@@ -1,5 +1,7 @@
 # Projektbeskrivning
 
+[Trello](https://trello.com/invite/b/6942b5fbe9bf8dcfc350d37e/ATTI30956f6bf62f514077875786ac3ef73cAE907468/backlog) | [GitHub](https://github.com/Carowa27/eshop-group3)
+
 ### Cups and Cakes Bageri AB
 
 Vi har Sveriges godaste cupcakes.<br>
