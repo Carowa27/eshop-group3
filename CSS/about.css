@@ -1,0 +1,32 @@
+header, footer{
+    background-color: #ccc;
+    height: 100px;
+}
+main img{
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+#usp-section{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+#usp-section article{
+    text-align: center;
+}
+
+.usp-img{
+    width: 50%;
+    max-width: 100px;
+}
+
+@media screen and (max-width:1000px) {
+    
+    #usp-section{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr);
+    }
+
+}
