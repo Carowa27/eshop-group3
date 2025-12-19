@@ -45,7 +45,7 @@ p {
 }
 .card-info-section {
   padding: 0.5rem 1rem;
-  background: rgba(255, 239, 195, 0.8); /* change color later!!*/
+  background: rgba(255, 250, 234, 0.8); /* change color later!!*/
 
   grid-column: 1/ -1;
   grid-row: 5/-1;
