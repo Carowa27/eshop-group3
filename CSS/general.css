@@ -42,11 +42,11 @@ body{
     display: none;
 }
 
-
 #nav-header {
     display: flex;
     align-items: center;
-    margin: 1rem 4rem 0 2rem;
+    margin: 2rem 4rem 0 2rem;
+    justify-content: space-between;
 }
 #home-page{
     display: flex;
@@ -54,23 +54,62 @@ body{
 }
 
 #logo-text {
-    margin-right: auto;
     font-family: 'Domine', serif;
-    font-weight: 700;
-    font-size: 1rem;
     color: #000000;
-    align-self: center;
 }
 
 #nav-header ul{
     display: flex;
-    gap: 5rem;
+    padding: 0;
+    gap: 4rem;
     list-style: none;
     text-decoration: none;
 }
 #nav-header ul li a{
     text-decoration: none;
     font-family: 'Domine', serif;
+    color: #000000;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-family: 'Domine', serif;
+}
+
+
+
+#footer-container {
+    font-family: 'Domine', serif;
+    color: #ffffff;
+    background-color: #f7559a;
+    height: 5rem;
+    padding: 5rem 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
+#footer-container p{
+    text-align: center;
+    margin: 0;
+}
+#media-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+#media-wrapper a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 0.5rem;
+}
+#media-wrapper i{
+    font-size: 1.5rem;
     color: #000000;
 }
 
