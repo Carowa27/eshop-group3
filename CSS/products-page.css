@@ -24,6 +24,12 @@ p {
   grid-template-columns: 1fr;
   gap: 0.5rem;
 }
+.filter-mobile {
+  display: block;
+}
+.filter-desktop {
+  display: none;
+}
 .product-card {
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -108,6 +114,21 @@ p {
     grid-row: 2/3;
 
     grid-template-columns: repeat(4, auto);
+  }
+  .filter-type-heading {
+    margin: 0.4rem 0 0.3rem 0;
+  }
+  .filter-radio-section {
+    margin-left: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .filter-mobile {
+    display: none;
+  }
+  .filter-desktop {
+    display: block;
   }
   .card-info-section {
     padding: 0.5rem;
