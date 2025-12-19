@@ -38,7 +38,7 @@ p {
   margin: 1rem;
   grid-column: 2/3;
   grid-row: 1/2;
-  justify-self: flex-end;
+  justify-self: end;
 }
 .card-info-section {
   padding: 0.5rem 1rem;
@@ -62,11 +62,11 @@ p {
 .product-cart {
   grid-column: -2/-1;
   grid-row: 1/2;
-  justify-self: flex-end;
+  justify-self: end;
 }
 .product-rating {
   grid-column: -3/-1;
   grid-row: 2/3;
   justify-self: end;
-  align-self: flex-end;
+  align-self: end;
 }
