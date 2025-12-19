@@ -80,8 +80,29 @@ p {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   #product-grid-section {
     grid-template-columns: repeat(3, auto);
+  }
+  .product-rating {
+    font-size: small;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #product-grid-section {
+    grid-template-columns: repeat(5, auto);
+  }
+  .product-rating {
+    font-size: xx-small;
+  }
+  .product-favorite {
+    margin: 0.6rem;
+  }
+  .card-info-section {
+    padding: 0.5rem;
+  }
+  #products-page {
+    margin: 0 auto;
+    max-width: 1366px;
   }
 }
