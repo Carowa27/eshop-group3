@@ -1,12 +1,18 @@
 #products-page {
   outline: skyblue solid 1px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 #filter-section {
   outline: pink solid 1px;
+  min-height: fit-content;
 }
 #product-grid-section {
   outline: orange solid 1px;
 }
 .product-card {
   outline: magenta solid 1px;
+}
+.card-info-section {
+  background: beige;
 }
