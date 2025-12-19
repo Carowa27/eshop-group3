@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+.nav-toggle:checked ~ nav {
+  transform: scaleY(1);
+}
+
+/*
+body:has(#nav-toggle:checked) .backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+body:has(#nav-toggle:checked) header {
+  border-radius: 6px 6px 0 0;
+  box-shadow: none;
+  transition: border-radius 0ms ease 0ms;
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+  background: transparent;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+  transform: rotate(45deg);
+  bottom: 0;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}*/
+
+body{
+    margin: 0;
+}
+#nav-toggle {
+    display: none;
+}
+
+
+#nav-header {
+    display: flex;
+    align-items: center;
+    margin: 1rem 4rem 0 2rem;
+}
+#home-page{
+    display: flex;
+    text-decoration: none;
+}
+
+#logo-text {
+    margin-right: auto;
+    font-family: 'Domine', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #000000;
+    align-self: center;
+}
+
+#nav-header ul{
+    display: flex;
+    gap: 5rem;
+    list-style: none;
+    text-decoration: none;
+}
+#nav-header ul li a{
+    text-decoration: none;
+    font-family: 'Domine', serif;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+@media screen and (min-width: 1300px) {}
+  
+.nav-toggle-label {
+  display: none;
+}*/
