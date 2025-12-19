@@ -3,16 +3,23 @@ p {
 }
 
 #products-page {
-  outline: skyblue solid 1px;
   display: grid;
   grid-template-columns: 1fr;
 }
 #filter-section {
-  outline: pink solid 1px;
   min-height: fit-content;
+  margin-bottom: 0.5rem;
+}
+#filter-heading {
+  margin: 0 0.2rem 0 0;
+  display: inline;
 }
 #product-grid-section {
-  outline: orange solid 1px;
+  width: 100vw;
+  display: grid;
+
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 .product-card {
   display: grid;
