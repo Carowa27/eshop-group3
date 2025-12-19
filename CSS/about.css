@@ -2,6 +2,12 @@ header, footer{
     background-color: #ccc;
     height: 100px;
 }
+
+main{
+    width: 70%;
+    margin: auto;
+}
+
 main img{
     max-width: 200px;
     border-radius: 50%;
@@ -10,6 +16,9 @@ main img{
 #usp-section{
     display: grid;
     grid-template-columns:repeat(4,1fr);
+    padding: 50px;
+    background-color: darksalmon;
+    gap: 20px;
 }
 
 #usp-section article{
