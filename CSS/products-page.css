@@ -1,0 +1,12 @@
+#products-page {
+  outline: skyblue solid 1px;
+}
+#filter-section {
+  outline: pink solid 1px;
+}
+#product-grid-section {
+  outline: orange solid 1px;
+}
+.product-card {
+  outline: magenta solid 1px;
+}
