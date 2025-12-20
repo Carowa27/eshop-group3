@@ -16,6 +16,11 @@ const products = {
             <span class="allergen">ägg</span>, mjölk,
             blåbär (15%), björnbär (5%),
             rapsolja, bakpulver, kanel, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "340 kcal" },
@@ -42,8 +47,13 @@ const products = {
         },
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
-            <span class="allergen">ägg</span>, mjölk,
+            <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             hallon (20%), rapsolja, bakpulver, vanilj, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "330 kcal" },
@@ -69,8 +79,13 @@ const products = {
         },
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
-            <span class="allergen">ägg</span>, mjölk,
+            <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             rabarber (20%), rapsolja, bakpulver, vanilj, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "325 kcal" },
@@ -98,6 +113,11 @@ const products = {
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             kaffeextrakt, rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "360 kcal" },
@@ -124,7 +144,12 @@ const products = {
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
-            citron, lemoncurd, rapsolja, bakpulver, salt.
+            citron, lemoncurd (citronjuice, <span class="allergen">ägg</span>, socker, <span class="allergen">smör</span>, gelatin), rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "345 kcal" },
@@ -151,8 +176,13 @@ const products = {
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
-            <span class="allergen">smör</span>, tonkaböna,
+            <span class="allergen">smör</span>, tonkaböna, <span class="allergen">mandel</span>,
             rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "375 kcal" },
@@ -180,6 +210,11 @@ const products = {
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             kakao, chokladbitar, rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "390 kcal" },
@@ -205,8 +240,13 @@ const products = {
         },
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
-            <span class="allergen">ägg</span>, mjölk,
+            <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             äpple (20%), kanel, rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "335 kcal" },
@@ -232,8 +272,13 @@ const products = {
         },
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
-            <span class="allergen">ägg</span>, mjölk,
+            <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             lingon (15%), rapsolja, bakpulver, vanilj, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
         { label: "Energi", value: "330 kcal" },
@@ -261,6 +306,11 @@ const products = {
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             kakao, mint, choklad, rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "385 kcal" },
@@ -286,8 +336,13 @@ const products = {
         },
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
-            <span class="allergen">ägg</span>, mjölk,
+            <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             jordgubbar (20%), vanilj, rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "345 kcal" },
@@ -314,7 +369,12 @@ const products = {
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
-            karamell, rapsolja, bakpulver, salt.
+            <span class="allergen">smör</span>, rapsolja, <span class="allergen">mandel</span>, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "400 kcal" },
@@ -340,8 +400,13 @@ const products = {
         },
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
-            <span class="allergen">ägg</span>, mjölk,
+            <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             matcha, rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "320 kcal" },
@@ -367,9 +432,14 @@ const products = {
         },
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
-            <span class="allergen">ägg</span>, mjölk,
+            <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
             <span class="allergen">pistagenötter</span>,
             rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "380 kcal" },
@@ -395,8 +465,13 @@ const products = {
         },
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
-            <span class="allergen">ägg</span>, mjölk,
-            morot (25%), kanel, rapsolja, bakpulver, salt.
+            <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
+            morot (25%), kanel, rapsolja, <span class="allergen">mandel</span>, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "365 kcal" },
@@ -423,7 +498,12 @@ const products = {
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
-            vit choklad, rapsolja, bakpulver, salt.
+            <span class="allergen">vit choklad</span>, rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            <span class="allergen">färskost</span>,
+            <span class="allergen">smör</span>,
+            florsocker.
         `,
         nutrition: [
             { label: "Energi", value: "395 kcal" },
