@@ -75,6 +75,10 @@ body{
 }
 #nav-container li{
   list-style: none;
+  transition: transform 0.2s ease-in-out;
+}
+#nav-container li:hover{
+  transform: scale(1.1);
 }
 #nav-container a,
 #nav-container i{
@@ -87,14 +91,6 @@ body{
   color: #f7559a;
   transform: scale(1.2);
 }
-
-
-
-
-
-
-
-
 
 
 
