@@ -119,10 +119,13 @@ p {
     margin: 0.4rem 0 0.3rem 0;
   }
   .filter-radio-section {
-    margin-left: 0.3rem;
+    margin: 1rem 0 0 0.3rem;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+  }
+  .no-top-margin {
+    margin-top: 0;
   }
   .filter-mobile {
     display: none;
