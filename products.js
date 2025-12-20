@@ -8,7 +8,7 @@ const products = {
             fruktig smak. Perfekt till fika eller kaffepaus.
         `,
         image: {
-            src: "prodimages/blueberryblackberry.jpg",
+            src: "images/prodimages/blueberryblackberry.jpg",
             alt: "Blåbärs- och björnbärsmuffins"
         },
         ingredients: `
@@ -42,7 +42,7 @@ const products = {
             kaffe som till festligare tillfällen.
         `,
         image: {
-            src: "prodimages/raspberry.jpg",
+            src: "images/prodimages/raspberry.jpg",
             alt: "Hallonmuffins"
         },
         ingredients: `
@@ -74,7 +74,7 @@ const products = {
             smaken perfekt. En somrig kombination med tydlig hembakad känsla.
         `,
         image: {
-            src: "prodimages/rhubarb.jpg",
+            src: "images/prodimages/rhubarb.jpg",
             alt: "Rabarber- och vaniljmuffins"
         },
         ingredients: `
@@ -106,7 +106,7 @@ const products = {
             djupa arom. Ett utmärkt val för kaffeälskaren.
         `,
         image: {
-            src: "prodimages/coffee.jpg",
+            src: "images/prodimages/coffee.jpg",
             alt: "Kaffemuffins med grädde"
         },
         ingredients: `
@@ -138,7 +138,7 @@ const products = {
             härligt balanserad sötma. Perfekt för dig som gillar fräscha smaker.
         `,
         image: {
-            src: "prodimages/lemoncurd.jpg",
+            src: "images/prodimages/lemoncurd.jpg",
             alt: "Citronmuffins med lemoncurd"
         },
         ingredients: `
@@ -170,7 +170,7 @@ const products = {
             aromatisk ton av tonkaböna. En sofistikerad smakupplevelse.
         `,
         image: {
-            src: "prodimages/tonka.jpg",
+            src: "images/prodimages/tonka.jpg",
             alt: "Muffins med brynt smör och tonkaböna"
         },
         ingredients: `
@@ -203,7 +203,7 @@ const products = {
             En tidlös klassiker för alla chokladälskare.
         `,
         image: {
-            src: "prodimages/chocolate.jpg",
+            src: "images/prodimages/chocolate.jpg",
             alt: "Chokladmuffins"
         },
         ingredients: `
@@ -235,7 +235,7 @@ const products = {
             En omtyckt smak som passar året runt.
         `,
         image: {
-            src: "prodimages/apple.jpg",
+            src: "images/prodimages/apple.jpg",
             alt: "Äpple- och kanelmuffins"
         },
         ingredients: `
@@ -267,7 +267,7 @@ const products = {
             till den söta smeten. Inspirerad av klassiska nordiska smaker.
         `,
         image: {
-            src: "prodimages/lingon.jpg",
+            src: "images/prodimages/lingon.jpg",
             alt: "Lingonmuffins"
         },
         ingredients: `
@@ -299,7 +299,7 @@ const products = {
             kombinationen choklad och mynta. En uppfriskande favorit.
         `,
         image: {
-            src: "prodimages/aftereight.jpg",
+            src: "images/prodimages/aftereight.jpg",
             alt: "Choklad- och mintmuffins"
         },
         ingredients: `
@@ -331,7 +331,7 @@ const products = {
             inspirerad av den klassiska desserten strawberry shortcake.
         `,
         image: {
-            src: "prodimages/strawberry.jpg",
+            src: "images/prodimages/strawberry.jpg",
             alt: "Jordgubbsmuffins"
         },
         ingredients: `
@@ -363,7 +363,7 @@ const products = {
             som balanserar smaken perfekt.
         `,
         image: {
-            src: "prodimages/caramel.jpg",
+            src: "images/prodimages/caramel.jpg",
             alt: "Muffins med salt karamell"
         },
         ingredients: `
@@ -395,7 +395,7 @@ const products = {
             grön te-smak och elegant färg.
         `,
         image: {
-            src: "prodimages/matcha.jpg",
+            src: "images/prodimages/matcha.jpg",
             alt: "Matchamuffins"
         },
         ingredients: `
@@ -427,7 +427,7 @@ const products = {
             elegant och lätt söt karaktär.
         `,
         image: {
-            src: "prodimages/pistachio.jpg",
+            src: "images/prodimages/pistachio.jpg",
             alt: "Pistagemuffins"
         },
         ingredients: `
@@ -460,7 +460,7 @@ const products = {
             morotskaka. En mustig och omtyckt favorit.
         `,
         image: {
-            src: "prodimages/carrot.jpg",
+            src: "images/prodimages/carrot.jpg",
             alt: "Morotsmuffins"
         },
         ingredients: `
@@ -492,7 +492,7 @@ const products = {
             i munnen. En len och uppskattad smak.
         `,
         image: {
-            src: "prodimages/whitechocolate.jpg",
+            src: "images/prodimages/whitechocolate.jpg",
             alt: "Muffins med vit choklad"
         },
         ingredients: `
