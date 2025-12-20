@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produkt</title>
+    <link rel="stylesheet" href="../CSS/general.css">
+    <link rel="stylesheet" href="../CSS/prodpage.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</html>
+<body>
+    <!--  Waiting for header content 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Hem</a></li>
+                <li><a href="../prodpages/products.html">Produkter</a></li>
+                <li><a href="../prodpages/about.html">Om Oss</a></li>
+                <li><a href="../prodpages/contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+<main>
+    <!-- <breadcrumbs>
+        <a href="../index.html">Hem</a> &gt;
+        <a href="products.html">Produkter</a> &gt;
+        <span>Blåbärsmuffin</span>
+    </breadcrumbs> -->
+    <!-- <button class="back-button" onclick="history.back()">
+        <i class="fa-solid fa-arrow-left"></i> Tillbaka till produkter
+    </button> -->
+
+    <article class="product">
+
+        <!-- Vänster sida -->
+        <div class="product-info">
+            <h1 id="product-name"></h1>
+
+            <p class="description" id="product-description"></p>
+            <div class="price">
+                <p class="price-unit">
+                    <strong>25 kr</strong> / st
+                </p>
+
+                <p class="price-discount">
+                    Köp 10 st för <strong>200 kr</strong>
+                    <span class="price-note">(rabatten dras av i kassan)</span>
+                </p>
+            </div>
+            <div class="purchase">
+                <div class="quantity">
+                    <input id="quantity" type="number" min="1" value="1">
+                </div>
+                <button class="add-to-cart">
+                   <i class="fa-solid fa-bag-shopping"></i> Lägg i varukorg 
+                </button>
+                <p id="discount-hint" hidden>
+                <em>Rabatten dras av i kassan.</em>
+                </p>
+            </div>
+
+            <details class="ingredients">
+                <summary>Ingredienser<i class="fa-solid"></i></summary>
+                <p id="product-ingredients"></p>
+            </details>
+
+            <details class="nutrition">
+                <summary>Näringsinnehåll per 100g<i class="fa-solid"></i></summary>
+                <ul class="nutrition" id="product-nutrition"></ul>
+            </details>
+        </div>
+
+        <!-- Höger sida -->
+        <figure class="product-image">
+            <img
+                id="product-image"
+                src=""
+                alt=""
+                loading="lazy">
+        </figure>
+
+    </article>
+</main>
+
+
+    <!-- Waiting for footer content
+    
+    <footer>
+        <p>&copy; 2024 Företagsnamn. Alla rättigheter förbehållna.</p>
+    </footer> -->
+    <script src="/prodpages/products.js"></script>
+    <script src="/prodpages/prodscript.js"></script>
+</body>
+</html>
