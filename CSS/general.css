@@ -42,10 +42,11 @@ body{
     display: none;
 }
 
-#nav-header {
+
+#header-container {
     display: flex;
     align-items: center;
-    margin: 2rem 4rem 0 2rem;
+    margin: 2rem 5rem 0 2.5rem;
     justify-content: space-between;
 }
 #home-page{
@@ -56,61 +57,79 @@ body{
 #logo-text {
     font-family: 'Domine', serif;
     color: #000000;
+    font-size: 0.9rem;
 }
 
-#nav-header ul{
+#header-container ul{
     display: flex;
-    padding: 0;
-    gap: 4rem;
+    gap: 5rem;
     list-style: none;
-    text-decoration: none;
 }
-#nav-header ul li a{
+
+#header-container ul li a{
     text-decoration: none;
     font-family: 'Domine', serif;
     color: #000000;
 }
-
-#main-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    font-family: 'Domine', serif;
+#header-container ul li a:hover{
+    color: #f7559a;
+}
+#header-container i{
+    font-size: 1.2rem;
+    color: #000000;
+}
+#header-container i:hover{
+    color: #f7559a;
+}
+#header-container a{
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+#header-container a:hover{
+  transform: scale(1.2);
 }
 
 
 
-#footer-container {
+
+
+#footer-container{
     font-family: 'Domine', serif;
-    color: #ffffff;
-    background-color: #f7559a;
-    height: 5rem;
-    padding: 5rem 0;
-    bottom: 0;
     width: 100%;
+
     position: fixed;
+    bottom: 0;
 }
-#footer-container p{
-    text-align: center;
-    margin: 0;
-}
-#media-wrapper {
+#media-wrapper{
     display: flex;
     justify-content: center;
     gap: 10rem;
+    padding: 5rem 5rem 4rem 5rem;
+    background-color: #f7559a;
 }
 #media-wrapper a{
     display: flex;
     align-items: center;
     text-decoration: none;
+    transition: transform 0.2s ease-in-out;
     color: white;
     gap: 0.5rem;
 }
+#media-wrapper a:hover{
+    transform: scale(1.1);
+    color: black;
+}
 #media-wrapper i{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #000000;
+}
+#footer-container p{
+    background-color: #f7559a;
+    color: white;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 
