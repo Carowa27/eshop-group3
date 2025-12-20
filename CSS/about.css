@@ -1,0 +1,117 @@
+header, footer{
+    background-color: #ccc;
+    height: 100px;
+}
+
+
+main img{
+    max-width: 75%;
+    min-width: 150px;
+    border-radius: 50%;
+    box-shadow: -5px -5px 0px darkgrey;
+    border: 5px solid pink;
+}
+
+.pop{
+    font-weight: bold;
+    color: darkcyan;
+}
+
+#our-story{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 50px 15%;
+    align-items: center;
+    grid-template-areas: 
+    "block-1 block-1 block-2"
+    "block-3 block-4 block-4"
+    ;
+}
+
+#block-1{
+    grid-area: block-1;
+    padding-right: 20px;
+}
+
+#block-2{
+    grid-area: block-2;
+    text-align: center;
+}
+
+#block-3{
+    grid-area: block-3;
+    text-align: center;
+}
+
+#block-4{
+    grid-area: block-4;
+    padding-left: 20px;
+}
+
+
+#usp-section{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 0 15%;
+    background-color: pink;
+    gap: 20px;
+    margin-top: 65px;
+}
+
+#usp-section article{
+    text-align: center;
+    padding-bottom: 65px;
+}
+
+/*
+#usp-1{
+    background-color: pink;
+    border-radius: 50% 50% 0 50%;
+    min-width: 200px;
+    min-height: 400px;
+}
+#usp-2{
+    background-color: darkorange;
+    border-radius: 30% 50% 30% 0;
+    min-width: 200px;
+    min-height: 400px;
+}
+#usp-2 .usp-img{
+    position: relative;
+    right:-200px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid 3px pink;
+}
+#usp-3{
+    background-color:goldenrod;
+    border-radius: 50% 0 50% 50%;
+    min-width: 200px;
+    min-height: 400px;
+}
+#usp-4{
+    background-color:salmon;
+    border-radius: 0 50% 50% 50%;
+    min-width: 200px;
+    min-height: 400px;
+}
+*/
+.usp-img{
+    width: 50%;
+    max-width: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid 3px pink;
+    padding: 15px;
+    margin-top: -65px;
+}
+
+@media screen and (max-width:1000px) {
+    
+    #usp-section{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows:repeat(2,1fr);
+    }
+
+}
