@@ -1,0 +1,35 @@
+main {
+    display: grid;
+    grid-template-columns: 50% 43%;
+    justify-content: center;
+    /* background-image:linear-gradient(to right, rgba(247,85,154,0.7), rgba(37, 178, 255, 0.3)); */
+}
+
+section {
+    border: solid 1px black;
+}
+
+#order-information {
+    display: grid;
+    border-right: 2px solid black;
+}
+
+#product-details {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 980px) {
+    main {
+        grid-template-columns: 47% 47%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #product-details {
+        order: -1;
+    }
+}
