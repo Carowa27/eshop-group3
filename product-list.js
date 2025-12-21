@@ -425,7 +425,7 @@ const products = {
             Nötig och mjuk muffins med tydlig smak av pistage som ger en elegant och lätt söt karaktär. Den saftiga konsistensen lyfter nötens naturliga arom och skapar en balanserad helhet. Toppad med len färskostfrosting är detta en lyxig muffins som passar perfekt till en finare fikastund.
         `,
         image: {
-            src: "Images/prodimages/pistachio.jpg",
+            src: "Images/prodimages/pistage.jpg",
             alt: "Pistagemuffins"
         },
         ingredients: `
