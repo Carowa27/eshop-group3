@@ -8,6 +8,18 @@ function renderProduct(product) {
     // Produktnamn
     document.getElementById("product-name").textContent = product.name;
 
+    // Allergener
+    const allergenContainer = document.getElementById("allergen-label");
+    allergenContainer.innerHTML = "";
+
+    if (product.allergens && product.allergens.length > 0) {
+        product.allergens.forEach(allergen => {
+            const p = document.createElement("p");
+            p.textContent = allergen;
+            allergenContainer.appendChild(p);
+        });
+    }
+
     // Beskrivning
     document.getElementById("product-description").innerHTML =
         product.description.trim();

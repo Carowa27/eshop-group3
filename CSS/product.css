@@ -1,10 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
 :root {
-    --border: 1px solid #ddd;
+    --border: 1px solid rgba(87, 65, 66,.5);
 }
 
 body {
     margin: 0;
+    font-family: 'Domine', serif;
+    background-color: #f3e5dc;
+    color: #574142;
+}
+
+p {
+    line-height: 1.6;
+    font-size: .9rem;
 }
 
 /* .back-button {
@@ -76,7 +86,7 @@ summary::-webkit-details-marker {
 summary i {
     margin-left: auto;
     font-size: .8rem;
-    transition: transform .3s;
+    transition: transform .5s;
 }
 
 summary i::before {
@@ -101,8 +111,22 @@ details[open] summary i {
 }
 
 .allergen {
-    font-weight: 600;
+    font-weight: 800;
 }
+
+#allergen-label {
+    border-radius: 60px;
+    display: flex;
+    gap: 0.5rem;
+}
+#allergen-label p {
+    background-color: #574142;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 60px;
+}
+
 .nutrition {
     margin: 0rem 0 2rem 0;
     padding: 2rem 1rem;
@@ -122,7 +146,8 @@ details[open] summary i {
     display: flex;
     justify-content: space-between;
     border-bottom: var(--border);
-    padding: 1rem 0;  
+    padding: 1rem 0;
+    font-size: .9rem;
 }
 
 .nutrition .label {
@@ -147,6 +172,7 @@ details[open] summary i {
     width: 40px;
     text-align: center;
     border: 1px solid #e28383;
+    background-color: #fdf4ee;
     font-size: 1rem;
     padding: 1rem 1.5rem;
     border-radius: 60px;
