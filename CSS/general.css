@@ -94,48 +94,6 @@ body{
 
 
 
-
-
-/*
-#header-container {
-    display: flex;
-    align-items: center;
-    margin: 2rem 5rem 0 2.5rem;
-    justify-content: space-between;
-}
-#header-container ul{
-    display: flex;
-    gap: 5rem;
-    list-style: none;
-}
-
-#header-container ul li a{
-    text-decoration: none;
-    font-family: 'Domine', serif;
-    color: #000000;
-}
-#header-container ul li a:hover{
-    color: #f7559a;
-}
-#header-container i{
-    font-size: 1.2rem;
-    color: #000000;
-}
-#header-container i:hover{
-    color: #f7559a;
-}
-#header-container a{
-  align-items: center;
-  transition: transform 0.2s ease-in-out;
-}
-#header-container a:hover{
-  transform: scale(1.2);
-}
-*/
-
-
-
-
 #foot-container{
     font-family: 'Domine', serif;
     width: 100%;
