@@ -32,23 +32,24 @@ p {
 }
 .product-card {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 20%);
   aspect-ratio: 1/1;
 }
 .card-img-section {
   grid-column: 1 / -1;
-  grid-row: 1/-5;
+  grid-row: 1 / 4;
 }
 .card-img {
   width: 100%;
+  object-fit: cover;
 }
-.product-favorite {
+/* .product-favorite {
   margin: 1rem;
   grid-column: 2/3;
   grid-row: 1/2;
   justify-self: end;
-}
+} */
 .card-info-section {
   padding: 0.5rem 1rem;
   background: rgba(255, 250, 234, 0.8); /* change color later!!*/
@@ -78,6 +79,10 @@ p {
   grid-row: 2/3;
   justify-self: end;
   align-self: end;
+}
+.no-link-style {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media screen and (min-width: 768px) {
