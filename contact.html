@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="CSS/contact.css">
 </head>
 <body>
-    <h2>Kontakt</h2>
+    <header>
+        <h1>Kontakt</h1>
+        <p>Har du några frågor eller behöver hjälp? <br>
+        Du är välkommen att kontakta oss.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Mejla oss</h2>
+            <p>Fyll i dina uppgifter och ställ din fråga så återkommer vi inom 48 timmar.</p>
+        </section>
+
+        <section>
+            <h2>Ring oss</h2>
+            <p>Vår kundservice är öppen varje måndag-fredag 9.00-18.00.</p>
+        </section>
+
+        <section>
+            <form action="submit" method="post">
+                <input type="text" name="name" placeholder="Namn:" required>
+                <input type="email" name="email" placeholder="E-post:" required>
+                <textarea name="message" placeholder="Meddelande..." required></textarea>
+                <button>Skicka</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
