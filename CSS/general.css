@@ -64,17 +64,21 @@ body{
 }
 
 #nav-container{
+  font-family: 'Domine', serif;
+  font-size: 1.1rem;
 }
 #nav-container ul{
   display: flex;
-  font-family: 'Domine', serif;
-  font-size: 1.1rem;
   gap: 4rem;
   margin: 0;
   padding: 0;
 }
 #nav-container li{
   list-style: none;
+  transition: transform 0.2s ease-in-out;
+}
+#nav-container li:hover{
+  transform: scale(1.1);
 }
 #nav-container a,
 #nav-container i{
@@ -84,61 +88,9 @@ body{
 }
 #nav-container a:hover,
 #nav-container i:hover{
-  color: #f7559a;
+  color: #e28383;
   transform: scale(1.2);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-#header-container {
-    display: flex;
-    align-items: center;
-    margin: 2rem 5rem 0 2.5rem;
-    justify-content: space-between;
-}
-#header-container ul{
-    display: flex;
-    gap: 5rem;
-    list-style: none;
-}
-
-#header-container ul li a{
-    text-decoration: none;
-    font-family: 'Domine', serif;
-    color: #000000;
-}
-#header-container ul li a:hover{
-    color: #f7559a;
-}
-#header-container i{
-    font-size: 1.2rem;
-    color: #000000;
-}
-#header-container i:hover{
-    color: #f7559a;
-}
-#header-container a{
-  align-items: center;
-  transition: transform 0.2s ease-in-out;
-}
-#header-container a:hover{
-  transform: scale(1.2);
-}
-*/
-
-
-
 
 #foot-container{
     font-family: 'Domine', serif;
@@ -147,19 +99,23 @@ body{
     position: fixed;
     bottom: 0;
 }
+#media-wrapper,
+#media-wrapper a,
+#foot-container p{
+  background-color: #e28383;
+  color: white;
+}
 #media-wrapper{
     display: flex;
     justify-content: center;
     gap: 10rem;
     padding: 5rem 5rem 4rem 5rem;
-    background-color: #f7559a;
 }
 #media-wrapper a{
     display: flex;
     align-items: center;
     text-decoration: none;
     transition: transform 0.2s ease-in-out;
-    color: white;
     gap: 0.5rem;
 }
 #media-wrapper a:hover{
@@ -171,9 +127,8 @@ body{
     color: #000000;
 }
 #foot-container p{
-    background-color: #f7559a;
-    color: white;
     text-align: center;
+    font-size: 0.8rem;
     padding-bottom: 1rem;
     margin-top: auto;
     margin-bottom: 0;
@@ -181,6 +136,21 @@ body{
 
 
 
+  /* Responsive Design */
+@media screen and (max-width: 680px) {
+    #head-container{
+      flex-direction: column;
+      margin: 1rem 2rem 0 2rem;
+    }
+
+    #media-wrapper{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+}
 
 
 
