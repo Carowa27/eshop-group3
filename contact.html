@@ -4,35 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/general.css">
     <link rel="stylesheet" href="CSS/contact.css">
 </head>
 <body>
-    <header>
-        <h1>Kontakt</h1>
-        <p>Har du några frågor eller behöver hjälp? <br>
-        Du är välkommen att kontakta oss.</p>
-    </header>
 
     <main>
-        <section>
-            <h2>Mejla oss</h2>
-            <p>Fyll i dina uppgifter och ställ din fråga så återkommer vi inom 48 timmar.</p>
+        <section id="hero">
+            <div id="hero-image">
+
+            </div>
+            <h1>Kontakt</h1>
         </section>
 
-        <section>
-            <h2>Ring oss</h2>
-            <p>Vår kundservice är öppen varje måndag-fredag 9.00-18.00.</p>
-        </section>
+        <section id="contact">
+            <div id="contact-wrapper">
 
-        <section>
-            <form action="submit" method="post">
-                <input type="text" name="name" placeholder="Namn:" required>
-                <input type="email" name="email" placeholder="E-post:" required>
-                <textarea name="message" placeholder="Meddelande..." required></textarea>
-                <button>Skicka</button>
-            </form>
+                <form id="contact-form">
+                    <input type="text" placeholder="Namn:" required>
+                    <input type="email" placeholder="E-post:" required>
+                    <textarea placeholder="Meddelande..." required></textarea>
+                    <button type="submit">Skicka</button>
+                </form>
+
+                <div id="contact-info">
+                    <div id="info-item">
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p>Vänligen fyll i dina uppgifter i formuläret. <br>
+                        Vi svarar vanligtvis inom 48 timmar.</p>
+                    </div>
+
+                    <div id="info-item">
+                        <span><i class="fa-solid fa-circle-user"></i></span>
+                        <p>Du kan även ringa oss på telefonnummer <br>
+                            0771-123456. <br>
+                        Vår kundsupport är öppen måndag-fredag kl. 9-18.</p>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
+
+    <footer id="foot-container">
+        <div id="media-wrapper">
+            <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+        </div>
+        <p>&copy; 2025 Cups&Cakes. Alla rättigheter förbehållna.</p>
+    </footer>
 </body>
 </html>

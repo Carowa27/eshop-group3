@@ -2,7 +2,15 @@
 #main-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
     font-family: 'Domine', serif;
+    margin: 8rem 0 auto 0;
+}
+
+
+  /* Responsive Design */
+@media screen and (max-width: 680px) {
+   #main-container {
+       margin: 5rem 0 auto 0;
+   }
 }
