@@ -64,17 +64,21 @@ body{
 }
 
 #nav-container{
+  font-family: 'Domine', serif;
+  font-size: 1.1rem;
 }
 #nav-container ul{
   display: flex;
-  font-family: 'Domine', serif;
-  font-size: 1.1rem;
   gap: 4rem;
   margin: 0;
   padding: 0;
 }
 #nav-container li{
   list-style: none;
+  transition: transform 0.2s ease-in-out;
+}
+#nav-container li:hover{
+  transform: scale(1.1);
 }
 #nav-container a,
 #nav-container i{
