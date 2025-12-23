@@ -36,7 +36,7 @@ export const renderProductCards = (products) => {
           <div class="card-info-section">
             <h4 class="product-name">${product.name}</h4>
             <p class="product-price">
-              25kr /st <br /> 200kr /10st
+              25kr /st
             </p>
             <p class="product-cart">
               <i class="fa-solid fa-cart-plus"></i>
