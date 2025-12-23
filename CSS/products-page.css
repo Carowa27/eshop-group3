@@ -33,7 +33,7 @@ p {
 .product-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 20%);
+  grid-template-rows: repeat(7, calc(100% / 7));
   aspect-ratio: 1/1;
 }
 .card-img-section {
@@ -55,7 +55,7 @@ p {
   background: rgba(243, 229, 220, 0.8); /* change color later!!*/
 
   grid-column: 1/ -1;
-  grid-row: 5/-1;
+  grid-row: 6/-1;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
