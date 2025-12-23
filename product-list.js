@@ -514,5 +514,125 @@ const products = {
             { label: "Protein", value: "5.5 g" },
             { label: "Salt", value: "0.55 g" }
         ]
+    },
+
+"pear-vanilla-gf-df": {
+    name: "Päron & Vanilj (gluten- och mjölkfri)",
+    allergens: ["Ägg"],
+    description: `
+        Saftig päronmuffins med mild vanilj som ger en mjuk och fruktig smakupplevelse. Päronets naturliga sötma och lätt blommiga ton möter vaniljens rundhet i en luftig, bakad kaka. Toppad med mjölkfri, krämig frosting blir detta ett fräscht och lätt fikaval som passar perfekt till kaffe eller te.
+    `,
+    image: {
+        src: "Images/prodimages/pearvanilla.jpg",
+        alt: "Gluten- och mjölkfri päron- och vaniljmuffins"
+    },
+    ingredients: `
+        Glutenfri mjölmix (ris-/majsmjöl), socker,
+        <span class="allergen">ägg</span>, päron (20%),
+        rapsolja, bakpulver, vanilj, salt.
+        <br><br>
+        Frosting:
+        mjölkfritt margarin, florsocker, vanilj.
+    `,
+    nutrition: [
+        { label: "Energi", value: "330 kcal" },
+        { label: "Fett", value: "14 g" },
+        { label: "- varav mättat fett", value: "3.5 g" },
+        { label: "Kolhydrater", value: "47 g" },
+        { label: "- varav sockerarter", value: "22 g" },
+        { label: "Fiber", value: "2 g" },
+        { label: "Protein", value: "5.5 g" },
+        { label: "Salt", value: "0.45 g" }
+    ]
+    },
+
+    "chocolate-gf-df": {
+        name: "Choklad (gluten- och mjölkfri)",
+        allergens: ["Ägg"],
+        description: `
+            Fyllig chokladmuffins med tydlig kakaosmak och mjuk, saftig konsistens, helt utan gluten och mjölk. Den mörka chokladtonen balanseras av en behaglig sötma som gör muffinsen till en klassisk favorit även i mjölkfri version. Toppad med krämig, mjölkfri frosting passar den perfekt som fika eller liten dessert.
+        `,
+        image: {
+            src: "Images/prodimages/chocolategfdf.jpg",
+            alt: "Gluten- och mjölkfri chokladmuffins"
+        },
+        ingredients: `
+            Glutenfri mjölmix (ris-/majsmjöl), socker,
+            <span class="allergen">ägg</span>, kakao,
+            rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            mjölkfritt margarin, florsocker, kakao.
+        `,
+        nutrition: [
+            { label: "Energi", value: "360 kcal" },
+            { label: "Fett", value: "17 g" },
+            { label: "- varav mättat fett", value: "4 g" },
+            { label: "Kolhydrater", value: "48 g" },
+            { label: "- varav sockerarter", value: "26 g" },
+            { label: "Fiber", value: "3 g" },
+            { label: "Protein", value: "6 g" },
+            { label: "Salt", value: "0.55 g" }
+        ]
+    },
+
+    "lemon-gf-df": {
+        name: "Citron (gluten- och mjölkfri)",
+        allergens: ["Ägg"],
+        description: `
+            Frisk citronmuffins med tydlig citrussmak och mjuk, luftig konsistens, bakad utan gluten och mjölk. Den pigga syran ger en lätt och uppfriskande karaktär som balanseras av en mild sötma. Toppad med krämig, mjölkfri frosting blir detta ett fräscht fikaval som passar perfekt när du vill ha något ljust och friskt.
+        `,
+        image: {
+            src: "Images/prodimages/lemongfdf.jpg",
+            alt: "Gluten- och mjölkfri citronmuffins"
+        },
+        ingredients: `
+            Glutenfri mjölmix (ris-/majsmjöl), socker,
+            <span class="allergen">ägg</span>, citron (saft & zest),
+            rapsolja, bakpulver, salt.
+            <br><br>
+            Frosting:
+            mjölkfritt margarin, florsocker, citronzest.
+        `,
+        nutrition: [
+            { label: "Energi", value: "325 kcal" },
+            { label: "Fett", value: "13 g" },
+            { label: "- varav mättat fett", value: "3 g" },
+            { label: "Kolhydrater", value: "48 g" },
+            { label: "- varav sockerarter", value: "24 g" },
+            { label: "Fiber", value: "2 g" },
+            { label: "Protein", value: "5.5 g" },
+            { label: "Salt", value: "0.45 g" }
+        ]
+    },
+
+    "blueberry-gf-df": {
+        name: "Blåbär (gluten- och mjölkfri)",
+        allergens: ["Ägg"],
+        description: `
+            Saftig blåbärsmuffins med solmogna blåbär som ger en naturligt fruktig och mild smak, bakad utan gluten och mjölk. Den mjuka konsistensen gör muffinsen lätt och uppskattad, med bär som ger friskhet i varje tugga. Toppad med krämig, mjölkfri frosting blir detta ett tryggt och gott fikaval för många.
+        `,
+        image: {
+            src: "Images/prodimages/blueberrygfdf.jpg",
+            alt: "Gluten- och mjölkfri blåbärsmuffins"
+        },
+        ingredients: `
+            Glutenfri mjölmix (ris-/majsmjöl), socker,
+            <span class="allergen">ägg</span>, blåbär (20%),
+            rapsolja, bakpulver, vanilj, salt.
+            <br><br>
+            Frosting:
+            mjölkfritt margarin, florsocker, vanilj.
+        `,
+        nutrition: [
+            { label: "Energi", value: "320 kcal" },
+            { label: "Fett", value: "13 g" },
+            { label: "- varav mättat fett", value: "3 g" },
+            { label: "Kolhydrater", value: "46 g" },
+            { label: "- varav sockerarter", value: "21 g" },
+            { label: "Fiber", value: "2.5 g" },
+            { label: "Protein", value: "5.5 g" },
+            { label: "Salt", value: "0.4 g" }
+        ]
     }
 };
