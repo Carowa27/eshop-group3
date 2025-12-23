@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/general.css">
     <link rel="stylesheet" href="CSS/checkout.css">
     <title>Cups&Cakes</title>
 </head>
@@ -15,10 +16,59 @@
     <main>
         <section id="order-information">
             <section id="delivery">
-                <h2>Ange leveransuppgifter</h2>
+                    <h2>Ange leveransuppgifter</h2>
+                <form>
+                    <div class="one-column">
+                        <label for="country">Land: </label>
+                        <select name="country" >
+                            <option>Sverige</option>
+                            <option>Norge</option>
+                            <option>Danmark</option>
+                            <option>Finland</option>
+                        </select>
+                    </div>
+                    <div class="two-column">
+                        <label for="first-name">Förnamn: </label>
+                        <input type="text" name="first-name" required id="first-name"/>
+                        <label for="last-name">Efternamn: </label>
+                        <input type="text" name="last-name" required/>
+                    </div>
+                    <div class="one-column">
+                        <label for="address">Adress: </label>
+                        <input type="text" name="address" required />
+                    </div>
+                    <div class="two-column">
+                        <label for="postal-code">Postnummer: </label>
+                        <input type="text" name="postal-code" required id="post-code" />
+                        <label for="city" >Stad: </label>
+                        <input type="text" name="city" required />
+                    </div>
+                    <div class="one-column">
+                        <label for="phone-number">Telefonnummer: </label>
+                        <input type="tel" name="phone-number" required />
+                        <label for="email">E-post: </label>
+                        <input type="email" name="email" required />
+                    </div>
+                </form>
             </section>
             <section id="billing">
                 <h2>Ange betalningsinformation</h2>
+                <form>
+                    <div class="one-column">
+                        <label for="card-number">Kortnummer: </label>
+                        <input type="text" inputmode="numeric" pattern="[0-9]+([-\,][0-9]+)?" name="card-number" />
+                    </div>
+                    <div class="two-column">
+                        <label for="expiration-date">Förfallodatum: </label>
+                        <input type="date" name="expiration-date" id="date" />
+                        <label for="security-code">Säkerhetskod: </label>
+                        <input type="decimal" name="security-code" />
+                    </div>
+                    <div class="one-column">
+                        <label for="card-name">Namn på kort: </label>
+                        <input type="text" name="card-name" />
+                    </div>
+                </form>
             </section>
         </section>
         <section id="product-details">
