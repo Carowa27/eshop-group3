@@ -14,6 +14,25 @@ export const renderProductCards = (products) => {
               class="card-img"
             />
           </div>
+         
+          <div class="allergens">
+           ${product.allergens
+             .map((allergen) => {
+               if (allergen === "Gluten") {
+                 return `<i class="fa-solid fa-wheat-awn" title="Innehåller gluten"></i>`;
+               }
+               if (allergen === "Mjölk") {
+                 return `<i class="fa-solid fa-cow" title="Innehåller mjölkprodukter"></i>`;
+               }
+               if (allergen === "Ägg") {
+                 return `<i class="fa-solid fa-egg" title="Innehåller ägg"></i>`;
+               }
+               if (allergen === "Nötter") {
+                 return `<i class="fa-solid fa-circle" title="Innehåller nötter"></i>`;
+               }
+             })
+             .join(" ")}
+          </div>
           <div class="card-info-section">
             <h4 class="product-name">${product.name}</h4>
             <p class="product-price">
