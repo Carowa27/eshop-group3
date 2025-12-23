@@ -33,9 +33,10 @@ p {
     grid-template-columns: 1fr;
     grid-template-areas:
     "image"
-    "details";   
+    "details"
+    "ingredients-nutrition";   
     column-gap: 1rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 8px;
@@ -59,6 +60,10 @@ p {
 
 .product-image {
     grid-area: image;
+}
+
+.ingredients-nutrition {
+    grid-area: ingredients-nutrition;
 }
 
 .price-unit {
@@ -195,6 +200,8 @@ details[open] summary i {
 @media (min-width: 768px) {
     .product { 
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "details image";
+        grid-template-areas: 
+        "details image"
+        "ingredients-nutrition ingredients-nutrition";
     }
 }
