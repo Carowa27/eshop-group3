@@ -137,7 +137,18 @@ body{
 
 
   /* Responsive Design */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px){
+
+    #head-container{
+      margin: 1rem 2rem 0 2rem;
+    }
+    
+    #nav-container ul{
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
     #head-container{
       flex-direction: column;
       margin: 1rem 2rem 0 2rem;

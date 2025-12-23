@@ -62,7 +62,7 @@ body{
 
 
 /* Responsive Design */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     #contact-wrapper{
         gap: 5rem;
         padding: 0 2rem;
