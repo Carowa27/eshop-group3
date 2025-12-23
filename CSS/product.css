@@ -33,11 +33,12 @@ p {
     grid-template-columns: 1fr;
     grid-template-areas:
     "image"
-    "details";   
+    "details"
+    "ingredients-nutrition";   
     column-gap: 1rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     border-radius: 8px;
 }
 
@@ -59,6 +60,10 @@ p {
 
 .product-image {
     grid-area: image;
+}
+
+.ingredients-nutrition {
+    grid-area: ingredients-nutrition;
 }
 
 .price-unit {
@@ -151,7 +156,7 @@ details[open] summary i {
 }
 
 .nutrition .label {
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .nutrition .value {
@@ -186,15 +191,119 @@ details[open] summary i {
     border-radius: 60px;
     cursor: pointer;
     font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color .3s ease, transform .2s ease;
 }
 
 .add-to-cart i {
     margin-right: 0.5rem;
 }
 
+/* Disabled state */
+.add-to-cart.loading {
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+/* Spinner */
+.add-to-cart.loading i {
+    animation: spin 1s linear infinite;
+}
+
+/* Success state */
+.add-to-cart.success {
+    background-color: #5bb065;
+}
+
+/* Small press feedback */
+.add-to-cart:active {
+    transform: scale(0.97);
+}
+
+/* Spinner animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.others-like {
+    margin: 0 auto 3rem auto;
+    padding: 0 2rem;
+    max-width: 1000px;
+}
+
+.others-like h2 {
+    margin-bottom: 1rem;
+}
+
+/* Scroll-container */
+.others-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: .5rem;
+}
+
+/* Kort */
+.other-item {
+    scroll-snap-align: start;
+}
+
+.other-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.other-item p {
+    text-align: center;
+}
+
+.other-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.others-list::-webkit-scrollbar {
+    height: 4px;
+}
+
+.others-list::-webkit-scrollbar-track {
+    background: #fdf4ee;
+    border-radius: 10px;
+}
+
+.others-list::-webkit-scrollbar-thumb {
+    background-color: #e28383;
+    border-radius: 10px;
+}
+
+.others-list {
+    scrollbar-color: #e28383 #fdf4ee;
+    scrollbar-width: thin;
+}
+
 @media (min-width: 768px) {
     .product { 
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "details image";
+        grid-template-areas: 
+        "details image"
+        "ingredients-nutrition ingredients-nutrition";
+    }
+
+    .others-list {
+        grid-auto-columns: 22%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .others-list {
+        grid-auto-columns: 18%;
     }
 }
