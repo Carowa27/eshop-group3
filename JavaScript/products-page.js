@@ -5,7 +5,7 @@ export const renderProductCards = (products) => {
   parent.innerHTML = productArray
     .map((product, i) => {
       const productQueue = productQueues[i];
-      return `<a class="no-link-style" href="/product.html?id=${productQueue}">
+      return `<a class="no-link-style" href="product.html?id=${productQueue}">
         <article class="product-card">
           <div class="card-img-section">
             <img
