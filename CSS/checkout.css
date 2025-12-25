@@ -24,7 +24,6 @@ h2 {
     margin: 10px;
     border: 1px solid #f7559a;
     border-radius: 4px;
-
 }
 
 #product-position {
@@ -64,35 +63,38 @@ h2 {
     text-align: right;
     margin-right: 10px;
 }
+
 .amount {
-    display:flex;
+    display: flex;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: fit-content;
     margin-left: auto;
 }
-.amount input, .amount button {
-    /* padding: 0 4px;
-    margin: 0; */
+
+.amount input,
+.amount button {
     width: 2em;
     height: 2em;
-    border:none;
+    border: none;
     background-color: #fff;
     flex-grow: 0;
 }
+
 .amount input {
-    text-align:center;
+    text-align: center;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 #cost {
@@ -157,9 +159,10 @@ select {
         width: 100%;
         border: none;
     }
-   #products article {
-    gap: 10px 0;
-}
+
+    #products article {
+        gap: 10px 0;
+    }
 }
 
 @media only screen and (max-width: 720px) {
