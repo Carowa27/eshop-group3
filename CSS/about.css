@@ -1,15 +1,35 @@
-header, footer{
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+body{
+    font-family: Domine, serif;
+    background-color: #f3e5dc;
+    color: #574142;
+}
+
+p {
+    line-height: 1.6;
+    font-size: .9rem;
+}
+
+h1{
+    text-align: center;
+    padding-top: 55px;
+}
+
+footer{
     background-color: #ccc;
     height: 100px;
 }
 
+main, section{
+    background-color: #e1d4bc;
+}
 
-main img{
+main .story-img{
     max-width: 75%;
     min-width: 150px;
     border-radius: 50%;
-    box-shadow: -5px -5px 0px darkgrey;
-    border: 5px solid pink;
+    border: 10px solid #fff;
 }
 
 .pop{
@@ -20,7 +40,7 @@ main img{
 #our-story{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    padding: 50px 15%;
+    padding: 50px 20%;
     align-items: center;
     grid-template-areas: 
     "block-1 block-1 block-2"
@@ -53,14 +73,28 @@ main img{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     padding: 0 15%;
-    background-color: pink;
+    background-color: #f7559a;
     gap: 20px;
     margin-top: 65px;
+    color:#fff;
+}
+
+#usp-section h3{
+    margin: 15px 0 10px;
+    font-weight: 700px;
+    font-size: 1.1rem;
+}
+
+#usp-section p{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0 0 10px;
+    font-size: 0.8rem;
+    line-height: 1rem;
 }
 
 #usp-section article{
     text-align: center;
-    padding-bottom: 65px;
+    padding-bottom: 55px;
 }
 
 /*
@@ -97,13 +131,11 @@ main img{
 }
 */
 .usp-img{
-    width: 50%;
-    max-width: 100px;
+    width:60px;
     background-color: #fff;
     border-radius: 50%;
-    border: solid 3px pink;
-    padding: 15px;
-    margin-top: -65px;
+    padding: 25px;
+    margin-top: -55px;
 }
 
 @media screen and (max-width:1000px) {
