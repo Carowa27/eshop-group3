@@ -39,7 +39,7 @@ export const renderProductCards = (products) => {
               25kr /st
             </p>
             <p class="product-cart">
-              <i class="fa-solid fa-cart-plus"></i>
+              <i class="fa-solid fa-cart-plus fa-icon-clickable"></i>
             </p>
             
           </div>

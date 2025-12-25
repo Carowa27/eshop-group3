@@ -67,6 +67,9 @@ p {
     -1px -1px 0 #000, 1px 0px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000,
     0px -1px 0 #000, 0px 0px 1px rgba(0, 0, 0, 0);
 }
+.fa-icon-clickable {
+  font-size: x-large;
+}
 /* .product-favorite {
   margin: 1rem;
   grid-column: 2/3;
@@ -120,6 +123,9 @@ p {
 @media screen and (min-width: 992px) {
   #product-grid-section {
     grid-template-columns: repeat(3, auto);
+  }
+  .fa-icon-clickable {
+    font-size: medium;
   }
 }
 @media screen and (min-width: 1200px) {
