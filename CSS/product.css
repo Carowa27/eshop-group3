@@ -173,6 +173,19 @@ details[open] summary i {
     display: inline-flex;
     margin: 1rem 1rem 0 0;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .quantity input {
     width: 40px;
     text-align: center;
@@ -211,8 +224,9 @@ details[open] summary i {
     animation: spin 1s linear infinite;
 }
 
-/* Success state */
+/* Success state is now also disabled */
 .add-to-cart.success {
+    pointer-events: none; /*Needed to add this to prevent bug when clicking button while in success-state */
     background-color: #5bb065;
 }
 
