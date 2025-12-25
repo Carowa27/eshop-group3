@@ -19,16 +19,16 @@ export const renderProductCards = (products) => {
            ${product.allergens
              .map((allergen) => {
                if (allergen === "Gluten") {
-                 return `<i class="fa-solid fa-wheat-awn" title="Innehåller gluten"></i>`;
+                 return `<i class="fa-solid fa-wheat-awn fa-icon-border" title="Innehåller gluten"></i>`;
                }
                if (allergen === "Mjölk") {
-                 return `<i class="fa-solid fa-cow" title="Innehåller mjölkprodukter"></i>`;
+                 return `<i class="fa-solid fa-cow fa-icon-border" title="Innehåller mjölkprodukter"></i>`;
                }
                if (allergen === "Ägg") {
-                 return `<i class="fa-solid fa-egg" title="Innehåller ägg"></i>`;
+                 return `<i class="fa-solid fa-egg fa-icon-border" title="Innehåller ägg"></i>`;
                }
                if (allergen === "Nötter") {
-                 return `<i class="fa-solid fa-circle" title="Innehåller nötter"></i>`;
+                 return `<i class="fa-solid fa-circle fa-icon-border" title="Innehåller nötter"></i>`;
                }
              })
              .join(" ")}
