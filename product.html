@@ -59,14 +59,22 @@
                     <div class="quantity">
                         <input id="quantity" type="number" min="1" value="1">
                     </div>
-                    <button class="add-to-cart">
-                        <i class="fa-solid fa-bag-shopping"></i> Lägg i varukorg
+                    <button class="add-to-cart" id="add-to-cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="btn-text">Lägg i varukorg</span>
                     </button>
                     <p id="discount-hint" hidden>
                         <em>Rabatten dras av i kassan.</em>
                     </p>
                 </div>
+            </div>
+            <!-- Höger sida vid större skärm -->
+            <figure class="product-image">
+                <img id="product-image" src="" alt="" loading="lazy">
+            </figure>
 
+            <!-- Under vänster och höger sida vid större skärm-->
+            <div class="ingredients-nutrition">    
                 <details class="ingredients">
                     <summary>Ingredienser<i class="fa-solid"></i></summary>
                     <p id="product-ingredients"></p>
@@ -78,12 +86,11 @@
                 </details>
             </div>
 
-            <!-- Höger sida vid större skärm -->
-            <figure class="product-image">
-                <img id="product-image" src="" alt="" loading="lazy">
-            </figure>
-
         </article>
+<section class="others-like">
+    <h2>Andra köpte också</h2>
+    <div class="others-list" id="others-list"></div>
+</section>
     </main>
 
 

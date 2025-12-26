@@ -16,11 +16,11 @@
     <main>
         <section id="order-information">
             <section id="delivery">
-                    <h2>Ange leveransuppgifter</h2>
+                <h2>Ange leveransuppgifter</h2>
                 <form>
                     <div class="one-column">
                         <label for="country">Land: </label>
-                        <select name="country" >
+                        <select name="country">
                             <option>Sverige</option>
                             <option>Norge</option>
                             <option>Danmark</option>
@@ -29,9 +29,9 @@
                     </div>
                     <div class="two-column">
                         <label for="first-name">Förnamn: </label>
-                        <input type="text" name="first-name" required id="first-name"/>
+                        <input type="text" name="first-name" required id="first-name" />
                         <label for="last-name">Efternamn: </label>
-                        <input type="text" name="last-name" required/>
+                        <input type="text" name="last-name" required />
                     </div>
                     <div class="one-column">
                         <label for="address">Adress: </label>
@@ -40,7 +40,7 @@
                     <div class="two-column">
                         <label for="postal-code">Postnummer: </label>
                         <input type="text" name="postal-code" required id="post-code" />
-                        <label for="city" >Stad: </label>
+                        <label for="city">Stad: </label>
                         <input type="text" name="city" required />
                     </div>
                     <div class="one-column">
@@ -72,7 +72,38 @@
             </section>
         </section>
         <section id="product-details">
-            <h2>Översikt</h2>
+            <section id="product-position">
+                <h2>Översikt</h2>
+                <section id="products">
+                    <article>
+                        <img src="/Images/prodimages/aftereight.jpg" class="product-img" />
+                        <div class="product-name">
+                            <p>Produktnamn</p>
+                        </div>
+                        <div class="product-cost">
+                            <p>100kr</p>
+                            <div class="amount"><button>-</button><input type="number" step="1" min="1"
+                                    value="1" /><button>+</button></div>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/Images/prodimages/aftereight.jpg" class="product-img" />
+                        <div class="product-name">
+                            <p>Produktnamn</p>
+                        </div>
+                        <div class="product-cost">
+                            <p>100kr</p>
+                            <div class="amount"><button>-</button><input type="number" step="1" min="1"
+                                    value="1" /><button>+</button></div>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="cost">
+                    <div>Summa: </div><br>
+                    <div>Total mängdrabatt: </div>
+                </section>
+            </section>
         </section>
     </main>
 
