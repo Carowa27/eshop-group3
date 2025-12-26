@@ -1,28 +1,28 @@
 body {
-    background-color: #f3e5dc;
+    background-color: var(--background-color);
+} 
+#foot-container {
+    position: static;
 }
-
-* {
-    box-sizing: border-box;
-}
-
 main {
-    max-width: 80%;
+    max-width: var(--max-width); 
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 43%;
     justify-content: center;
-    font-family: 'Domine', serif;
+    color: var(--font-color-secondary);
+    padding: var(--body-padding); 
 }
 
 h2 {
-    color: #f7559a;
-    margin-left: 10px;
+    color: var(--font-color-primary);
+    margin: 10px;
 }
 
-#product-details {
+#product-details, #billing,
+#delivery {
     margin: 10px;
-    border: 1px solid #f7559a;
+    border: 1px solid var(--secondary-color);
     border-radius: 4px;
 }
 
@@ -43,7 +43,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 10px 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--font-color-secondary);
     padding: 12px 0px;
     margin-bottom: 8px;
 }
@@ -66,7 +66,7 @@ h2 {
 
 .amount {
     display: flex;
-    border: 1px solid #ccc;
+    border: 1px solid var(--font-color-secondary);
     border-radius: 4px;
     width: fit-content;
     margin-left: auto;
@@ -77,7 +77,7 @@ h2 {
     width: 2em;
     height: 2em;
     border: none;
-    background-color: #fff;
+    background-color: #FFF;
     flex-grow: 0;
 }
 
@@ -94,7 +94,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
-    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 #cost {
@@ -110,9 +110,7 @@ input[type=number] {
 #billing,
 #delivery {
     display: grid;
-    border: 1px solid #f7559a;
-    border-radius: 4px;
-    margin: 10px;
+    padding-bottom: 10px;
 }
 
 .one-column,
@@ -138,9 +136,10 @@ input[type=number] {
 select {
     padding: 12px 0;
     margin: 8px 0;
-    border: 1px solid #ccc;
+    border: 1px solid var(--font-color-secondary);
     border-radius: 4px;
     overflow: hidden;
+    background-color: #fff;
 }
 
 select {
@@ -187,16 +186,12 @@ select {
     }
 
     h2 {
-        font-size: large;
-    }
+        font-size: 1.3em;
+    } 
 }
 
 @media only screen and (max-width: 400px) {
-    h2 {
-        font-size: medium;
-    }
-
     body {
-        font-size: small;
-    }
+        font-size: 0.9em;
+    } 
 }
