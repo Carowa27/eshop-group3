@@ -1,46 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
-.nav-toggle:checked ~ nav {
-  transform: scaleY(1);
+:root{
+    --primary-color: #e28383;
+    --secondary-color: #665253;
+    --accent-color-1: #5BB065;
+    --background-color: #F3E5DC;
+    --font-family: 'Domine', serif;
+    --font-color-primary: #574142;
+    --font-color-secondary: #746263;
+    --max-width: 1200px;
+    --body-padding: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-/*
-body:has(#nav-toggle:checked) .backdrop {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-
-body:has(#nav-toggle:checked) header {
-  border-radius: 6px 6px 0 0;
-  box-shadow: none;
-  transition: border-radius 0ms ease 0ms;
-}
-
-.nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span {
-  background: transparent;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span::before {
-  transform: rotate(45deg);
-  bottom: 0;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span::after {
-  transform: rotate(-45deg);
-  top: 0;
-}*/
 
 body{
     margin: 0;
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 1.6;
+
 }
-#nav-toggle {
-    display: none;
+h1,
+h2,
+h3{
+  margin: 0;
 }
+.current{
+  font-weight: 600;
+}
+
+
 #home-page{
     display: flex;
     text-decoration: none;
@@ -51,10 +50,11 @@ body{
     transition: transform 0.2s ease-in-out;
 }
 #logo-text {
-    font-family: 'Domine', serif;
-    color: #000000;
+    font-family: var(--font-family);
+    color: var(--accent-color);
     font-size: 0.9rem;
 }
+
 
 #head-container{
     display: flex;
@@ -62,9 +62,13 @@ body{
     align-items: center;
     margin: 1rem 4rem 0 2rem;
 }
+#head-container a{
+  color: #000000;
+  line-height: 1.2;
+}
 
 #nav-container{
-  font-family: 'Domine', serif;
+  font-family: var(--font-family);
   font-size: 1.1rem;
 }
 #nav-container ul{
