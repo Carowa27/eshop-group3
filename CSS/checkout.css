@@ -170,7 +170,9 @@ select {
     .two-column {
         grid-template-columns: 1fr;
     }
-
+    main {
+        padding: 0; 
+    }
     #product-details {
         order: -1;
     }
