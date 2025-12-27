@@ -43,7 +43,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 10px 20px;
-    border-bottom: 1px solid var(--font-color-secondary);
+    border-bottom: 1px solid var(--border-color);
     padding: 12px 0px;
     margin-bottom: 8px;
 }
@@ -66,7 +66,7 @@ h2 {
 
 .amount {
     display: flex;
-    border: 1px solid var(--font-color-secondary);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     width: fit-content;
     margin-left: auto;
@@ -77,7 +77,7 @@ h2 {
     width: 2em;
     height: 2em;
     border: none;
-    background-color: #FFF;
+    background-color: var(--input-field-color);
     flex-grow: 0;
 }
 
@@ -136,10 +136,10 @@ input[type=number] {
 select {
     padding: 12px 0;
     margin: 8px 0;
-    border: 1px solid var(--font-color-secondary);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: var(--input-field-color);
 }
 
 select {
