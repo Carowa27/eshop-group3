@@ -24,7 +24,6 @@ img {
   display: block;
 }
 
-
 body{
     margin: 0;
     font-family: var(--font-family);
@@ -99,7 +98,7 @@ h3{
 }
 
 #foot-container{
-    font-family: 'Domine', serif;
+    font-family: var(--font-family);
     width: 100%;
 
     position: fixed;
@@ -115,7 +114,7 @@ h3{
     display: flex;
     justify-content: center;
     gap: 10rem;
-    padding: 5rem 5rem 4rem 5rem;
+    padding: 4rem 4rem 3rem 4rem;
 }
 #media-wrapper a{
     display: flex;
@@ -126,12 +125,13 @@ h3{
 }
 #media-wrapper a:hover{
     transform: scale(1.1);
-    color: black;
+    color: var(--font-color-primary);
 }
 #media-wrapper i{
     font-size: 1.4rem;
-    color: #000000;
+    color: white;
 }
+
 #foot-container p{
     text-align: center;
     font-size: 0.8rem;
@@ -143,7 +143,7 @@ h3{
 
 
   /* Responsive Design */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
 
     #head-container{
       margin: 1rem 2rem 0 2rem;
@@ -154,12 +154,15 @@ h3{
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     #head-container{
       flex-direction: column;
       margin: 1rem 2rem 0 2rem;
     }
 
+    #foot-container{
+        position: static;
+    }
     #media-wrapper{
         flex-direction: column;
         align-items: center;
@@ -168,16 +171,4 @@ h3{
     }
     
 }
-
-
-
-
-
-
-
-/*
-@media screen and (min-width: 1300px) {}
-  
-.nav-toggle-label {
-  display: none;
-}*/
+    
