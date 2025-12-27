@@ -46,7 +46,6 @@ export const renderProductCards = (products) => {
               25kr /st
             </p>
             <p class="product-cart" onclick="saveToLSCart('${i}')">
-<!--console.log('${product}')-->
               <i class="cart-icon fa-solid fa-cart-plus fa-icon-clickable"></i>
             </p>
           </div>
