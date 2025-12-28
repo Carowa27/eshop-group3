@@ -42,7 +42,7 @@ export const productFilterHTML = (products) => {
         )
         .join("")}  
         </div>
-        
+        <hr/>
         <h5 class="filter-type-heading">Smak kategori</h5>
       <div class="filter-wrapper">
         ${categoryArray
