@@ -29,6 +29,14 @@ p {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+#filter-head-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+#filter-mobile-caret {
+  visibility: 1;
+}
 .filter-radio-btn {
   display: flex;
   flex-direction: row;
