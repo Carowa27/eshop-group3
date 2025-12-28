@@ -27,6 +27,35 @@ export const productFilterHTML = (products) => {
   console.log("arrays", allergenArray, categoryArray);
 
   //create html for filter
+  parent.innerHTML = `
+    <h4 id="filter-heading">Filter</h4>
+    <div class="filter-radio-section no-top-margin">
+      <h5 class="filter-type-heading">Allergen</h5>
+      <div class="filter-wrapper">
+      ${allergenArray
+        .map(
+          (a) => `
+        <label for="${a}" class="filter-radio-btn">
+        <input type="radio" id="${a}" name="taste" value="${a}">
+          ${a}
+      </label>`
+        )
+        .join("")}  
+        </div>
+        
+        <h5 class="filter-type-heading">Smak kategori</h5>
+      <div class="filter-wrapper">
+        ${categoryArray
+          .map(
+            (cat) => `
+        <label for="${cat}" class="filter-radio-btn">
+        <input type="radio" id="${cat}" name="category" value="${cat}">
+          ${cat}
+      </label>`
+          )
+          .join("")}
+      </div>
+    </div>`;
 };
 productFilterHTML(products);
 export const filterFn = (filterAttr) => {
