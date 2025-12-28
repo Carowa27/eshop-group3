@@ -36,14 +36,14 @@ export const productFilterHTML = (products) => {
         .map(
           (a) => `
         <label for="${a}" class="filter-radio-btn">
-        <input type="radio" id="${a}" name="taste" value="${a}">
+          <input type="radio" id="${a}" name="taste" value="${a}">
           ${a}
-      </label>`
+        </label>`
         )
         .join("")}  
-        </div>
-        <hr/>
-        <h5 class="filter-type-heading">Smak kategori</h5>
+      </div>
+      <hr/>
+      <h5 class="filter-type-heading">Smak kategori</h5>
       <div class="filter-wrapper">
         ${categoryArray
           .map(
@@ -51,7 +51,7 @@ export const productFilterHTML = (products) => {
         <label for="${cat}" class="filter-radio-btn">
         <input type="radio" id="${cat}" name="category" value="${cat}">
           ${cat}
-      </label>`
+        </label>`
           )
           .join("")}
       </div>
