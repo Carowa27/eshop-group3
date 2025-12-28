@@ -26,7 +26,6 @@ export const productFilterHTML = (products) => {
   });
   console.log("arrays", allergenArray, categoryArray);
 
-  //create html for filter
   parent.innerHTML = `<div id="filter-head-wrapper">
     <h4 id="filter-heading">Filter</h4><div id="filter-mobile-caret"><i class="fa-solid fa-caret-down"></i></div></div>
     <div class="filter-radio-section no-top-margin">
