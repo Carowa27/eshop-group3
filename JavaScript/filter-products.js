@@ -35,7 +35,7 @@ export const productFilterHTML = (products) => {
       ${allergenArray
         .map(
           (a) => `
-        <label for="${a}" class="filter-radio-btn">
+        <label for="${a}" id="radio-btn-${a.toLowerCase()}" class="filter-radio-btn">
           <input type="radio" id="${a}" name="taste" value="${a}">
           ${a}
         </label>`
@@ -48,7 +48,7 @@ export const productFilterHTML = (products) => {
         ${categoryArray
           .map(
             (cat) => `
-        <label for="${cat}" class="filter-radio-btn">
+        <label for="${cat}" id="radio-btn-${cat.toLowerCase()}" class="filter-radio-btn">
         <input type="radio" id="${cat}" name="category" value="${cat}">
           ${cat}
         </label>`
