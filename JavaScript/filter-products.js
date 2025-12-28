@@ -22,8 +22,13 @@ export const productFilterHTML = (products) => {
     }
   });
 
-  parent.innerHTML = `<div id="filter-head-wrapper">
-    <h4 id="filter-heading">Filter</h4><div id="filter-mobile-caret"><i class="fa-solid fa-caret-down"></i></div></div>
+  parent.innerHTML = `
+    <div id="filter-head-wrapper">
+      <h4 id="filter-heading">Filter</h4>
+      <div id="filter-mobile-caret">
+        <i class="fa-solid fa-caret-down"></i>
+      </div>
+    </div>
     <div class="filter-radio-section no-top-margin">
       <h5 class="filter-type-heading">Allergen</h5>
       <div class="filter-wrapper">
