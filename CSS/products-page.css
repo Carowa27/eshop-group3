@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: var(--body-padding);
   background-color: var(--background-color);
 }
 
@@ -9,7 +8,8 @@ p {
 }
 
 #products-page {
-  margin: 0 0.5rem;
+  padding: var(--body-padding);
+
   display: grid;
   grid-template-columns: 1fr;
 }
