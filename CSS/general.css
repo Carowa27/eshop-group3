@@ -23,7 +23,6 @@ img {
   height: auto;
   display: block;
 }
-
 body{
     margin: 0;
     font-family: var(--font-family);
@@ -62,40 +61,43 @@ h3{
     justify-content: space-between;
     align-items: center;
     margin: 1rem 4rem 0 2rem;
+    padding: 1.5rem 2rem 0 2rem;
 }
 #head-container a{
   color: #000000;
   line-height: 1.2;
 }
 
-#nav-container{
+#nav-wrapper{
   font-family: var(--font-family);
   font-size: 1.1rem;
 }
-#nav-container ul{
+#nav-wrapper ul{
   display: flex;
   gap: 4rem;
   margin: 0;
   padding: 0;
 }
-#nav-container li{
+#nav-wrapper li{
   list-style: none;
   transition: transform 0.2s ease-in-out;
 }
-#nav-container li:hover{
+#nav-wrapper li:hover{
   transform: scale(1.1);
 }
-#nav-container a,
-#nav-container i{
+#nav-wrapper a,
+#nav-wrapper i{
+  font-size: 1.2rem;
   text-decoration: none;
   color: #000000;
   transition: transform 0.2s ease-in-out;
 }
-#nav-container a:hover,
-#nav-container i:hover{
-  color: #e28383;
+#nav-wrapper a:hover,
+#nav-wrapper i:hover{
+  color: var(--primary-color);
   transform: scale(1.2);
 }
+
 
 #foot-container{
     font-family: var(--font-family);
@@ -107,7 +109,7 @@ h3{
 #media-wrapper,
 #media-wrapper a,
 #foot-container p{
-  background-color: #e28383;
+  background-color: var(--primary-color);
   color: white;
 }
 #media-wrapper{
@@ -147,9 +149,10 @@ h3{
 
     #head-container{
       margin: 1rem 2rem 0 2rem;
+      gap: 2rem;
     }
     
-    #nav-container ul{
+    #nav-wrapper ul{
         gap: 2rem;
     }
 }
@@ -157,7 +160,8 @@ h3{
 @media screen and (max-width: 700px) {
     #head-container{
       flex-direction: column;
-      margin: 1rem 2rem 0 2rem;
+      margin-top: 1rem;
+      gap: 2rem;
     }
 
     #foot-container{
