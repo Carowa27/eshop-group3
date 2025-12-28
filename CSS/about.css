@@ -7,6 +7,8 @@ footer, header{
 }
 /*DELETE*/
 
+/* Page */
+
 body{
     background-color: var(--background-color);
     color: var(--font-color-primary);
@@ -14,12 +16,15 @@ body{
 
 h1{
     text-align: center;
-    padding-top: 55px;
+    padding:55px 0 20px;
 }
 
-main .story-img{
-    max-width: 75%;
-    min-width: 150px;
+h2{
+    padding-bottom: 10px;
+}
+
+p{
+    margin:0;
 }
 
 .pop{
@@ -27,38 +32,49 @@ main .story-img{
     color: var(--accent-color-1);
 }
 
+
+/* Our story section */
+
 #our-story{
     max-width: var(--max-width);
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: var(--body-padding);
+    grid-template-columns: repeat(4,1fr);
+    padding: 0 var(--body-padding) 55px;
+    gap:50px;
     align-items: center;
     grid-template-areas: 
-    "block-1 block-1 block-2"
-    "block-3 block-4 block-4"
+    "block-1 block-1 block-1 block-2"
+    "block-3 block-3 block-4 block-4"
     ;
 }
 
 #block-1{
     grid-area: block-1;
-    padding-right: 20px;
 }
 
 #block-2{
     grid-area: block-2;
-    text-align: center;
 }
 
 #block-3{
     grid-area: block-3;
-    text-align: center;
 }
 
 #block-4{
     grid-area: block-4;
-    padding-left: 20px;
 }
+
+#our-story .story-img{
+    width:100%;
+    min-width: 150px;
+}
+
+#block-2 .story-img{
+    border-radius: 50%;
+}
+
+/* USP section */
 
 #usp-section{
     background-color: var(--secondary-color);
@@ -75,7 +91,10 @@ main .story-img{
     margin: auto;
 }
 
-
+#usp-section article{
+    text-align: center;
+    padding-bottom: 55px;
+}
 
 #usp-section h3{
     margin: 15px 0 10px;
@@ -88,11 +107,6 @@ main .story-img{
     font-size: 0.8rem;
 }
 
-#usp-section article{
-    text-align: center;
-    padding-bottom: 55px;
-}
-
 .usp-img{
     width:110px;
     background-color: var(--primary-color);
@@ -100,6 +114,9 @@ main .story-img{
     padding: 25px;
     margin: -75px auto 0;
 }
+
+
+/* Locations section */
 
 #locations-section{
     max-width: var(--max-width);
@@ -109,6 +126,14 @@ main .story-img{
     padding:45px var(--body-padding);
     gap: 20px;
     align-items: center;
+    grid-template-areas: 
+    "locations map"
+    ;
+}
+
+#locations h2{
+    width: 100%;
+    text-align: center;
 }
 
 #locations{
@@ -118,11 +143,12 @@ main .story-img{
     margin:auto;
     justify-content: center;
     padding-right: var(--body-padding);
+    grid-area: locations;
 }
 
 #locations a{
     background-color: var(--font-color-primary);
-    background-image: url(/Images/pin.png);
+    background-image: url(https://carowa27.github.io/eshop-group3/Images/pin.png);
     background-repeat: no-repeat;
     background-size:contain;
     padding: 10px 17px 8px 40px;
@@ -132,12 +158,7 @@ main .story-img{
     border-radius: 15px;
 }
 
-#locations h2{
-    width: 100%;
-    text-align: center;
-}
-
-#locations a:hover{
+#locations a:hover, #locations a:active{
     color: #fff;
     background-color: var(--secondary-color);
 }
@@ -146,6 +167,7 @@ main .story-img{
     position: relative;
     max-width:300px;
     text-align: center;
+    grid-area: map;
 }
 
 #map img{
@@ -170,9 +192,17 @@ iframe {
   opacity: 0;
 }
 
-
 @media screen and (max-width:1000px) {
-    
+
+    #our-story{
+        grid-template-columns: repeat(6,1fr);
+        gap:20px;
+        grid-template-areas: 
+        "block-1 block-1 block-1 block-1 block-2 block-2"
+        "block-3 block-3 block-3 block-4 block-4 block-4"
+        ;
+    }
+
     #usp-section div{
         display: grid;
         grid-template-columns:repeat(2,1fr);
@@ -184,6 +214,19 @@ iframe {
 
 @media screen and (max-width:768px) {
     
+    #our-story{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+        "block-1 block-1 block-2"
+        "block-3 block-3 block-3"
+        "block-4 block-4 block-4"
+        ;
+    }
+
+    #block-3 .story-img {
+        margin-top:30px;
+    }
+
     #usp-section div{
         display: grid;
         grid-template-columns:repeat(1,1fr);
@@ -193,10 +236,10 @@ iframe {
 
     #locations-section{
         grid-template-columns: 1fr;
-    }
-
-    #locations-section{
-        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "map"
+        "locations"
+        ;
     }
 
     #map {
