@@ -37,7 +37,6 @@ export const subtractToLSCart = (subItemIndex) => {
   const LSCart = getLSCart();
   const newArray = LSCart && LSCart.length > 0 ? LSCart : [];
   const updateLSCart = () => {
-    // if amount == 0 remove item
     const existsInArray = LSCart.some(
       (prod) => prod.product.name == subItem.name
     );
