@@ -29,14 +29,14 @@ export const productFilterHTML = (products) => {
         <i class="fa-solid fa-caret-down"></i>
       </div>
     </div>
-    <div class="filter-radio-section no-top-margin">
+    <div class="filter-box-section no-top-margin">
       <h5 class="filter-type-heading">Allergen</h5>
       <div class="filter-wrapper">
       ${allergenArray
         .map(
           (a) => `
-        <label for="${a}" id="radio-btn-${a.toLowerCase()}" class="filter-radio-btn">
-          <input type="radio" id="${a}" name="taste" value="${a}">
+        <label for="${a}" id="box-btn-${a.toLowerCase()}" class="filter-box-btn">
+          <input type="checkbox" id="${a}" name="allergen" value="${a}">
           ${a}
         </label>`
         )
@@ -48,8 +48,8 @@ export const productFilterHTML = (products) => {
         ${categoryArray
           .map(
             (cat) => `
-        <label for="${cat}" id="radio-btn-${cat.toLowerCase()}" class="filter-radio-btn">
-        <input type="radio" id="${cat}" name="category" value="${cat}">
+        <label for="${cat}" id="box-btn-${cat.toLowerCase()}" class="filter-box-btn">
+        <input type="checkbox" id="${cat}" name="category" value="${cat}">
           ${cat}
         </label>`
           )

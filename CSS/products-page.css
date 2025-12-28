@@ -38,11 +38,11 @@ p {
 #filter-mobile-caret {
   visibility: 1;
 }
-.filter-radio-btn {
+.filter-box-btn {
   display: flex;
   flex-direction: row;
 }
-input[type="radio"] {
+input[type="checkbox"] {
   margin: 0 5px 3px 3px;
 }
 #product-grid-section {
@@ -172,7 +172,7 @@ input[type="radio"] {
   .filter-type-heading {
     margin: 0.4rem 0 0.3rem 0;
   }
-  .filter-radio-section {
+  .filter-box-section {
     margin: 1rem 0 0 0.3rem;
     display: flex;
     flex-direction: column;
