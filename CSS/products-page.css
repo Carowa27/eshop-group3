@@ -21,6 +21,21 @@ p {
   margin: 0 0.2rem 0 0;
   display: inline;
 }
+.filter-type-heading {
+  margin: 0.6rem 0 0.3rem 0;
+}
+.filter-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.filter-radio-btn {
+  display: flex;
+  flex-direction: row;
+}
+input[type="radio"] {
+  margin: 0 5px 3px 3px;
+}
 #product-grid-section {
   display: grid;
   grid-template-columns: 1fr;
