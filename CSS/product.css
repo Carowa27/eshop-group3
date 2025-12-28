@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
 
 :root {
-    --border-1: 1px solid var(--font-color-secondary);
-    --border-2: 1px dashed var(--font-color-secondary);
+    --border-1: 1px solid var(--border-color);
+    --border-2: 1px dashed var(--border-color);
 }
 
 * {
@@ -129,7 +129,7 @@ details[open] summary i {
 }
 #allergen-label p {
     background-color: var(--font-color-primary);
-    color: var(--background-color);
+    color: var(--input-field-color);
     padding: 0.3rem 0.8rem;
     font-size: 0.8rem;
     border-radius: 60px;
@@ -203,7 +203,7 @@ details[open] summary i {
     width: 80px;
     text-align: center;
     border: 1px solid var(--primary-color);
-    background-color: #fdf4ee;
+    background-color: var(--input-field-color);
     color: var(--font-color-primary);
     font-size: 1rem;
     padding: 1rem 1.5rem;
@@ -212,7 +212,7 @@ details[open] summary i {
 
 .add-to-cart {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--input-field-color);
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 60px;
@@ -303,7 +303,7 @@ details[open] summary i {
 }
 
 .others-list::-webkit-scrollbar-track {
-    background: #fdf4ee;
+    background: var(--input-field-color);
     border-radius: 10px;
 }
 
@@ -313,7 +313,7 @@ details[open] summary i {
 }
 
 .others-list {
-    scrollbar-color: var(--primary-color) #fdf4ee;
+    scrollbar-color: var(--primary-color) var(--input-field-color);
     scrollbar-width: thin;
 }
 
