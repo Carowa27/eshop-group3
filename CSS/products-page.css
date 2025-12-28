@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  padding: var(--body-padding);
+  background-color: var(--background-color);
 }
 
 p {
@@ -78,7 +80,7 @@ p {
 } */
 .card-info-section {
   padding: 0.5rem 1rem;
-  background: rgba(243, 229, 220, 0.8); /* change color later!!*/
+  background: rgba(var(--background-color-rgb), 0.8);
 
   grid-column: 1/ -1;
   grid-row: 7/-1;
@@ -130,7 +132,7 @@ p {
 }
 @media screen and (min-width: 1200px) {
   #products-page {
-    /* max-width: 1366px; */
+    max-width: var(--max-width);
     grid-template-columns: 2fr 10fr;
   }
   #filter-section {
@@ -172,11 +174,11 @@ p {
     margin: 0.6rem;
   }
 }
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   #product-grid-section {
     grid-column: 2/3;
     grid-row: 2/3;
 
     grid-template-columns: repeat(5, auto);
-  }
-}
+  } 
+}*/

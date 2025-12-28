@@ -3,6 +3,7 @@ const products = {
     "blueberry-blackberry": {
         name: "Blåbär & Björnbär",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Bär",
         description: `
             Blåbärs- och björnbärsmuffins med saftiga, solmogna bär som ger en fyllig och naturligt fruktig smak. Muffinsen har en mjuk och luftig konsistens där blåbärens sötma möter björnbärens lätt syrliga ton. Toppad med len färskostfrosting passar den perfekt till fika, kaffepaus eller som en liten dessert.
         `,
@@ -36,6 +37,7 @@ const products = {
     "raspberry": {
         name: "Hallon",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Bär",
         description: `
             Saftig hallonmuffins med generösa mängder solmogna hallon som ger en frisk och balanserad syrlighet. Muffinsen har en mjuk konsistens som lyfter bärens naturliga arom och skapar en behaglig sötma. Toppad med krämig färskostfrosting är detta en uppskattad favorit som passar lika bra till vardagsfika som till festligare tillfällen.
         `,
@@ -68,6 +70,7 @@ const products = {
     "rhubarb-vanilla": {
         name: "Rabarber & Vanilj",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Frukt",
         description: `
             Muffins med syrlig rabarber och len vanilj som tillsammans skapar en välbalanserad smakupplevelse. Den mjuka och saftiga konsistensen ger en tydlig hembakad känsla där rabarberns friskhet möter vaniljens rundhet. Toppad med färskostfrosting är detta en somrig muffins som passar utmärkt till kaffe och fika.
         `,
@@ -100,6 +103,7 @@ const products = {
     "coffee-cream": {
         name: "Mocka",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Kaffe",
         description: `
             Smakrik mockamuffins med tydlig kaffearom och mjuk, saftig konsistens. Den fylliga smaken ger en rund och balanserad helhet som tilltalar kaffeälskare. Kaffets djupa toner möter en behaglig sötma och toppas med len färskostfrosting, vilket gör muffinsen perfekt till kaffepausen eller som ett lyxigare fikaval.
         `,
@@ -132,6 +136,7 @@ const products = {
     "lemoncurd": {
         name: "Lemoncurd",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Citrus",
         description: `
             Frisk citronmuffins med len lemoncurd som ger en balanserad kombination av sötma och syra. Den mjuka konsistensen lyfter citronsmaken utan att bli för skarp och skapar en lätt och uppfriskande helhet. Toppad med krämig färskostfrosting är detta ett perfekt val för dig som uppskattar fräscha och pigga smaker.
         `,
@@ -164,6 +169,7 @@ const products = {
     "brown-butter-tonka": {
         name: "Brynt smör & Tonkaböna",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Aromatisk",
         description: `
             Elegant muffins med djup, nötig smak av brynt smör och en subtil arom av tonkaböna. Den saftiga konsistensen ger en fyllig och rund smakupplevelse med lätt kryddig karaktär. Toppad med len färskostfrosting är detta ett sofistikerat val för dig som uppskattar mer komplexa och vuxna smaker.
         `,
@@ -197,8 +203,9 @@ const products = {
     "chocolate": {
         name: "Choklad",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Choklad",
         description: `
-            Fyllig chokladmuffins med rik kakaosmak och saftig konsistens som ger en djup och rund smakupplevelse. Den balanserade sötman lyfter chokladens karaktär och gör muffinsen till en tidlös klassiker. Toppad med krämig färskostfrosting passar den perfekt till fika, dessert eller när suget efter choklad gör sig påmint.
+            Fyllig Chokladmuffins med rik kakaosmak och saftig konsistens som ger en djup och rund smakupplevelse. Den balanserade sötman lyfter Chokladens karaktär och gör muffinsen till en tidlös klassiker. Toppad med krämig färskostfrosting passar den perfekt till fika, dessert eller när suget efter Choklad gör sig påmint.
         `,
         image: {
             src: "Images/prodimages/chocolate.jpg",
@@ -207,7 +214,7 @@ const products = {
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
-            kakao, chokladbitar, rapsolja, bakpulver, salt.
+            kakao, Chokladbitar, rapsolja, bakpulver, salt.
             <br><br>
             Frosting:
             <span class="allergen">färskost</span>,
@@ -229,6 +236,7 @@ const products = {
     "apple-cinnamon": {
         name: "Äpple & Kanel",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Frukt",
         description: `
             Klassisk muffins med saftiga äppelbitar och varm kanel som ger en välbekant och hemtrevlig smak. Den mjuka konsistensen och milda kryddigheten skapar en balanserad helhet som passar året runt. Toppad med len färskostfrosting är detta en omtyckt muffins som känns lika rätt till höstfika som till vardag.
         `,
@@ -261,6 +269,7 @@ const products = {
     "lingonberry": {
         name: "Lingon",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Bär",
         description: `
             Muffins med syrliga lingon som ger en frisk kontrast till den söta och mjuka kakan. Inspirerad av nordiska smaker kombinerar denna muffins tradition med modern fikaglädje. Den lena färskostfrostingen rundar av smaken och skapar en balanserad helhet som passar perfekt till kaffe och lugna fikastunder.
         `,
@@ -293,6 +302,7 @@ const products = {
     "after-eight": {
         name: "After Eight",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Choklad",
         description: `
             Chokladmuffins med frisk mintsmak som ger en tydlig kontrast mellan fyllig kakao och sval mynta. Den saftiga konsistensen gör smaken rund och balanserad. Toppad med len färskostfrosting är detta en uppfriskande muffins som passar perfekt för dig som uppskattar klassiska smakkombinationer med en fräsch twist.
         `,
@@ -303,7 +313,7 @@ const products = {
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
-            kakao, mint, choklad, rapsolja, bakpulver, salt.
+            kakao, mint, Choklad, rapsolja, bakpulver, salt.
             <br><br>
             Frosting:
             <span class="allergen">färskost</span>,
@@ -325,6 +335,7 @@ const products = {
     "strawberry-shortcake": {
         name: "Strawberry Shortcake",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Bär",
         description: `
             Ljus och fluffig muffins med smak av jordgubb och vanilj, inspirerad av den klassiska desserten strawberry shortcake. Den saftiga konsistensen ger en mild och balanserad sötma där bären står i centrum. Toppad med krämig färskostfrosting är detta en lätt och somrig muffins som passar perfekt till fika.
         `,
@@ -357,6 +368,7 @@ const products = {
     "salted-caramel": {
         name: "Salt karamell",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Kola",
         description: `
             Fyllig muffins med krämig karamell och en balanserad sälta som ger en rund och djup smakupplevelse. Den saftiga konsistensen lyfter karamellens sötma och skapar en harmonisk helhet. Toppad med len färskostfrosting är detta en populär muffins för dig som uppskattar kontrasten mellan sött och salt.
         `,
@@ -389,6 +401,7 @@ const products = {
     "matcha-green-tea": {
         name: "Matcha grönt te",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Aromatisk",
         description: `
             Mild och aromatisk muffins med matcha som ger en subtil grön te-smak och elegant färg. Den saftiga konsistensen låter matchans karaktär komma fram på ett balanserat sätt utan bitterhet. Toppad med krämig färskostfrosting är detta ett lätt och harmoniskt val för dig som uppskattar nyanserade smaker.
         `,
@@ -421,6 +434,7 @@ const products = {
     "pistachio": {
         name: "Pistage",
         allergens: ["Gluten", "Mjölk", "Ägg", "Nötter"],
+        category: "Aromatisk",
         description: `
             Nötig och mjuk muffins med tydlig smak av pistage som ger en elegant och lätt söt karaktär. Den saftiga konsistensen lyfter nötens naturliga arom och skapar en balanserad helhet. Toppad med len färskostfrosting är detta en lyxig muffins som passar perfekt till en finare fikastund.
         `,
@@ -454,6 +468,7 @@ const products = {
     "carrot-cake": {
         name: "Morotskaka",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Frukt",
         description: `
             Kryddig och saftig morotsmuffins inspirerad av klassisk morotskaka. Smaken av morot och milda kryddor ger en fyllig och varm karaktär. Den mjuka konsistensen kombineras med len färskostfrosting som rundar av smaken och gör muffinsen till en omtyckt favorit vid fikabordet.
         `,
@@ -484,19 +499,20 @@ const products = {
     },
 
     "white-chocolate": {
-        name: "Vit choklad",
+        name: "Vit Choklad",
         allergens: ["Gluten", "Mjölk", "Ägg"],
+        category: "Choklad",
         description: `
-            Söt och krämig muffins med bitar av vit choklad som ger en mjuk och len smakupplevelse. Den saftiga konsistensen balanserar chokladens sötma och skapar en rund helhet. Toppad med krämig färskostfrosting är detta en populär muffins för dig som uppskattar milda, mjuka och dessertlika smaker.
+            Söt och krämig muffins med bitar av vit Choklad som ger en mjuk och len smakupplevelse. Den saftiga konsistensen balanserar Chokladens sötma och skapar en rund helhet. Toppad med krämig färskostfrosting är detta en populär muffins för dig som uppskattar milda, mjuka och dessertlika smaker.
         `,
         image: {
             src: "Images/prodimages/whitechocolate.jpg",
-            alt: "Muffins med vit choklad"
+            alt: "Muffins med vit Choklad"
         },
         ingredients: `
             <span class="allergen">Vetemjöl</span>, socker,
             <span class="allergen">ägg</span>, <span class="allergen">mjölk</span>,
-            <span class="allergen">vit choklad</span>,
+            <span class="allergen">vit Choklad</span>,
             rapsolja, bakpulver, salt.
             <br><br>
             Frosting:
@@ -516,45 +532,50 @@ const products = {
         ]
     },
 
-"pear-vanilla-gf-df": {
-    name: "Päron & Vanilj (gluten- och mjölkfri)",
-    allergens: ["Ägg"],
-    description: `
-        Saftig päronmuffins med mild vanilj som ger en mjuk och fruktig smakupplevelse. Päronets naturliga sötma och lätt blommiga ton möter vaniljens rundhet i en luftig, bakad kaka. Toppad med mjölkfri, krämig frosting blir detta ett fräscht och lätt fikaval som passar perfekt till kaffe eller te.
-    `,
-    image: {
-        src: "Images/prodimages/pearvanilla.jpg",
-        alt: "Gluten- och mjölkfri päron- och vaniljmuffins"
-    },
-    ingredients: `
-        Glutenfri mjölmix (ris-/majsmjöl), socker,
-        <span class="allergen">ägg</span>, päron (20%),
-        rapsolja, bakpulver, vanilj, salt.
-        <br><br>
-        Frosting:
-        mjölkfritt margarin, florsocker, vanilj.
-    `,
-    nutrition: [
-        { label: "Energi", value: "330 kcal" },
-        { label: "Fett", value: "14 g" },
-        { label: "- varav mättat fett", value: "3.5 g" },
-        { label: "Kolhydrater", value: "47 g" },
-        { label: "- varav sockerarter", value: "22 g" },
-        { label: "Fiber", value: "2 g" },
-        { label: "Protein", value: "5.5 g" },
-        { label: "Salt", value: "0.45 g" }
-    ]
+
+    /* Gluten- & mjölkfria */
+
+    "pear-vanilla-gf-df": {
+        name: "Päron & Vanilj (gluten- och mjölkfri)",
+        allergens: ["Ägg"],
+        category: "Frukt",
+        description: `
+            Saftig päronmuffins med mild vanilj som ger en mjuk och fruktig smakupplevelse. Päronets naturliga sötma och lätt blommiga ton möter vaniljens rundhet i en luftig, bakad kaka. Toppad med mjölkfri, krämig frosting blir detta ett fräscht och lätt fikaval som passar perfekt till kaffe eller te.
+        `,
+        image: {
+            src: "Images/prodimages/pearvanilla.jpg",
+            alt: "Gluten- och mjölkfri päron- och vaniljmuffins"
+        },
+        ingredients: `
+            Glutenfri mjölmix (ris-/majsmjöl), socker,
+            <span class="allergen">ägg</span>, päron (20%),
+            rapsolja, bakpulver, vanilj, salt.
+            <br><br>
+            Frosting:
+            mjölkfritt margarin, florsocker, vanilj.
+        `,
+        nutrition: [
+            { label: "Energi", value: "330 kcal" },
+            { label: "Fett", value: "14 g" },
+            { label: "- varav mättat fett", value: "3.5 g" },
+            { label: "Kolhydrater", value: "47 g" },
+            { label: "- varav sockerarter", value: "22 g" },
+            { label: "Fiber", value: "2 g" },
+            { label: "Protein", value: "5.5 g" },
+            { label: "Salt", value: "0.45 g" }
+        ]
     },
 
     "chocolate-gf-df": {
         name: "Choklad (gluten- och mjölkfri)",
         allergens: ["Ägg"],
+        category: "Choklad",
         description: `
-            Fyllig chokladmuffins med tydlig kakaosmak och mjuk, saftig konsistens, helt utan gluten och mjölk. Den mörka chokladtonen balanseras av en behaglig sötma som gör muffinsen till en klassisk favorit även i mjölkfri version. Toppad med krämig, mjölkfri frosting passar den perfekt som fika eller liten dessert.
+            Fyllig Chokladmuffins med tydlig Chokladsmak och mjuk, saftig konsistens, helt utan gluten och mjölk. Den mörka Chokladtonen balanseras av en behaglig sötma som gör muffinsen till en klassisk favorit även i mjölkfri version. Toppad med krämig, mjölkfri frosting passar den perfekt som fika eller liten dessert.
         `,
         image: {
             src: "Images/prodimages/chocolategfdf.jpg",
-            alt: "Gluten- och mjölkfri chokladmuffins"
+            alt: "Gluten- och mjölkfri Chokladmuffins"
         },
         ingredients: `
             Glutenfri mjölmix (ris-/majsmjöl), socker,
@@ -579,6 +600,7 @@ const products = {
     "lemon-gf-df": {
         name: "Citron (gluten- och mjölkfri)",
         allergens: ["Ägg"],
+        category: "Citrus",
         description: `
             Frisk citronmuffins med tydlig citrussmak och mjuk, luftig konsistens, bakad utan gluten och mjölk. Den pigga syran ger en lätt och uppfriskande karaktär som balanseras av en mild sötma. Toppad med krämig, mjölkfri frosting blir detta ett fräscht fikaval som passar perfekt när du vill ha något ljust och friskt.
         `,
@@ -609,6 +631,7 @@ const products = {
     "blueberry-gf-df": {
         name: "Blåbär (gluten- och mjölkfri)",
         allergens: ["Ägg"],
+        category: "Bär",
         description: `
             Saftig blåbärsmuffins med solmogna blåbär som ger en naturligt fruktig och mild smak, bakad utan gluten och mjölk. Den mjuka konsistensen gör muffinsen lätt och uppskattad, med bär som ger friskhet i varje tugga. Toppad med krämig, mjölkfri frosting blir detta ett tryggt och gott fikaval för många.
         `,
