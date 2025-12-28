@@ -134,6 +134,7 @@ p {
   #products-page {
     max-width: var(--max-width);
     grid-template-columns: 2fr 10fr;
+    justify-self: center;
   }
   #filter-section {
     grid-column: 1/2;
