@@ -13,14 +13,21 @@
   --max-width: 1200px;
   --body-padding: 20px;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -32,14 +39,21 @@ body {
   font-family: var(--font-family);
   font-size: 16px;
   line-height: 1.6;
+
 }
 h1,
 h2,
 h3 {
   margin: 0;
 }
+
 .current {
   font-weight: 600;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: var(--input-field-color);
 }
 
 #home-page {
@@ -139,6 +153,13 @@ h3 {
   margin-top: auto;
   margin-bottom: 0;
 }
+
+/* Need to adjust this to match mobile first layout
+
+@media (min-width: 768px)
+@media (min-width: 1024px)
+
+*/
 
 /* Responsive Design */
 @media screen and (max-width: 900px) {
