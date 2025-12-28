@@ -6,12 +6,10 @@ export const productFilterHTML = (products) => {
   let categoryArray = [];
 
   productArray.map((prod) => {
-    console.log(prod.name);
     prod.allergens.map((a) => {
       const allergenAlreadyInArray = allergenArray.some(
         (allergen) => allergen === a
       );
-      console.log("allergenAlreadyInArray", allergenAlreadyInArray);
       if (allergenAlreadyInArray === false) {
         allergenArray.push(a);
       }
@@ -19,12 +17,10 @@ export const productFilterHTML = (products) => {
     const categoryAlreadyInArray = categoryArray.some(
       (category) => category === prod.category
     );
-    console.log("categoryAlreadyInArray", categoryAlreadyInArray);
     if (categoryAlreadyInArray === false) {
       categoryArray.push(prod.category);
     }
   });
-  console.log("arrays", allergenArray, categoryArray);
 
   parent.innerHTML = `<div id="filter-head-wrapper">
     <h4 id="filter-heading">Filter</h4><div id="filter-mobile-caret"><i class="fa-solid fa-caret-down"></i></div></div>
