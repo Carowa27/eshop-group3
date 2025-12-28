@@ -36,7 +36,7 @@ export const productFilterHTML = (products) => {
         .map(
           (a) => `
         <label for="${a}" id="box-btn-${a.toLowerCase()}" class="filter-box-btn">
-          <input type="checkbox" id="${a}" name="allergen" class="filter-box-input" value="${a}">
+          <input type="checkbox" id="${a}" name="allergen" class="filter-box-input-allergen" value="${a}">
           ${a}
         </label>`
         )
@@ -50,7 +50,7 @@ export const productFilterHTML = (products) => {
             (cat) => `
         <label for="${cat}" id="box-btn-${cat.toLowerCase()}" class="filter-box-btn"
             )}>
-        <input type="checkbox" id="${cat}" name="category" class="filter-box-input" value="${cat}">
+        <input type="checkbox" id="${cat}" name="category" class="filter-box-input-cat" value="${cat}">
           ${cat}
         </label>`
           )
@@ -59,15 +59,29 @@ export const productFilterHTML = (products) => {
     </div>`;
 
   document.addEventListener("change", (e) => {
-    if (e.target.classList.contains("filter-box-input")) {
-      const category = e.target.value;
-      filterFn(category);
+    if (e.target.classList.contains("filter-box-input-allergen")) {
+      filterFn({ type: "allergen", value: e.target.value });
+    }
+  });
+  document.addEventListener("change", (e) => {
+    if (e.target.classList.contains("filter-box-input-cat")) {
+      filterFn({ type: "category", value: e.target.value });
     }
   });
 };
 productFilterHTML(products);
 
+let filterArr = [];
 export const filterFn = (filterAttr) => {
-  //create rendering of correct products
+  const filterInArray = filterArr.some(
+    (filter) => filter.value === filterAttr.value
+  );
+  if (filterInArray === false) {
+    filterArr.push(filterAttr);
+  } else {
+    const filterIndexToRemove = filterArr.indexOf(filterAttr);
+    filterArr.splice(filterIndexToRemove, 1);
+  }
   console.log("filter by", filterAttr);
+  console.log("filter arr", filterArr);
 };
