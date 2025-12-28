@@ -1,23 +1,35 @@
-// save product in local storage when pressing buy
-export const saveToLSCart = (newItemIndex) => {
+export const addToLSCart = (newItemIndex) => {
   const newItem = Object.values(products)[newItemIndex];
   console.log("ls", getLSCart());
   const LSCart = getLSCart();
+  const newArray = LSCart && LSCart.length > 0 ? LSCart : [];
   const updateLSCart = () => {
     if ((LSCart == undefined) | (LSCart == null)) {
-      console.log("create cart", [{ product: newItem, amount: 1 }]);
       localStorage.setItem(
         "CC-Cart",
         JSON.stringify([{ product: newItem, amount: 1 }])
       );
     } else {
-      LSCart.map((prod, i) => {
-        if (prod.product.name == newItem.name) {
-          console.log("it exists, add amount");
-        } else {
-          console.log("does not exist, add prod");
-        }
-      });
+      console.log("cart", LSCart);
+      const existsInArray = LSCart.some(
+        (prod) => prod.product.name == newItem.name
+      );
+      if (existsInArray === true) {
+        LSCart.map((prod, i) => {
+          console.log("PRODUCT", prod);
+          if (prod.product.name == newItem.name) {
+            const updatedProduct = {
+              product: prod.product,
+              amount: prod.amount + 1,
+            };
+            newArray.splice(i, 1, updatedProduct);
+            localStorage.setItem("CC-Cart", JSON.stringify(newArray));
+          }
+        });
+      } else {
+        newArray.push({ product: newItem, amount: 1 });
+        localStorage.setItem("CC-Cart", JSON.stringify(newArray));
+      }
     }
   };
   updateLSCart();

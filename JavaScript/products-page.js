@@ -1,5 +1,5 @@
-import { saveToLSCart } from "./local-storage-checkout-fn.js";
-window.saveToLSCart = saveToLSCart;
+import { addToLSCart } from "./local-storage-checkout-fn.js";
+window.addToLSCart = addToLSCart;
 
 export const renderProductCards = (products) => {
   const parent = document.getElementById("product-grid-section");
@@ -45,7 +45,7 @@ export const renderProductCards = (products) => {
             <p class="product-price">
               25kr /st
             </p>
-            <p class="product-cart" onclick="saveToLSCart('${i}')">
+            <p class="product-cart" onclick="addToLSCart('${i}')">
               <i class="cart-icon fa-solid fa-cart-plus fa-icon-clickable"></i>
             </p>
           </div>
