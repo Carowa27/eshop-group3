@@ -36,7 +36,7 @@ export const productFilterHTML = (products) => {
         .map(
           (a) => `
         <label for="${a}" id="box-btn-${a.toLowerCase()}" class="filter-box-btn">
-          <input type="checkbox" id="${a}" name="allergen" value="${a}">
+          <input type="checkbox" id="${a}" name="allergen" class="filter-box-input" value="${a}">
           ${a}
         </label>`
         )
@@ -48,16 +48,25 @@ export const productFilterHTML = (products) => {
         ${categoryArray
           .map(
             (cat) => `
-        <label for="${cat}" id="box-btn-${cat.toLowerCase()}" class="filter-box-btn">
-        <input type="checkbox" id="${cat}" name="category" value="${cat}">
+        <label for="${cat}" id="box-btn-${cat.toLowerCase()}" class="filter-box-btn"
+            )}>
+        <input type="checkbox" id="${cat}" name="category" class="filter-box-input" value="${cat}">
           ${cat}
         </label>`
           )
           .join("")}
       </div>
     </div>`;
+
+  document.addEventListener("change", (e) => {
+    if (e.target.classList.contains("filter-box-input")) {
+      const category = e.target.value;
+      filterFn(category);
+    }
+  });
 };
 productFilterHTML(products);
+
 export const filterFn = (filterAttr) => {
   //create rendering of correct products
   console.log("filter by", filterAttr);
