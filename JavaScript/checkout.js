@@ -1,3 +1,7 @@
+import { getLSCart } from "./local-storage-checkout-fn.js";
+document.addEventListener('DOMContentLoaded', function() {
+    console.log(getLSCart);
+}, false);
 
 function validityCheck() {
     var checkV = event.target.checkValidity();  
@@ -20,3 +24,5 @@ var formattedValue = "";
   }
   cardNumber.value = formattedValue;
 }
+
+
