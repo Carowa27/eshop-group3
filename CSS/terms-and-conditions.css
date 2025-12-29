@@ -1,0 +1,39 @@
+body {
+    color: var(--font-color-primary);
+    background-color: var(--background-color);
+}
+
+.terms {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.terms h1 {
+    margin-bottom: 1.5rem;
+}
+
+.terms h2 {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+.terms p {
+    line-height: 1.6;
+    margin: .2rem 0 1rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color-primary);
+}
+
+i {
+    margin-right: .5rem;
+}
+
+@media (min-width: 768px) {
+    .phone {
+        pointer-events: none;
+    }
+}
