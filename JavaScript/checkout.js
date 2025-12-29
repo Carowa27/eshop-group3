@@ -1,19 +1,22 @@
 import { getLSCart } from "./local-storage-checkout-fn.js";
+
+// Fetch products in cart on page load
 document.addEventListener('DOMContentLoaded', function () {
 
   const inCart = JSON.parse(localStorage.getItem("CC-Cart"));
   const parent = document.getElementById("products");
-  const totalSum = document.getElementById("totalSum");
+  const totalSum = document.getElementById("total-sum");
   const totalDiscount = document.getElementById("total-discount");
   let totalCost = 0;
   let totalOff = 0;
 
+//Visualise and calculate cost for each product type in cart
   inCart.forEach(element => {
     const specificCupCake = element.product;
     const numberOfCupCakes = element.amount;
     let costForEach = 25;
     let discount = 0;
-    if (numberOfCupCakes > 10) {
+    if (numberOfCupCakes < 10) {
          costForEach = numberOfCupCakes * 25;
     } else if (numberOfCupCakes % 10 == 0) {
         costForEach = numberOfCupCakes * 20;
@@ -26,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     totalCost = totalCost + costForEach;
+    totalOff = totalOff + discount;
     parent.innerHTML += `
         <article>
           <img src=${specificCupCake.image.src}
@@ -43,13 +47,14 @@ document.addEventListener('DOMContentLoaded', function () {
         </article>`;
   });
   if (totalCost > 0) {
-      totalSum.innerHTML = "Summa: " + totalCost; 
+      totalSum.innerHTML = "Totalt: " + totalCost + " kr"; 
   }
   if (totalOff > 0) {
-      totalDiscount.innerHTML = "Total mängdrabatt: " ;
+      totalDiscount.innerHTML = "Din rabatt: " + totalOff + " kr";
   }
 }, false);
 
+//Check the form input
 function validityCheck() {
   var checkV = event.target.checkValidity();
 
@@ -58,6 +63,7 @@ function validityCheck() {
   }
 }
 
+//Format card number automatically
 function formatCardNumber() {
   var cardNumber = document.getElementById("cardnumber");
   var value = cardNumber.value.replace(/\D/g, '');
