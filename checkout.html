@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/general.css">
     <link rel="stylesheet" href="CSS/checkout.css">
-    <title>Cups&Cakes</title>
+    <title>Varukorg | Cups&Cakes</title>
 </head>
 
 <body>
@@ -108,32 +108,10 @@
             <section id="product-position">
                 <h2>Översikt</h2>
                 <section id="products">
-                    <article>
-                        <img src="Images/prodimages/aftereight.jpg" class="product-img" />
-                        <div class="product-name">
-                            <p>Produktnamn</p>
-                        </div>
-                        <div class="product-cost">
-                            <p>100kr</p>
-                            <div class="amount"><button>-</button><input type="number" step="1" min="1"
-                                    value="1" /><button>+</button></div>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="Images/prodimages/aftereight.jpg" class="product-img" />
-                        <div class="product-name">
-                            <p>Produktnamn</p>
-                        </div>
-                        <div class="product-cost">
-                            <p>100kr</p>
-                            <div class="amount"><button>-</button><input type="number" step="1" min="1"
-                                    value="1" /><button>+</button></div>
-                        </div>
-                    </article>
-                </section>
 
+                </section>
                 <section id="cost">
-                    <div>Summa: </div><br>
+                    <div id="totalSum"></div><br>
                     <div>Total mängdrabatt: </div>
                 </section>
             </section>
@@ -150,6 +128,8 @@
     </footer>
     <script src="JavaScript/checkout.js" type="module"></script>
     <script src="JavaScript/local-storage-checkout-fn.js" type="module"></script>
+     <script src="JavaScript/local-storage-checkout-fn.js" type="module"></script>
+     <script src="product-list.js"></script>
 </body>
 
 </html>
