@@ -4,21 +4,34 @@ document.addEventListener('DOMContentLoaded', function () {
   const inCart = JSON.parse(localStorage.getItem("CC-Cart"));
   const parent = document.getElementById("products");
   const totalSum = document.getElementById("totalSum");
-  console.log(inCart);
+  const totalDiscount = document.getElementById("total-discount");
   let totalCost = 0;
+  let totalOff = 0;
 
   inCart.forEach(element => {
-    const eachElement = element.product;
+    const specificCupCake = element.product;
     const numberOfCupCakes = element.amount;
-    const costForEach = numberOfCupCakes * 25;
+    let costForEach = 25;
+    let discount = 0;
+    if (numberOfCupCakes > 10) {
+         costForEach = numberOfCupCakes * 25;
+    } else if (numberOfCupCakes % 10 == 0) {
+        costForEach = numberOfCupCakes * 20;
+        discount = (numberOfCupCakes*25) - costForEach;
+    } else {
+        const remainder = numberOfCupCakes % 10;
+        const multiplesOfTen = numberOfCupCakes - remainder;
+        costForEach = (remainder * 25) + (multiplesOfTen * 20);
+        discount = (numberOfCupCakes * 25) - costForEach;
+    }
+
     totalCost = totalCost + costForEach;
-    console.log(costForEach);
     parent.innerHTML += `
         <article>
-          <img src=${eachElement.image.src}
-          alt=${eachElement.image.alt} class="product-img" />
+          <img src=${specificCupCake.image.src}
+          alt=${specificCupCake.image.alt} class="product-img" />
           <div class="product-name">
-            <p>${eachElement.name}</p>
+            <p>${specificCupCake.name}</p>
           </div>
           <div class="product-cost">
             <p>${costForEach} kr</p>
@@ -29,8 +42,12 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </article>`;
   });
-
-  totalSum.innerHTML = "Summa: " + totalCost; 
+  if (totalCost > 0) {
+      totalSum.innerHTML = "Summa: " + totalCost; 
+  }
+  if (totalOff > 0) {
+      totalDiscount.innerHTML = "Total mängdrabatt: " ;
+  }
 }, false);
 
 function validityCheck() {
