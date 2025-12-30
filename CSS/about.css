@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
 
-/*DELETE*/
-footer, header{
-    background-color: #ccc;
-    height: 100px;
-}
-/*DELETE*/
-
 /* Page */
 
 body{
@@ -146,7 +139,7 @@ p{
     grid-area: locations;
 }
 
-#locations a{
+#locations div{
     background-color: var(--font-color-primary);
     background-image: url(https://carowa27.github.io/eshop-group3/Images/pin.png);
     background-repeat: no-repeat;
@@ -156,9 +149,10 @@ p{
     text-decoration: none;
     font-weight: bolder;
     border-radius: 15px;
+    cursor: pointer;
 }
 
-#locations a:hover, #locations a:active{
+#locations div:hover, #locations div:active{
     color: #fff;
     background-color: var(--secondary-color);
 }
@@ -176,7 +170,7 @@ p{
 
 iframe {
   opacity: 0;
-  transition: opacity 0.5s linear;
+  transition: opacity 1s linear;
   position: absolute;
   margin-top: -300px;
   margin-left: -150px;
@@ -184,12 +178,12 @@ iframe {
   height: 100%;
 }
 
-.iframeShow {
-  opacity: 1;
-}
-
 .iframeHide {
   opacity: 0;
+}
+
+.iframeShow {
+  opacity: 1;
 }
 
 @media screen and (max-width:1000px) {
@@ -245,3 +239,8 @@ iframe {
     #map {
         margin: auto;
     }
+
+    #usp-section p{
+        font-size: 1rem;
+    }
+}

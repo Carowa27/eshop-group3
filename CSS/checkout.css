@@ -1,17 +1,16 @@
+/* Outer wrappers and general settings */
 body {
     background-color: var(--background-color);
-} 
-#foot-container {
-    position: static;
 }
+
 main {
-    max-width: var(--max-width); 
+    max-width: var(--max-width);
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 43%;
     justify-content: center;
     color: var(--font-color-secondary);
-    padding: var(--body-padding); 
+    padding: var(--body-padding);
 }
 
 h2 {
@@ -19,24 +18,97 @@ h2 {
     margin: 10px;
 }
 
-#product-details, #billing,
+.discount {
+    font-style: italic;
+}
+
+p {
+    margin: 0;
+}
+
+#foot-container {
+    position: static;
+}
+
+#product-details,
+#billing,
 #delivery {
     margin: 10px;
     border: 1px solid var(--secondary-color);
     border-radius: 4px;
+    padding-bottom: 10px;
 }
 
+/* Order information settings*/
+
+.one-column,
+.two-column {
+    display: grid;
+    padding: 0 10px 0 10px;
+}
+
+.two-column {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+}
+
+.accept {
+    padding: 0 10px 0 10px;
+}
+
+.one-column button {
+    padding: 15px;
+    background-color: var(--accent-color-1);
+    margin: 20px 10px;
+    font-family: var(--font-family);
+    font-size: 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#date,
+#first-name,
+#post-code {
+    grid-row: 2;
+    max-width: 95%;
+}
+
+#cost-mobile {
+    display: none;
+}
+
+/* Style the form questions */
+#order-information input,
+select {
+    padding: 12px 0;
+    margin: 8px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--input-field-color);
+}
+
+select {
+    padding-left: 8px;
+}
+
+/* Products section */
 #product-position {
     position: sticky;
     top: 20px;
+}
+
+#collapsible {
+    display: none;
 }
 
 #products {
     width: 90%;
     margin: 0 auto;
     padding: 5px;
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: 600px;
+    display: block;
 }
 
 #products article {
@@ -81,6 +153,10 @@ h2 {
     flex-grow: 0;
 }
 
+.amount button {
+    cursor: pointer;
+}
+
 .amount input {
     text-align: center;
 }
@@ -106,51 +182,10 @@ input[type=number] {
     margin: 20px 10px;
 }
 
-/*Set the grid for the forms*/
-#billing,
-#delivery {
-    display: grid;
-    padding-bottom: 10px;
-}
-
-.one-column,
-.two-column {
-    display: grid;
-    padding: 0 10px 0 10px;
-}
-
-.two-column {
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
-}
-
-#date,
-#first-name,
-#post-code {
-    grid-row: 2;
-    max-width: 95%;
-}
-
-/* Style the form questions */
-#order-information input,
-select {
-    padding: 12px 0;
-    margin: 8px 0;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    overflow: hidden;
-    background-color: var(--input-field-color);
-}
-
-select {
-    padding-left: 8px;
-}
-
-
 /* Screen adjustments */
 @media screen and (max-width: 980px) {
     main {
-        grid-template-columns: 47% 47%;
+        grid-template-columns: 52% 48%;
         max-width: 100%;
     }
 
@@ -164,21 +199,57 @@ select {
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 750px) {
+    main {
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
 
     main,
     .two-column {
         grid-template-columns: 1fr;
     }
-    main {
-        padding: 0; 
-    }
-    #product-details {
-        order: -1;
+
+    #cost-mobile {
+        display: grid;
+        justify-content: end;
+        margin: 20px;
     }
 
     #product-position {
         position: static;
+    }
+
+    #overview {
+        display: none;
+    }
+
+    #collapsible {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #collapsible h3 {
+        margin: 10px;
+    }
+
+    .fa {
+        font-size: 0.9em;
+    }
+
+    #products {
+        display: none;
+    }
+
+    #product-details {
+        order: -1;
+    }
+
+    #cost {
+        display: none;
     }
 
     #date,
@@ -187,13 +258,10 @@ select {
         max-width: 100%;
     }
 
-    h2 {
-        font-size: 1.3em;
-    } 
 }
 
 @media only screen and (max-width: 400px) {
     body {
         font-size: 0.9em;
-    } 
+    }
 }

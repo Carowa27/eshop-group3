@@ -1,7 +1,8 @@
 body{
     display: flex;
     flex-direction: column;
-    font-family: 'Domine', serif;
+    font-family: var(--font-family);
+
 }
 
 #hero-image{
@@ -45,11 +46,11 @@ body{
     font-size: 1rem;
     border-radius: 15px;
     font-family: var(--font-family);
-    border: 2px solid #746263;
+    border: 2px solid var(--font-color-secondary);
 }
 textarea{
     min-height: 150px;
-    resize: vertical;
+    resize: none;
 }
 
 .contact-form button{
@@ -59,15 +60,15 @@ textarea{
     padding: 0.5rem 2.5rem;
     border-radius: 15px;
     border: none;
-    background-color: #e28383;
-    color: #F3E5DC;
+    background-color: var(--primary-color) ;
+    color: var(--background-color);
     cursor: pointer;
     transition: all 0.2s ease;
     width: 25%;
     font-size: 1rem;
 }
 .contact-form button:hover{
-    background-color: #c76b6b;
+    background-color: var(--primary-color);
     color: white;
     transform: translateY(-2px);
 }
@@ -87,7 +88,7 @@ textarea{
 }
 .info-item i{
     font-size: 2.5rem;
-    color: #665253;
+    color: var(--secondary-color);
 }
 
 
