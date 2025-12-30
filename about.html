@@ -10,18 +10,104 @@
     <script>
 
         function showMap(id){
-            document.getElementById(id).className = "iframeShow";
-        }
 
-        function hideMap(id){
-            document.getElementById(id).className = "iframeHide";
+            src="";
+            
+            if (id == "gbg"){
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4261.912947977616!2d11.920418390448553!3d57.71719707164946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464f8caac8058d89%3A0x2648fa81638fad4c!2sLantmannagatan%2C%20417%2015%20G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1767027565126!5m2!1ssv!2sse";
+            }
+
+            else if (id == "hbg"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2228.1068491345477!2d12.68952244561024!3d56.05145194958197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465232311f3589c5%3A0xdfa6850e2c22c59c!2sDrottninggatan%2078%2C%20252%2021%20Helsingborg!5e0!3m2!1ssv!2sse!4v1767027698789!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "jkpg"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2127.0900413674863!2d14.146505472854006!3d57.782849267105846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465a6de6d9823c93%3A0xf31aba565964bd32!2sS%3At%20Pauligatan%2022%2C%20553%2013%20J%C3%B6nk%C3%B6ping!5e0!3m2!1ssv!2sse!4v1767045438578!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "lkpg"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4179.58408172493!2d15.616591176591344!3d58.41376598396849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46596f3ab735a805%3A0x21c0fbc0cb0e5491!2sPlatensgatan%2012%2C%20582%2020%20Link%C3%B6ping!5e0!3m2!1ssv!2sse!4v1767045533314!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "lund"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1124.1439045293616!2d13.19482616965251!3d55.70136885403767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465397c466b738e9%3A0x31d0b983ed98fb2a!2sM%C3%A5rtenstorget%202%2C%20222%2023%20Lund!5e0!3m2!1ssv!2sse!4v1767045825033!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "mo"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.7956053678463!2d12.9961122461106!3d55.60557083946577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a3fc228e4fbf%3A0x5f224c62ebfa9866!2sHamngatan%204%2C%20211%2022%20Malm%C3%B6!5e0!3m2!1ssv!2sse!4v1767045936111!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "nkpg"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2079.5226241093806!2d16.18167675062265!3d58.58672711797815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46593bb48341468d%3A0x969163113e2a1bb5!2sSkomakaregatan%2011%2C%20602%2032%20Norrk%C3%B6ping!5e0!3m2!1ssv!2sse!4v1767046015402!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "sthlm"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.5607664466438!2d18.04237078930942!3d59.34028673929687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d7a89e6847d%3A0xf8637ed74a44bea9!2sSigtunagatan%203%2C%20113%2022%20Stockholm!5e0!3m2!1ssv!2sse!4v1767046112524!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "umea"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1760.0432623351046!2d20.276237747678387!3d63.82376284147858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467c5b0580bd24ab%3A0x3546bb8d32205180!2sSkolgatan%2092%2C%20903%2031%20Ume%C3%A5!5e0!3m2!1ssv!2sse!4v1767046409400!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "upps"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1001.7376168850798!2d17.631748470322506!3d59.85785477677469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbf14d9f1129%3A0x5905bb5e47ef791c!2sS%3At%20Eriks%20torg%209%2C%20753%2010%20Uppsala!5e0!3m2!1ssv!2sse!4v1767046477669!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "vstrs"){
+                src= "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2017.4566323550998!2d16.56129519941939!3d59.62540647419644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e61334700b4a9%3A0xa9732593ba40a046!2sHumlegatan%2016%2C%20722%2026%20V%C3%A4ster%C3%A5s!5e0!3m2!1ssv!2sse!4v1767046913547!5m2!1ssv!2sse";               
+            }
+
+            else if (id == "ystd"){
+                src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4527.493637952898!2d13.813570789361131!3d55.43220894694562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46547d5d56bf1e91%3A0x8961ac6cfe2c28bb!2sKlostergatan%2016%2C%20271%2034%20Ystad!5e0!3m2!1ssv!2sse!4v1767046739506!5m2!1ssv!2sse";               
+            }
+
+            else {
+                document.getElementById("map-iframe").className = "iframeHide";
+            }
+
+            document.getElementById("map-iframe").setAttribute("src", src);
+            document.getElementById("map-iframe").className = "iframeShow";
+            return;
+
         }
     </script>
 
 </head>
 <body>
 
-    <header></header>
+    <header id="head-container">
+        <a href="index.html" id="home-page">
+                <div id="logo-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 500 500">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #e28383;
+                                    fill-rule: evenodd;
+                                }
+                            </style>
+                        </defs>
+                        <path id="cupcakeb_1" data-name="cupcakeb 1" class="cls-1" d="M415.179,279.3c4.152,5.452,6.346,7.2,6.826,17.064-1.074,3.949-18.176,5.874-20.477,13.651-2.1,7.083-7.957,5.982-21.614,9.1-17.419,3.977-11.425,12.509-23.89,11.376-17.992-1.636-25.62,10.846-34.128,9.1-20.964-4.3-26.817-1.884-35.265,2.275-10.232,5.038-25.382,7.262-36.4,3.413-6.708-2.342-24.226-5.708-35.265-2.275-6.521,2.028-16.08-2.123-21.627-4.334-5.281-2.1-13.944-.919-20.464-2.491-6.27-1.512-8.693-3.862-14.789-5.688-6.461-1.936-13.135,1.216-19.339-1.138-4.733-1.8-12.1-8.606-17.064-9.1-20.258-2.016-17.283-9.222-27.3-14.789-4.674-2.6-9.81-3.085-14.789-6.825-1.368-1.107-9.25-4.961,4.55-18.2C10.25,213.826,150.527,162.159,210.411,167.81c-14.781,7.83-124.35,31.845-109.209,84.182,3.4,11.762,8.815,17.062,20.477,20.477,30.34-55.03,163.349-68.387,208.18-139.925-18.234,65.786-115.01,85.729-175.19,129.687v1.137c1.517,0.379,4.171,1.9,5.688,2.275,100.218,17.283,249.127-82.428,171.777-158.126,69.239,26.593,64.805,86.1,10.239,120.586,10.716-12.822,32.478-38.961,25.027-63.706-10.867,63.4-65.644,93.966-124,113.76,13.569,4.111,97.821,4.231,139.924-52.33-8.568,21.861-29.572,35.593-45.5,46.642,58.163-15.349,76.41-57.185,51.192-96.7C427.18,188.228,460.114,244.626,415.179,279.3ZM362.85,295.221c-11.823-2.407-26.091,3.255-37.541,4.55-19.42,2.2-41.547.6-61.43-1.137-40.045-3.5-39.821-12.878-71.768-10.466-34.019,2.567-44.816-5.446-52.231-10.011-11.118,9.543-25.8,11.982-44.366,7.963-6.922-1.24-5.225-1.011,4.55,13.651,12.077,12.922,29.475,12.929,43.229,18.2,15.611,2,21.341.423,35.266,4.55,15.91,4.716,3.5,5.6,35.265,10.239,14.578,2.431,19.236-4.213,32.991-3.413,14.688,0.854,17.839,9.852,45.5,0,15.364-3.988,20.135,4.764,30.715-1.138,15.208-8.482,22.884-6.685,34.128-10.238,12.721-2.688,9.007-13.659,36.637-17.2,5.507-.7,8.321-8.169,11.142-13.516C392,293.884,380.792,298.874,362.85,295.221Zm-7.4,14.789a3.982,3.982,0,1,1,3.982-3.982A3.981,3.981,0,0,1,355.455,310.01Zm-19.908-1.138a2.275,2.275,0,1,1,2.275-2.275A2.276,2.276,0,0,1,335.547,308.872Zm-19.908,10.239a5.12,5.12,0,1,1,5.119-5.12A5.119,5.119,0,0,1,315.639,319.111Zm-22.752-9.1a1.707,1.707,0,1,1,1.707-1.707A1.706,1.706,0,0,1,292.887,310.01Zm-7.963,15.926a5.119,5.119,0,1,1,5.119-5.119A5.119,5.119,0,0,1,284.924,325.936ZM267.86,315.7a5.12,5.12,0,1,1,5.119-5.119A5.119,5.119,0,0,1,267.86,315.7Zm-21.614,6.825a3.982,3.982,0,1,1,3.981-3.981A3.981,3.981,0,0,1,246.246,322.523Zm-13.083-14.788a2.276,2.276,0,1,1,2.276-2.276A2.276,2.276,0,0,1,233.163,307.735ZM207,320.248a2.275,2.275,0,1,1,2.275-2.275A2.276,2.276,0,0,1,207,320.248ZM200.173,306.6a4.551,4.551,0,1,1,4.55-4.55A4.55,4.55,0,0,1,200.173,306.6Zm-19.339,10.238a4.55,4.55,0,1,1,4.55-4.55A4.551,4.551,0,0,1,180.834,316.835Zm-2.844-14.788a2.844,2.844,0,1,1,2.844-2.844A2.844,2.844,0,0,1,177.99,302.047Zm-39.247-3.413a3.413,3.413,0,1,1,3.412-3.413A3.413,3.413,0,0,1,138.743,298.634Zm-17.064,2.275a3.413,3.413,0,1,1,3.412-3.413A3.413,3.413,0,0,1,121.679,300.909ZM294.594,137.1c-18.662,14.18-48.422,17.15-77.357,21.614,39.339-7.64,104.541-50.84,64.843-114.9,1.517,19.717,2.294,40.576-27.3,61.43-19.992,15.279-69.522,21.034-104.659,39.816-22.3,11.919-35.1,24.984-50.055,43.229,0.207-30.519,8.145-41.6,26.165-53.468,25.944-17.088,57.728-16.064,89.87-29.577,41.851-17.595,72.834-48.1,35.266-98.971C293.3,20.284,348.147,96.4,294.594,137.1ZM162.632,115.48C169.259,58.1,245.736,76,254.778,25.61,265.152,80.092,181.609,75.04,162.632,115.48ZM146.706,434.008l-20.477-98.971,29.578,11.376c9.1,36.4,17.065,73.947,26.164,110.347-4.17-35.262-7.205-71.672-11.376-106.934a249.844,249.844,0,0,1,27.3,5.688c2.813,0.782,10.768,79.841,17.064,106.934v-105.8l25.027,1.138q4.549,56.306,9.1,112.622,4.549-56.305,9.1-112.622l25.027-1.138V467q8.53-56.305,17.064-112.622l27.3-4.55q-5.688,52.893-11.376,105.8,13.65-55.167,27.3-110.347l28.44-9.1q-9.667,49.48-19.339,98.971l34.128-105.8c11.072-6.976,24.194-13.728,35.266-28.44-8.184,31.473-39.783,149.719-46.642,160.4-32.075,49.96-207.839,49.847-251.409,2.276L77.312,300.909a154.984,154.984,0,0,0,34.128,27.3Z"/>
+                    </svg>
+                </div>
+                <div id="logo-text">
+                    <h1>Cups& <br>
+                        Cakes</h1>
+                </div>
+        </a>
+
+        <nav id="nav-wrapper">
+                <ul>
+                    <li><a class="current" href="index.html">Hem</a></li>
+                    <li><a href="products.html">Produkter</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+
+                    <a href="checkout.html"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                </ul>
+        </nav>
+
+    </header>
     <main>
 
         <h1>Om oss</h1>
@@ -34,7 +120,7 @@
                 <h2>Vår historia</h2>
 
                 <p>
-                    <span class="pop">Cups&Cake</span> grundades år <span class="pop">2014</span> i Stockholm av konditorn <span class="pop">Elin Andersson</span>, vars passion för eleganta bakverk och rena smaker blev startskottet för något unikt. Med en vision om att förena klassisk hantverkstradition med modern design skapade hon ett bageri som snabbt blev en favorit bland både lokalbor och internationella besökare.
+                    <span class="pop">Cups&Cakes Bageri AB</span> grundades år <span class="pop">2014</span> i Stockholm av konditorn <span class="pop">Elin Andersson</span>, vars passion för eleganta bakverk och rena smaker blev startskottet för något unikt. Med en vision om att förena klassisk hantverkstradition med modern design skapade hon ett bageri som snabbt blev en favorit bland både lokalbor och internationella besökare.
                 </p>
 
             </article>
@@ -51,7 +137,7 @@
             <article id="block-4">
 
                 <p>
-                    Idag driver Cups&Cake <span class="pop">12 bagerier</span> i Sverige - från Malmö till Umeå - samt <span class="pop">4 internationella filialer</span> i Köpenhamn, Berlin, London och Tokyo. Vårt mest stolta ögonblick kom år <span class="pop">2019</span>, då vi vann <span class="pop">Svenska Mästerskapet</span> i bakning för vår ikoniska <span class="pop">päroncupcake</span>, en skapelse som kombinerar friskhet, elegans och en subtil sötma.
+                    Idag driver Cups&Cakes <span class="pop">12 bagerier</span> i Sverige - från Umeå till Ystad. Vårt mest stolta ögonblick kom år <span class="pop">2019</span>, då vi vann <span class="pop">Svenska Mästerskapet</span> i bakning för vår ikoniska <span class="pop">päroncupcake</span>, en skapelse som kombinerar friskhet, elegans och en subtil sötma.
                 </p>
                 <br>
                 <p>
@@ -73,8 +159,8 @@
                     <h3>Nordisk elegans</h3><p>Modern och stilfull design inspirerad av skandinavisk minimalism, både i smak och estetik.</p>
                 </article>
                 <article id="usp-3">
-                    <img alt="Internationell närvaro" src="Images/usp-3-light.png" class="usp-img">
-                    <h3>Internationell närvaro</h3><p>12 bagerier i Sverige och 4 utomlands, vilket gör våra cupcakes tillgängliga för en bred publik.</p>
+                    <img alt="Stor nationell närvaro" src="Images/usp-3-light.png" class="usp-img">
+                    <h3>Stor nationell närvaro</h3><p>12 bagerier från norr till söder, vilket gör våra cupcakes tillgängliga för en bred publik.</p>
                 </article>
                 <article id="usp-4">
                     <img alt="Hantverk & innovation" src="Images/usp-4-light.png" class="usp-img">
@@ -87,37 +173,25 @@
 
             <article id="map">
 
-                <img src="Images/sweden.png" alt="Karta">                
-                <iframe id="map-gbg" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-hbg" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-jkpg" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-lkpg" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-lund" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71938.4362452284!2d13.11559555566187!3d55.70504839488409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653907c03e75a3b%3A0x4019078290e7a70!2sLund!5e0!3m2!1ssv!2sse!4v1766763232548!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-mo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d144372.77614708012!2d12.851165623816048!3d55.57025208964354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465305a574c491ff%3A0xd3a905dfbd4888e5!2zTWFsbcO2!5e0!3m2!1ssv!2sse!4v1766759615201!5m2!1ssv!2sse" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-nkpg" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-sthlm" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-umea" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-upps" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-vstrs" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe id="map-ystd" src="" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                <img src="Images/sweden.png" alt="Karta">
+                <iframe class="iframeHide" id="map-iframe" src="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </article>
 
             <article id="locations">
 
                 <h2>Våra bagerier</h2>
-                <a href="#/" id="loc-gbg" onmouseleave="hideMap('map-gbg');" onmouseenter="showMap('map-gbg');">Göteborg</a>
-                <a href="#/" id="loc-hbg" onmouseleave="hideMap('map-hbg');" onmouseenter="showMap('map-hbg');">Helsingborg</a>
-                <a href="#/" id="loc-jkpg" onmouseleave="hideMap('map-jkpg');" onmouseenter="showMap('map-jkpg');">Jönköping</a>
-                <a href="#/" id="loc-lkpg" onmouseleave="hideMap('map-lkpg');" onmouseenter="showMap('map-lkpg');">Linköping</a>
-                <a href="#/" id="loc-lund" onmouseleave="hideMap('map-lund');" onmouseenter="showMap('map-lund');">Lund</a>
-                <a href="#/" id="loc-mo" onmouseleave="hideMap('map-mo');" onmouseenter="showMap('map-mo');">Malmö</a>
-                <a href="#/" id="loc-nkpg" onmouseleave="hideMap('map-nkpg');" onmouseenter="showMap('map-nkpg');">Norrköping</a>
-                <a href="#/" id="loc-sthlm" onmouseleave="hideMap('map-sthlm');" onmouseenter="showMap('map-sthlm');">Stockholm</a>
-                <a href="#/" id="loc-umea" onmouseleave="hideMap('map-umea');" onmouseenter="showMap('map-umea');">Umeå</a>
-                <a href="#/" id="loc-upps" onmouseleave="hideMap('map-upps');" onmouseenter="showMap('map-upps');">Uppsala</a>
-                <a href="#/" id="loc-vstrs" onmouseleave="hideMap('map-vstr');" onmouseenter="showMap('map-vstrs');">Västerås</a>
-                <a href="#/" id="loc-ystd" onmouseleave="hideMap('map-ystd');" onmouseenter="showMap('map-ystd');">Ystad</a>
+                <div id="loc-gbg" onclick="showMap('gbg');">Göteborg</div>
+                <div id="loc-hbg" onclick="showMap('hbg');">Helsingborg</div>
+                <div id="loc-jkpg" onclick="showMap('jkpg');">Jönköping</div>
+                <div id="loc-lkpg" onclick="showMap('lkpg');">Linköping</div>
+                <div id="loc-lund" onclick="showMap('lund');">Lund</div>
+                <div id="loc-mo" onclick="showMap('mo');">Malmö</div>
+                <div id="loc-nkpg" onclick="showMap('nkpg');">Norrköping</div>
+                <div id="loc-sthlm" onclick="showMap('sthlm');">Stockholm</div>
+                <div id="loc-umea" onclick="showMap('umea');">Umeå</div>
+                <div id="loc-upps" onclick="showMap('upps');">Uppsala</div>
+                <div id="loc-vstrs" onclick="showMap('vstrs');">Västerås</div>
+                <div id="loc-ystd" onclick="showMap('ystd');">Ystad</div>
 
             </article>
 
@@ -126,8 +200,16 @@
 
     </main>
 
-    
+    <!--
+    <footer id="foot-container">
+        <div id="media-wrapper">
+            <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+        </div>
+        <p>&copy; 2025 Cups&Cakes. Alla rättigheter förbehållna.</p>
+    </footer>
+    -->
 
-    <footer>Placeholder footer</footer>
 </body>
 </html>

@@ -77,4 +77,16 @@ function formatCardNumber() {
   cardNumber.value = formattedValue;
 }
 
-
+function expand() {
+  const expanderElement = document.getElementById("products");
+  const iconElement = document.getElementById("icon-span");
+    if(expanderElement.style.display === "block") {
+      expanderElement.style.display = "none";
+      iconElement.classList.add('fa-chevron-down');
+      iconElement.classList.remove('fa-chevron-up');
+    } else {
+      expanderElement.style.display = "block";
+      iconElement.classList.remove('fa-chevron-down');
+      iconElement.classList.add('fa-chevron-up');
+    }
+}
