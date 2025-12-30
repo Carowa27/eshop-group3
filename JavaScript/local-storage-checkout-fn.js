@@ -1,12 +1,14 @@
-export const addToLSCart = (newItemIndex) => {
-  const newItem = Object.values(products)[newItemIndex];
+export const addToLSCart = (item, amount) => {
+  console.log(amount);
+  const newItem = products[item];
+  const amountToAdd = parseInt(amount);
   const LSCart = getLSCart();
   const newArray = LSCart && LSCart.length > 0 ? LSCart : [];
   const updateLSCart = () => {
     if ((LSCart == undefined) | (LSCart == null)) {
       localStorage.setItem(
         "CC-Cart",
-        JSON.stringify([{ product: newItem, amount: 1 }])
+        JSON.stringify([{ product: newItem, amount: amountToAdd }])
       );
     } else {
       const existsInArray = LSCart.some(
@@ -17,14 +19,14 @@ export const addToLSCart = (newItemIndex) => {
           if (prod.product.name == newItem.name) {
             const updatedProduct = {
               product: prod.product,
-              amount: prod.amount + 1,
+              amount: prod.amount + amountToAdd,
             };
             newArray.splice(i, 1, updatedProduct);
             localStorage.setItem("CC-Cart", JSON.stringify(newArray));
           }
         });
       } else {
-        newArray.push({ product: newItem, amount: 1 });
+        newArray.push({ product: newItem, amount: amountToAdd });
         localStorage.setItem("CC-Cart", JSON.stringify(newArray));
       }
     }
