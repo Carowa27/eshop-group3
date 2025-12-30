@@ -1,5 +1,5 @@
-export const addToLSCart = (newItemIndex) => {
-  const newItem = Object.values(products)[newItemIndex];
+export const addToLSCart = (item) => {
+  const newItem = products[item];
   const LSCart = getLSCart();
   const newArray = LSCart && LSCart.length > 0 ? LSCart : [];
   const updateLSCart = () => {
