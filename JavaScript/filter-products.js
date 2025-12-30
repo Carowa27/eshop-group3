@@ -37,7 +37,7 @@ export const productFilterHTML = (products) => {
       ? "checked"
       : "";
   };
-  // isActiveFilter("allergen", "Mjölk");
+
   let renderHtml = () => {
     parent.innerHTML = `
     <div id="filter-head-wrapper">
