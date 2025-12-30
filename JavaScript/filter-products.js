@@ -82,8 +82,6 @@ export const filterFn = (filterAttr) => {
     const filterIndexToRemove = filterArr.indexOf(filterAttr);
     filterArr.splice(filterIndexToRemove, 1);
   }
-  console.log("filter by", filterAttr);
-  console.log("filter arr", filterArr);
 
   setFilterToLS(filterArr);
 };
@@ -123,4 +121,3 @@ export const filterLogic = (products, filter) => {
   return productsToRender;
 };
 filterLogic(products);
-console.log("prod to render", productsToRender);
