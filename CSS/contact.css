@@ -24,7 +24,7 @@ main{
     justify-content: space-evenly;
 }
 
-/*Form*/
+/*Formulär*/
 .form{
     display: flex;
     flex-direction: column;
@@ -77,7 +77,61 @@ textarea{
     padding: 0.5rem;
 }
 
-/*Contact Info section*/
+
+/*Enkelt sätt att få Checkboxen snyggare
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--primary-color);
+}
+*/
+
+/*Checkbox design*/
+/* Göm original-checkboxen */
+.terms input[type="checkbox"] {
+  opacity: 0;
+}
+
+/* Label som klickyta */
+.terms label {
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+
+/* Checkbox-rutan */
+.terms label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--font-color-secondary);
+  border-radius: 5px;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+/* När checkboxen är checked → färgad box */
+.terms input:checked + label::before {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Vit checkmark */
+.terms input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 5px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/*Kontakt Info sektion*/
 #contact-info{
     display: flex;
     flex-direction: column;
@@ -100,8 +154,8 @@ textarea{
 
 
 
-/* Responsive Design */
-@media (max-width: 900px) {
+/* Responsiv Design */
+@media (max-width: 950px) {
     #contact-wrapper{
         gap: 2rem;
     }
@@ -110,7 +164,7 @@ textarea{
     }
 }
 
-@media (max-width: 700px){
+@media (max-width: 768px){
     #hero h1{
         padding: 2.5rem 1.5rem 2rem 1.5rem;
     }
