@@ -84,4 +84,43 @@ export const filterFn = (filterAttr) => {
   }
   console.log("filter by", filterAttr);
   console.log("filter arr", filterArr);
+
+  setFilterToLS(filterArr);
 };
+
+export const getFilterFromLS = () => {
+  return JSON.parse(sessionStorage.getItem("CC-prod-filter"));
+};
+export const setFilterToLS = (filterAttr) => {
+  sessionStorage.setItem("CC-prod-filter", JSON.stringify(filterAttr));
+};
+export const removeFilterFromLS = () => {
+  return sessionStorage.removeItem("CC-prod-filter");
+};
+
+let productsToRender = [];
+export const filterLogic = (products, filter) => {
+  const productArray = Object.values(products);
+  let filterArr = filter || [];
+  const productsWOAllergens = productArray.filter(
+    (prod) =>
+      !filterArr.some(
+        (filter) =>
+          filter.type === "allergen" && prod.allergens.includes(filter.value)
+      )
+  );
+  const categoryFilters = filterArr.filter((f) => f.type === "category");
+
+  if (productsWOAllergens.length > 0) {
+    productsToRender = productsWOAllergens.filter((prod) =>
+      categoryFilters.every((filter) => prod.category.includes(filter.value))
+    );
+  } else {
+    productsToRender = productArray.filter((prod) =>
+      categoryFilters.every((filter) => prod.category.includes(filter.value))
+    );
+  }
+  return productsToRender;
+};
+filterLogic(products);
+console.log("prod to render", productsToRender);

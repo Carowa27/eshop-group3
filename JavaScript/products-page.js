@@ -1,15 +1,28 @@
 import { addToLSCart } from "./local-storage-checkout-fn.js";
 window.addToLSCart = addToLSCart;
+import { getFilterFromLS, filterLogic } from "./filter-products.js";
 
 export const renderProductCards = (products) => {
+  let chosenFilterAttributes = getFilterFromLS();
   const parent = document.getElementById("product-grid-section");
   const productArray = Object.values(products);
   const productQueues = Object.keys(products);
+  let productList =
+    filterLogic(products, chosenFilterAttributes) || productArray;
 
-  parent.innerHTML = productArray
-    .map((product, i) => {
-      const productQueue = productQueues[i];
-      return `
+  document.addEventListener("change", (e) => {
+    if (e.target.closest(".filter-wrapper")) {
+      chosenFilterAttributes = getFilterFromLS();
+      productList = filterLogic(products, chosenFilterAttributes);
+      renderHtml();
+    }
+  });
+
+  const renderHtml = () => {
+    parent.innerHTML = productList
+      .map((product, i) => {
+        const productQueue = productQueues[i];
+        return `
         <article class="product-card">
           <div class="card-img-section">
             <a class="no-link-style" href="product.html?id=${productQueue}">
@@ -50,7 +63,9 @@ export const renderProductCards = (products) => {
             </p>
           </div>
         </article>`;
-    })
-    .join("");
+      })
+      .join("");
+  };
+  renderHtml();
 };
 renderProductCards(products);
