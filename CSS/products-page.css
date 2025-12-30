@@ -6,6 +6,9 @@ body {
 p {
   margin: 0;
 }
+hr {
+  width: 100%;
+}
 
 #products-page {
   padding: var(--body-padding);
@@ -135,6 +138,10 @@ input[type="checkbox"] {
 }
 
 @media screen and (min-width: 768px) {
+  hr {
+    height: 0;
+    width: 0;
+  }
   #product-grid-section {
     grid-template-columns: repeat(2, auto);
   }
@@ -171,6 +178,10 @@ input[type="checkbox"] {
   } */
 }
 @media screen and (min-width: 1200px) {
+  hr {
+    margin-left: 0;
+    width: 80%;
+  }
   #products-page {
     max-width: var(--max-width);
     grid-template-columns: 2fr 10fr;
