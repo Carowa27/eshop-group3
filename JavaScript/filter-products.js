@@ -47,38 +47,42 @@ export const productFilterHTML = (products) => {
       </div>
     </div>
     <div class="filter-box-section no-top-margin">
-      <h5 class="filter-type-heading">Allergen</h5>
-      <div class="filter-wrapper">
-      ${allergenArray
-        .map(
-          (a) => `
-        <label for="${a}" id="box-btn-${a.toLowerCase()}" class="filter-box-btn">
-          <input type="checkbox" id="allergen-${a}" name="allergen" class="filter-box-input-allergen" value="${a}" ${isActiveFilter(
-            "allergen",
-            a
-          )}>
-          ${a}
-        </label>`
-        )
-        .join("")}  
-      </div>
-      <hr/>
-      <h5 class="filter-type-heading">Smak kategori</h5>
-      <div class="filter-wrapper">
-        ${categoryArray
+      <section id="filter-allergen-section">
+        <h5 class="filter-type-heading">Allergen</h5>
+        <div class="filter-wrapper">
+        ${allergenArray
           .map(
-            (cat) => `
-        <label for="${cat}" id="box-btn-${cat.toLowerCase()}" class="filter-box-btn"
+            (a) => `
+          <label for="${a}" id="box-btn-${a.toLowerCase()}" class="filter-box-btn">
+            <input type="checkbox" id="allergen-${a}" name="allergen" class="filter-box-input-allergen" value="${a}" ${isActiveFilter(
+              "allergen",
+              a
             )}>
-        <input type="checkbox" id="category-${cat}" name="category" class="filter-box-input-cat" value="${cat}" ${isActiveFilter(
-              "category",
-              cat
-            )}>
-          ${cat}
-        </label>`
+            ${a}
+          </label>`
           )
-          .join("")}
-      </div>
+          .join("")}  
+        </div>
+      </section>
+      <hr/>
+      <section id="filter-category-section">
+        <h5 class="filter-type-heading">Smak kategori</h5>
+        <div class="filter-wrapper">
+          ${categoryArray
+            .map(
+              (cat) => `
+          <label for="${cat}" id="box-btn-${cat.toLowerCase()}" class="filter-box-btn"
+              )}>
+            <input type="checkbox" id="category-${cat}" name="category" class="filter-box-input-cat" value="${cat}" ${isActiveFilter(
+                "category",
+                cat
+              )}>
+            ${cat}
+          </label>`
+            )
+            .join("")}
+        </div>
+      </section>
     </div>`;
   };
 

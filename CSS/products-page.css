@@ -144,6 +144,19 @@ input[type="checkbox"] {
   .card-info-section {
     grid-row: 6/-1;
   }
+  .filter-box-section {
+    display: flex;
+  }
+  #filter-allergen-section,
+  #filter-category-section {
+    width: 50%;
+  }
+  #filter-category-section {
+    padding-left: 10px;
+  }
+  #filter-category-section .filter-wrapper {
+    column-gap: 10px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -152,6 +165,9 @@ input[type="checkbox"] {
   }
   .fa-icon-clickable {
     font-size: medium;
+  }
+  #filter-category-section .filter-wrapper {
+    column-gap: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -196,6 +212,13 @@ input[type="checkbox"] {
   }*/
   .product-favorite {
     margin: 0.6rem;
+  }
+  .filter-wrapper {
+    justify-content: start;
+    row-gap: 15px;
+  }
+  #filter-category-section {
+    padding-left: 0px;
   }
 }
 /* @media screen and (min-width: 1440px) {
