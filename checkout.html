@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/general.css">
     <link rel="stylesheet" href="CSS/checkout.css">
+    <title>Varukorg | Cups&Cakes</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title>Cups&Cakes</title>
 </head>
 
 <body>
@@ -130,36 +130,20 @@
                 <h2 id="overview">Översikt </h2>
                 <div id="collapsible" onclick="expand()">
                     <h2>Översikt <span id="icon-span" class="fa fa-chevron-down"> </span></h2>
-                    <h3>500 kr </h3>
+                    <h3> </h3>
                 </div>
 
                 <section id="products">
-                    <article>
-                        <img src="Images/prodimages/aftereight.jpg" class="product-img" />
-                        <div class="product-name">
-                            <p>Produktnamn</p>
-                        </div>
-                        <div class="product-cost">
-                            <p>100kr</p>
-                            <div class="amount"><button>-</button><input type="number" step="1" min="1"
-                                    value="1" /><button>+</button></div>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="Images/prodimages/aftereight.jpg" class="product-img" />
-                        <div class="product-name">
-                            <p>Produktnamn</p>
-                        </div>
-                        <div class="product-cost">
-                            <p>100kr</p>
-                            <div class="amount"><button>-</button><input type="number" step="1" min="1"
-                                    value="1" /><button>+</button></div>
-                        </div>
-                    </article>
+
+                </section>
+                <section id="cost">
+                    <div id="total-sum"></div><br>
+                    <div id="total-discount"></div>
+
                 </section>
                 <section id="cost">
                     <p>Totalt: </p><br>
-                    <p class="discount">Total rabatt: </p>
+                    <p class="discount"> </p>
                 </section>
             </section>
         </section>
@@ -173,7 +157,10 @@
         </div>
         <p>&copy; 2025 Cups&Cakes. Alla rättigheter förbehållna.</p>
     </footer>
-    <script src="JavaScript/checkout.js"></script>
+    <script src="JavaScript/checkout.js" type="module"></script>
+    <script src="JavaScript/local-storage-checkout-fn.js" type="module"></script>
+     <script src="JavaScript/local-storage-checkout-fn.js" type="module"></script>
+     <script src="product-list.js"></script>
 </body>
 
 </html>
