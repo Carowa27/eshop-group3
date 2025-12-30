@@ -1,21 +1,26 @@
-import { getLSCart } from "./local-storage-checkout-fn.js";
+import { subtractToLSCart, getLSCart, addToLSCart } from "./local-storage-checkout-fn.js";
+window.addToLSCart = addToLSCart;
+window.subtractToLSCart = subtractToLSCart;
+window.getLSCart = getLSCart;
 
 // Fetch products in cart on page load
 document.addEventListener('DOMContentLoaded', function () {
-
-  const inCart = JSON.parse(localStorage.getItem("CC-Cart"));
+  const inCart = JSON.parse(localStorage.getItem("CC-Cart"))
+  // const inCart = getLSCart;
   const parent = document.getElementById("products");
-  const totalSum = document.getElementById("total-sum");
-  const totalDiscount = document.getElementById("total-discount");
+  const totalSumElements = Array.from(document.getElementsByClassName("total-sum"));
+  const totalDiscountElements = Array.from(document.getElementsByClassName("total-discount"));
   let totalCost = 0;
   let totalOff = 0;
 
 //Visualise and calculate cost for each product type in cart
-  inCart.forEach(element => {
+  inCart.forEach(function (element, i)  {
     const specificCupCake = element.product;
     const numberOfCupCakes = element.amount;
+    const productId = element.id;
     let costForEach = 25;
     let discount = 0;
+
     if (numberOfCupCakes < 10) {
          costForEach = numberOfCupCakes * 25;
     } else if (numberOfCupCakes % 10 == 0) {
@@ -40,53 +45,20 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="product-cost">
             <p>${costForEach} kr</p>
             <div class="amount">
-              <button>-</button>
-              <input type="number" step="1" min="1" value="${numberOfCupCakes}" /><button>+</button>
+              <button onclick="subtractToLSCart('${productId}')">-</button>
+              <input type="number" step="1" min="1" disabled value="${numberOfCupCakes}" /><button onclick="addToLSCart('${productId}')">+</button>
             </div>
           </div>
         </article>`;
   });
   if (totalCost > 0) {
-      totalSum.innerHTML = "Totalt: " + totalCost + " kr"; 
+    totalSumElements.forEach(element => {
+      element.innerHTML = "Totalt: " + totalCost + " kr"; 
+    });
   }
   if (totalOff > 0) {
-      totalDiscount.innerHTML = "Din rabatt: " + totalOff + " kr";
+      totalDiscountElements.forEach(element => {
+        element.innerHTML = "Din rabatt: " + totalOff + " kr";
+      });
   }
 }, false);
-
-//Check the form input
-function validityCheck() {
-  var checkV = event.target.checkValidity();
-
-  if (checkV == false) {
-    event.target.reportValidity();
-  }
-}
-
-//Format card number automatically
-function formatCardNumber() {
-  var cardNumber = document.getElementById("cardnumber");
-  var value = cardNumber.value.replace(/\D/g, '');
-  var formattedValue = "";
-  for (var i = 0; i < value.length; i++) {
-    if (i % 4 == 0 && i > 0) {
-      formattedValue += " ";
-    }
-    formattedValue += value[i];
-  }
-  cardNumber.value = formattedValue;
-}
-
-function expand() {
-  const expanderElement = document.getElementById("products");
-  const iconElement = document.getElementById("icon-span");
-    if(expanderElement.style.display === "block") {
-      expanderElement.style.display = "none";
-      iconElement.classList.add('fa-chevron-down');
-      iconElement.classList.remove('fa-chevron-up');
-    } else {
-      expanderElement.style.display = "block";
-      iconElement.classList.remove('fa-chevron-down');
-      iconElement.classList.add('fa-chevron-up');
-    }
-}
