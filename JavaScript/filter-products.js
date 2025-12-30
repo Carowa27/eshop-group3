@@ -1,6 +1,17 @@
+export const getFilterFromLS = () => {
+  return JSON.parse(sessionStorage.getItem("CC-prod-filter"));
+};
+export const setFilterToLS = (filterAttr) => {
+  sessionStorage.setItem("CC-prod-filter", JSON.stringify(filterAttr));
+};
+export const removeFilterFromLS = () => {
+  return sessionStorage.removeItem("CC-prod-filter");
+};
+
 export const productFilterHTML = (products) => {
   const parent = document.getElementById("filter-section");
   const productArray = Object.values(products);
+  let activeFilter = getFilterFromLS() || [];
 
   let allergenArray = [];
   let categoryArray = [];
@@ -21,8 +32,14 @@ export const productFilterHTML = (products) => {
       categoryArray.push(prod.category);
     }
   });
-
-  parent.innerHTML = `
+  const isActiveFilter = (type, value) => {
+    return activeFilter.some((f) => f.type === type && f.value === value)
+      ? "checked"
+      : "";
+  };
+  // isActiveFilter("allergen", "Mjölk");
+  let renderHtml = () => {
+    parent.innerHTML = `
     <div id="filter-head-wrapper">
       <h4 id="filter-heading">Filter</h4>
       <div id="filter-mobile-caret">
@@ -36,7 +53,10 @@ export const productFilterHTML = (products) => {
         .map(
           (a) => `
         <label for="${a}" id="box-btn-${a.toLowerCase()}" class="filter-box-btn">
-          <input type="checkbox" id="${a}" name="allergen" class="filter-box-input-allergen" value="${a}">
+          <input type="checkbox" id="allergen-${a}" name="allergen" class="filter-box-input-allergen" value="${a}" ${isActiveFilter(
+            "allergen",
+            a
+          )}>
           ${a}
         </label>`
         )
@@ -50,13 +70,17 @@ export const productFilterHTML = (products) => {
             (cat) => `
         <label for="${cat}" id="box-btn-${cat.toLowerCase()}" class="filter-box-btn"
             )}>
-        <input type="checkbox" id="${cat}" name="category" class="filter-box-input-cat" value="${cat}">
+        <input type="checkbox" id="category-${cat}" name="category" class="filter-box-input-cat" value="${cat}" ${isActiveFilter(
+              "category",
+              cat
+            )}>
           ${cat}
         </label>`
           )
           .join("")}
       </div>
     </div>`;
+  };
 
   document.addEventListener("change", (e) => {
     if (e.target.classList.contains("filter-box-input-allergen")) {
@@ -68,6 +92,15 @@ export const productFilterHTML = (products) => {
       filterFn({ type: "category", value: e.target.value });
     }
   });
+
+  document.addEventListener("change", (e) => {
+    if (e.target.closest(".filter-wrapper")) {
+      activeFilter = getFilterFromLS();
+      renderHtml();
+      isActiveFilter();
+    }
+  });
+  renderHtml();
 };
 productFilterHTML(products);
 
@@ -84,16 +117,6 @@ export const filterFn = (filterAttr) => {
   }
 
   setFilterToLS(filterArr);
-};
-
-export const getFilterFromLS = () => {
-  return JSON.parse(sessionStorage.getItem("CC-prod-filter"));
-};
-export const setFilterToLS = (filterAttr) => {
-  sessionStorage.setItem("CC-prod-filter", JSON.stringify(filterAttr));
-};
-export const removeFilterFromLS = () => {
-  return sessionStorage.removeItem("CC-prod-filter");
 };
 
 let productsToRender = [];
