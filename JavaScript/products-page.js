@@ -14,7 +14,6 @@ export const renderProductCards = (products) => {
   let chosenFilterAttributes = getFilterFromLS();
   const parent = document.getElementById("product-grid-section");
   const productArray = Object.values(products);
-  const productQueues = Object.keys(products);
   let productList =
     filterLogic(products, chosenFilterAttributes) || productArray;
 
@@ -28,12 +27,11 @@ export const renderProductCards = (products) => {
 
   const renderHtml = () => {
     parent.innerHTML = productList
-      .map((product, i) => {
-        const productQueue = productQueues[i];
+      .map((product) => {
         return `
         <article class="product-card">
           <div class="card-img-section">
-            <a class="no-link-style" href="product.html?id=${productQueue}">
+            <a class="no-link-style" href="product.html?id=${product.id}">
               <img
                 src=${product.image.src}
                 alt=${product.image.alt}
@@ -60,13 +58,15 @@ export const renderProductCards = (products) => {
               .join(" ")}
           </div>
           <div class="card-info-section">
-            <a class="no-link-style product-name" href="product.html?id=${productQueue}">
+            <a class="no-link-style product-name" href="product.html?id=${
+              product.id
+            }">
               <h4 class="product-name">${product.name}</h4>
             </a>
             <p class="product-price">
               25kr /st
             </p>
-            <p class="product-cart" onclick="addToLSCart('${i}')">
+            <p class="product-cart" onclick="addToLSCart('${product.id}')">
               <i class="cart-icon fa-solid fa-cart-plus fa-icon-clickable"></i>
             </p>
           </div>
