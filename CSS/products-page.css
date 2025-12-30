@@ -1,15 +1,18 @@
 body {
   margin: 0;
-  padding: var(--body-padding);
   background-color: var(--background-color);
 }
 
 p {
   margin: 0;
 }
+hr {
+  width: 100%;
+}
 
 #products-page {
-  margin: 0 0.5rem;
+  padding: var(--body-padding);
+
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -20,6 +23,30 @@ p {
 #filter-heading {
   margin: 0 0.2rem 0 0;
   display: inline;
+}
+.filter-type-heading {
+  margin: 0.6rem 0 0.3rem 0;
+}
+.filter-wrapper {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+#filter-head-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+#filter-mobile-caret {
+  visibility: 1;
+}
+.filter-box-btn {
+  display: flex;
+  flex-direction: row;
+}
+input[type="checkbox"] {
+  margin: 0 5px 3px 3px;
 }
 #product-grid-section {
   display: grid;
@@ -111,6 +138,10 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+  hr {
+    height: 0;
+    width: 0;
+  }
   #product-grid-section {
     grid-template-columns: repeat(2, auto);
   }
@@ -120,6 +151,19 @@ p {
   .card-info-section {
     grid-row: 6/-1;
   }
+  .filter-box-section {
+    display: flex;
+  }
+  #filter-allergen-section,
+  #filter-category-section {
+    width: 50%;
+  }
+  #filter-category-section {
+    padding-left: 10px;
+  }
+  /* #filter-category-section .filter-wrapper {
+    column-gap: 10px;
+  } */
 }
 
 @media screen and (min-width: 992px) {
@@ -129,8 +173,15 @@ p {
   .fa-icon-clickable {
     font-size: medium;
   }
+  /* #filter-category-section .filter-wrapper {
+    column-gap: 15px;
+  } */
 }
 @media screen and (min-width: 1200px) {
+  hr {
+    margin-left: 0;
+    width: 80%;
+  }
   #products-page {
     max-width: var(--max-width);
     grid-template-columns: 2fr 10fr;
@@ -149,7 +200,7 @@ p {
   .filter-type-heading {
     margin: 0.4rem 0 0.3rem 0;
   }
-  .filter-radio-section {
+  .filter-box-section {
     margin: 1rem 0 0 0.3rem;
     display: flex;
     flex-direction: column;
@@ -173,6 +224,13 @@ p {
   }*/
   .product-favorite {
     margin: 0.6rem;
+  }
+  .filter-wrapper {
+    justify-content: start;
+    row-gap: 5px;
+  }
+  #filter-category-section {
+    padding-left: 0px;
   }
 }
 /* @media screen and (min-width: 1440px) {
