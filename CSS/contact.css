@@ -1,40 +1,38 @@
-body{
+main{
     display: flex;
     flex-direction: column;
-    font-family: var(--font-family);
 }
 
 /*Header text*/
+
 #hero h1{
     text-align: center;
     font-size: 2.5rem;
-    padding: 2rem 1rem 0 1rem;
+    padding: 3rem 1rem 2rem 1rem;
+    color: var(--primary-color);
     
 }
 
-/*Contact information and Contact form*/
+/*Contact section*/
 .contact-section{
-    padding: 2rem 1.5rem;
+    padding: 1rem 2rem 3rem 2rem;
 }
 
+/*Contact wrapper*/
 #contact-wrapper{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    gap: 4rem;
 }
 
+/*Form*/
 .form{
     display: flex;
     flex-direction: column;
-    flex: 1;
-    gap: 1rem;
-    max-width: 400px;
+    gap: 1.2rem;
 }
 .form .terms{
     display: flex;
-    justify-content: center;
-    gap: 0.3rem;
+    align-items: center;
 }
 
 .form-group input,
@@ -44,7 +42,8 @@ body{
     font-size: 1rem;
     border-radius: 15px;
     font-family: var(--font-family);
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--border-color);
+    outline: none;
 }
 textarea{
     min-height: 150px;
@@ -67,25 +66,21 @@ textarea{
 }
 .form button:hover{
     transform: translateY(-2px);
+    background-color: var(--secondary-color);
 }
 .terms{
     font-size: 0.8rem;
     color: var(--font-color-primary);
     background-color: white;
     border-radius: 25px;
-    border: 2px solid var(--primary-color);
+   
     padding: 0.5rem;
 }
 
+/*Contact Info section*/
 #contact-info{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 400px;
-    padding: 2rem 2rem 1rem 2rem;
-    border-radius: 25px;
-    border: 2px solid var(--primary-color);
-    background-color: white;
 }
 .info-item{
     display: flex;
@@ -104,37 +99,36 @@ textarea{
 
 
 
+
 /* Responsive Design */
 @media (max-width: 900px) {
-
-    .contact-section{
-        padding: 0;
-    }
     #contact-wrapper{
-        padding: 0 2rem 0 2rem;
-        height: 450px;
-        gap: 1rem;
+        gap: 2rem;
     }
-    #contact-info{
-        gap: 0;
-    }
-    .form{
-        gap: 0.5rem;
-    }
-    .terms{
+    .form .terms{
         align-items: flex-start;
-        padding: 0.8rem;
     }
 }
 
 @media (max-width: 700px){
+    #hero h1{
+        padding: 2.5rem 1.5rem 2rem 1.5rem;
+    }
     #contact-wrapper{
         flex-direction: column;
         align-items: center;
-        padding: 2rem 2rem 0 2rem;
+        padding: 0 2.5rem 0 2.5rem;
     }
-    .contact-form{
-        min-width: 400px;
-        min-height: 380px;
+    .form{
+        gap: 1.5rem;
+        width: 100%;
+    }
+    .contact-section{
+        padding: 0;
+    }
+   
+    #contact-info{
+        padding: 2rem 0 2rem 0;
+        gap: 2rem;
     }
 }
