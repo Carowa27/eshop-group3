@@ -51,6 +51,7 @@ h3 {
   font-weight: 600;
 }
 
+/* Denna koden färgar bakgrunden på markerad text, ta bort från general CSS och lägg i era egna om ni vill ha den */
 ::selection {
     background-color: var(--primary-color);
     color: var(--input-field-color);
@@ -62,7 +63,7 @@ h3 {
 #header {
   position: sticky;
   top: 0;
-  background: var(--input-field-color);
+  background: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,7 +80,7 @@ h3 {
 }
 #logo h1 {
   font-size: 1.5rem;
-  color: var(--font-color-primary);
+  color: var(--input-field-color);
   line-height: 1.2;
 }
 
@@ -93,7 +94,7 @@ h3 {
   margin-left: auto;
   margin-right: .8rem;
   font-size: 1.4rem;
-  color: var(--font-color-primary);
+  color: var(--input-field-color);
   text-decoration: none;
 }
 
@@ -119,9 +120,9 @@ h3 {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: var(--font-color-primary);
-  height: 2px;
-  width: 1.6rem;
+  background: var(--input-field-color);
+  height: 3px;
+  width: 1.7rem;
   border-radius: 4px;
   position: relative;
   transition: all 300ms ease-in-out;
@@ -141,13 +142,13 @@ h3 {
   top: 0; right: 0;
   height: 100vh;
   width: 40vw;
-  background: var(--input-field-color);
+  background: var(--primary-color);
   transform: translateX(100%);
   transition: transform 300ms ease-in-out;
   z-index: 9998;
   padding: 5rem 2rem;
   box-shadow: -4px 0 10px rgba(0,0,0,.2);
-  border-radius: 8px 0 0 8px;
+  border-radius: 0px;
 }
 
 /* Länklista */
@@ -157,19 +158,20 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
-  text-align: right;
+  text-align: left;
 }
 
 /* Enskild länk */
 #nav a {
   text-decoration: none;
-  color: var(--font-color-primary);
+  color: var(--input-field-color);
   opacity: 0;
   transition: opacity 200ms ease;
 }
 
+/* Kan vi se till så att länkarna kör en transform scale 1.1? och kanske blir fetmarkerade med font-weight */
 #nav a:hover {
-  color: var(--primary-color);
+  color: var(--font-color-primary);
 }
 
 /* Backdrop som gör bakgrunden suddig */
@@ -182,6 +184,7 @@ h3 {
   pointer-events: none;
   transition: all 300ms ease;
   z-index: 9997;
+  backdrop-filter: blur(5px);
 }
 
 /* När menyn öppnas sker detta*/
@@ -300,7 +303,6 @@ h3 {
     order: 3;
     margin-left: 1.5rem;   /* spacing mellan meny och ikon */
     font-size: 1.5rem;
-    color: var(--font-color-primary);
   }
 
   /* Loggan ska alltid vara först */
