@@ -5,8 +5,7 @@ window.getLSCart = getLSCart;
 
 // Fetch products in cart on page load
 document.addEventListener('DOMContentLoaded', function () {
-  const inCart = JSON.parse(localStorage.getItem("CC-Cart"))
-  // const inCart = getLSCart;
+   const inCart = getLSCart();
   const parent = document.getElementById("products");
   const totalSumElements = Array.from(document.getElementsByClassName("total-sum"));
   const totalDiscountElements = Array.from(document.getElementsByClassName("total-discount"));
