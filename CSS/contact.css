@@ -1,10 +1,10 @@
 main{
     display: flex;
     flex-direction: column;
+    background-color: var(--background-color);
 }
 
 /*Header text*/
-
 #hero h1{
     text-align: center;
     font-size: 2.5rem;
@@ -44,6 +44,7 @@ main{
     font-family: var(--font-family);
     border: 2px solid var(--border-color);
     outline: none;
+    background-color: var( --input-field-color);
 }
 textarea{
     min-height: 150px;
@@ -71,11 +72,23 @@ textarea{
 .terms{
     font-size: 0.8rem;
     color: var(--font-color-primary);
-    background-color: white;
-    border-radius: 25px;
-   
-    padding: 0.5rem;
+    padding: 0;
 }
+/*Extra Div för linje under terms
+.terms-underline{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+.terms-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3.5px;
+  background-color: var(--primary-color);
+  border-radius: 999px;
+}
+*/
 
 
 /*Enkelt sätt att få Checkboxen snyggare
