@@ -34,7 +34,7 @@ export const renderProductCards = (products) => {
             <a class="no-link-style" href="product.html?id=${product.id}">
               <img
                 src=${product.image.src}
-                alt=${product.image.alt}
+                alt="${product.image.alt}"
                 class="card-img"
               />
             </a>
