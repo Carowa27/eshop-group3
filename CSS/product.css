@@ -46,6 +46,12 @@ main {
 
 .product h1{
     margin: 1rem 0 0 0;
+    line-height: 1.4;
+}
+
+#weight {
+    font-size: 1rem;
+    font-weight: 800;
 }
 
 .product-image {
@@ -206,6 +212,7 @@ details[open] summary i {
 .quantity input {
     width: 80px;
     text-align: center;
+    font-family: var(--font-family);
     border: 1px solid var(--primary-color);
     background-color: var(--input-field-color);
     color: var(--font-color-primary);
@@ -214,12 +221,23 @@ details[open] summary i {
     border-radius: 60px;
 }
 
+#quantity::-webkit-inner-spin-button,
+#quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#quantity {
+    -moz-appearance: textfield;
+}
+
 .add-to-cart {
     background-color: var(--primary-color);
     color: var(--input-field-color);
-    padding: 1rem 1.5rem;
+    font-family: var(--font-family);
+    padding: var(--button-padding);
     border: none;
-    border-radius: 60px;
+    border-radius: var(--button-border-radius);
     cursor: pointer;
     font-size: 1rem;
     display: inline-flex;
