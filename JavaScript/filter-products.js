@@ -116,7 +116,9 @@ export const filterFn = (filterAttr) => {
   if (filterInArray === false) {
     filterArr.push(filterAttr);
   } else {
-    const filterIndexToRemove = filterArr.indexOf(filterAttr);
+    const filterIndexToRemove = filterArr.findIndex(
+      (item) => item.value === `${filterAttr.value}`
+    );
     filterArr.splice(filterIndexToRemove, 1);
   }
 
