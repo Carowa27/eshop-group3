@@ -11,12 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const totalDiscountElements = Array.from(document.getElementsByClassName("total-discount"));
   let totalCost = 0;
   let totalOff = 0;
-
+console.log(inCart);
 //Visualise and calculate cost for each product type in cart
   inCart.forEach(function (element, i)  {
+    
     const specificCupCake = element.product;
     const numberOfCupCakes = element.amount;
-    const productId = element.id;
+    const productId = element.product.id;
+    console.log(productId);
     let costForEach = 25;
     let discount = 0;
 
@@ -44,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="product-cost">
             <p>${costForEach} kr</p>
             <div class="amount">
-              <button onclick="subtractToLSCart('${productId}')">-</button>
-              <input type="number" step="1" min="1" disabled value="${numberOfCupCakes}" /><button onclick="addToLSCart('${productId}')">+</button>
+              <button onclick="subtractToLSCart('${productId}'); window.location.reload();">-</button>
+              <input type="number" step="1" min="1" disabled value="${numberOfCupCakes}" /><button onclick="addToLSCart('${element.product.id}',1); window.location.reload();">+</button>
             </div>
           </div>
         </article>`;

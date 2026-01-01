@@ -4,6 +4,7 @@ export const addToLSCart = (item, amount) => {
   const amountToAdd = parseInt(amount);
   const LSCart = getLSCart();
   const newArray = LSCart && LSCart.length > 0 ? LSCart : [];
+  console.log(item);
   const updateLSCart = () => {
     if ((LSCart == undefined) | (LSCart == null)) {
       localStorage.setItem(
@@ -34,8 +35,8 @@ export const addToLSCart = (item, amount) => {
   updateLSCart();
 };
 
-export const subtractToLSCart = (subItemIndex) => {
-  const subItem = Object.values(products)[subItemIndex];
+export const subtractToLSCart = (item) => {
+  const subItem = products[item];
   const LSCart = getLSCart();
   const newArray = LSCart && LSCart.length > 0 ? LSCart : [];
   const updateLSCart = () => {
