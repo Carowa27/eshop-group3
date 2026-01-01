@@ -212,7 +212,7 @@ details[open] summary i {
 .quantity input {
     width: 80px;
     text-align: center;
-    font-family: "Domine";
+    font-family: var(--font-family);
     border: 1px solid var(--primary-color);
     background-color: var(--input-field-color);
     color: var(--font-color-primary);
@@ -234,7 +234,7 @@ details[open] summary i {
 .add-to-cart {
     background-color: var(--primary-color);
     color: var(--input-field-color);
-    font-family: "Domine";
+    font-family: var(--font-family);
     padding: var(--button-padding);
     border: none;
     border-radius: var(--button-border-radius);
