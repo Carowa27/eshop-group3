@@ -137,8 +137,7 @@ export const filterLogic = (products, filter) => {
       )
   );
   const categoryFilters = filterArr.filter((f) => f.type === "category");
-
-  if (productsWOAllergens.length > 0) {
+  if (productsWOAllergens.length >= 0) {
     productsToRender = productsWOAllergens.filter((prod) =>
       categoryFilters.every((filter) => prod.category.includes(filter.value))
     );
