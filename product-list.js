@@ -555,7 +555,11 @@ const products = {
     allergens: ["Ägg"],
     category: "Frukt",
     description: `
-            Saftig päronmuffins med mild vanilj som ger en mjuk och fruktig smakupplevelse. Päronets naturliga sötma och lätt blommiga ton möter vaniljens rundhet i en luftig, bakad kaka. Toppad med mjölkfri, krämig frosting blir detta ett fräscht och lätt fikaval som passar perfekt till kaffe eller te.
+            Saftig och elegant päronmuffins med mild vanilj och subtil rosmarin som lyfter fram fruktens sötma. Kombinationen av Alexandrine d'Hiver-päronets naturliga friskhet, den lena vaniljen och den aromatiska örtnoten skapar en balanserad och modern smakprofil. Den luftiga kakan möts av en mjölkfri, krämig frosting som ger en rund avslutning. En prisbelönt skapelse som tog guld i SM i bakning 2019 - och fortfarande är en självklar favorit till både kaffe och te.
+            <br><br>
+            <h3>Juryns motivering</h3>
+            <br>
+            <em>”En fulländad balans mellan nordisk frukt, modern elegans och överraskande aromatik. Päron och vanilj får nytt liv genom rosmarinens subtila karaktär, och den luftiga texturen bär smaken med precision. En cupcake som överraskar, förför och dröjer sig kvar. Årets värdiga vinnare.”</em>
         `,
     image: {
       src: "Images/prodimages/pearvanilla.jpg",
@@ -563,11 +567,11 @@ const products = {
     },
     ingredients: `
             Glutenfri mjölmix (ris-/majsmjöl), socker,
-            <span class="allergen">ägg</span>, päron (20%),
-            rapsolja, bakpulver, vanilj, salt.
+            <span class="allergen">ägg</span>, svenska Alexandrine d'Hiver-päron (20%),
+            rapsolja, bakpulver, bourbonvanilj, salt, rosmarin.
             <br><br>
             Frosting:
-            mjölkfritt margarin, florsocker, vanilj.
+            mjölkfritt margarin, florsocker, bourbonvanilj.
         `,
     nutrition: [
       { label: "Energi", value: "330 kcal" },
