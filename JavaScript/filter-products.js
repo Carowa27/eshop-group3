@@ -48,7 +48,7 @@ export const productFilterHTML = (products) => {
     </div>
     <div class="filter-box-section no-top-margin">
       <section id="filter-allergen-section">
-        <h5 class="filter-type-heading">Allergen</h5>
+        <h5 class="filter-type-heading">Fri från</h5>
         <div class="filter-wrapper">
         ${allergenArray
           .map(
