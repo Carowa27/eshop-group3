@@ -217,6 +217,19 @@ iframe {
         ;
     }
 
+    #block-2{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    #block-2 .story-img{
+        border-radius: 10px;
+        height: 80%;
+        object-fit: cover;
+        margin-top: 40px;
+    }
+
     #block-3 .story-img {
         margin-top:30px;
     }
@@ -242,5 +255,21 @@ iframe {
 
     #usp-section p{
         font-size: 1rem;
+    }
+
+
+@media screen and (max-width:400px) {
+
+    #our-story{
+        grid-template-columns:1fr;
+        grid-template-areas: 
+        "block-1"
+        "block-3"
+        "block-4"
+        ;
+    }
+
+    #block-2{
+        display: none;
     }
 }
