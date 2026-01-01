@@ -144,11 +144,12 @@ p{
     background-image: url(https://carowa27.github.io/eshop-group3/Images/pin.png);
     background-repeat: no-repeat;
     background-size:contain;
-    padding: 10px 17px 8px 40px;
+    padding: 0.8rem 1.2rem 0.8rem 2.3rem;
+    line-height: normal;
     color: var(--background-color);
     text-decoration: none;
     font-weight: bolder;
-    border-radius: 15px;
+    border-radius: 60px;
     cursor: pointer;
 }
 
