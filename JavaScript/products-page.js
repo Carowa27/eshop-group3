@@ -57,7 +57,11 @@ export const renderProductCards = (products) => {
               })
               .join(" ")}
           </div>
-          <div class="card-info-section">
+          <div class="${
+            product.name.length > 22 && window.innerWidth <= 350
+              ? "card-info-section-long"
+              : "card-info-section"
+          }">
             <a class="no-link-style product-name" href="product.html?id=${
               product.id
             }">
