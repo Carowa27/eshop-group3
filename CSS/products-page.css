@@ -43,7 +43,8 @@ hr {
   gap: 5px;
 }
 #filter-mobile-caret {
-  visibility: 1;
+  display: flex;
+  align-items: center;
 }
 .filter-box-btn {
   display: flex;
@@ -209,6 +210,9 @@ input[type="checkbox"] {
     grid-row: 2/3;
 
     grid-template-columns: repeat(4, auto);
+  }
+  #filter-mobile-caret {
+    display: none;
   }
   .filter-type-heading {
     margin: 0.4rem 0 0.3rem 0;
