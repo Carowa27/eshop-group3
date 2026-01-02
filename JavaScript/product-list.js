@@ -1,4 +1,39 @@
 const products = {
+    "pear-vanilla-gf-df": {
+    id: "pear-vanilla-gf-df",
+    name: "Päron & Vanilj (gluten- och mjölkfri)",
+    allergens: ["Ägg"],
+    category: "Frukt",
+    description: `
+            Saftig och elegant päronmuffins med mild vanilj och subtil rosmarin som lyfter fram fruktens sötma. Kombinationen av Alexandrine d'Hiver-päronets naturliga friskhet, den lena vaniljen och den aromatiska örtnoten skapar en balanserad och modern smakprofil. Den luftiga kakan möts av en mjölkfri, krämig frosting som ger en rund avslutning. En prisbelönt skapelse som tog guld i SM i bakning 2019 - och fortfarande är en självklar favorit till både kaffe och te.
+            <br><br>
+            <h3>Juryns motivering</h3>
+            <br>
+            <em>”En fulländad balans mellan nordisk frukt, modern elegans och överraskande aromatik. Päron och vanilj får nytt liv genom rosmarinens subtila karaktär, och den luftiga texturen bär smaken med precision. En cupcake som överraskar, förför och dröjer sig kvar. Årets värdiga vinnare.”</em>
+        `,
+    image: {
+      src: "Images/prodimages/pearvanilla.jpg",
+      alt: "Gluten- och mjölkfri päron- och vaniljmuffins",
+    },
+    ingredients: `
+            Glutenfri mjölmix (ris-/majsmjöl), socker,
+            <span class="allergen">ägg</span>, svenska Alexandrine d'Hiver-päron (20%),
+            rapsolja, bakpulver, bourbonvanilj, salt, rosmarin.
+            <br><br>
+            Frosting:
+            mjölkfritt margarin, florsocker, bourbonvanilj.
+        `,
+    nutrition: [
+      { label: "Energi", value: "330 kcal" },
+      { label: "Fett", value: "14 g" },
+      { label: "- varav mättat fett", value: "3.5 g" },
+      { label: "Kolhydrater", value: "47 g" },
+      { label: "- varav sockerarter", value: "22 g" },
+      { label: "Fiber", value: "2 g" },
+      { label: "Protein", value: "5.5 g" },
+      { label: "Salt", value: "0.45 g" },
+    ],
+  },
   "blueberry-blackberry": {
     id: "blueberry-blackberry",
     name: "Blåbär & Björnbär",
@@ -548,42 +583,6 @@ const products = {
   },
 
   /* Gluten- & mjölkfria */
-
-  "pear-vanilla-gf-df": {
-    id: "pear-vanilla-gf-df",
-    name: "Päron & Vanilj (gluten- och mjölkfri)",
-    allergens: ["Ägg"],
-    category: "Frukt",
-    description: `
-            Saftig och elegant päronmuffins med mild vanilj och subtil rosmarin som lyfter fram fruktens sötma. Kombinationen av Alexandrine d'Hiver-päronets naturliga friskhet, den lena vaniljen och den aromatiska örtnoten skapar en balanserad och modern smakprofil. Den luftiga kakan möts av en mjölkfri, krämig frosting som ger en rund avslutning. En prisbelönt skapelse som tog guld i SM i bakning 2019 - och fortfarande är en självklar favorit till både kaffe och te.
-            <br><br>
-            <h3>Juryns motivering</h3>
-            <br>
-            <em>”En fulländad balans mellan nordisk frukt, modern elegans och överraskande aromatik. Päron och vanilj får nytt liv genom rosmarinens subtila karaktär, och den luftiga texturen bär smaken med precision. En cupcake som överraskar, förför och dröjer sig kvar. Årets värdiga vinnare.”</em>
-        `,
-    image: {
-      src: "Images/prodimages/pearvanilla.jpg",
-      alt: "Gluten- och mjölkfri päron- och vaniljmuffins",
-    },
-    ingredients: `
-            Glutenfri mjölmix (ris-/majsmjöl), socker,
-            <span class="allergen">ägg</span>, svenska Alexandrine d'Hiver-päron (20%),
-            rapsolja, bakpulver, bourbonvanilj, salt, rosmarin.
-            <br><br>
-            Frosting:
-            mjölkfritt margarin, florsocker, bourbonvanilj.
-        `,
-    nutrition: [
-      { label: "Energi", value: "330 kcal" },
-      { label: "Fett", value: "14 g" },
-      { label: "- varav mättat fett", value: "3.5 g" },
-      { label: "Kolhydrater", value: "47 g" },
-      { label: "- varav sockerarter", value: "22 g" },
-      { label: "Fiber", value: "2 g" },
-      { label: "Protein", value: "5.5 g" },
-      { label: "Salt", value: "0.45 g" },
-    ],
-  },
 
   "chocolate-gf-df": {
     id: "chocolate-gf-df",

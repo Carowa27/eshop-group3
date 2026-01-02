@@ -49,6 +49,12 @@ h3 {
   margin: 0;
 }
 
+a {
+  color: var(--font-color-primary);
+}
+a:hover {
+  color: var( --primary-color);
+}
 .current {
   font-weight: 600;
 }

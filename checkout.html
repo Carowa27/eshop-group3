@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="CSS/general.css">
     <link rel="stylesheet" href="CSS/checkout.css">
     <title>Varukorg | Cups & Cakes</title>
@@ -11,7 +12,7 @@
 </head>
 
 <body>
-    <header id="header">
+     <header id="header">
         <div class="header-container">
             <a href="index.html" id="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 500 500">
@@ -30,16 +31,21 @@
             </a>
 
             <a href="checkout.html" id="cart-btn" aria-label="Kassa">
-                <i class="fa-solid fa-cart-arrow-down"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-badge" class="cart-badge" hidden>0</span>
             </a>
 
+
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
 
             <label for="nav-toggle" class="nav-toggle-label" aria-label="Öppna meny">
                 <span></span>
             </label>
 
+
             <div class="backdrop"></div>
+
 
             <nav id="nav">
                 <ul>
@@ -157,10 +163,11 @@
         </div>
         <p>&copy; 2025 Cups & Cakes. Alla rättigheter förbehållna.</p>
     </footer>
-    <script src="product-list.js"></script>
+    <script src="JavaScript/product-list.js"></script>
     <script src="JavaScript/checkout.js" type="module"></script>
     <script src="JavaScript/local-storage-checkout-fn.js" type="module"></script>
     <script src="JavaScript/checkout-functions.js"></script>
+     <script type="module" src="JavaScript/cart-badge.js"></script>
 </body>
 
 </html>
