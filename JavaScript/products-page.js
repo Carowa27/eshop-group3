@@ -6,9 +6,9 @@ import {
   removeFilterFromLS,
 } from "./filter-products.js";
 
-// window.addEventListener("pagehide", () => {
-//   removeFilterFromLS();
-// });
+window.addEventListener("pagehide", () => {
+  removeFilterFromLS();
+});
 
 export const renderProductCards = (products) => {
   let chosenFilterAttributes = getFilterFromLS();
@@ -59,7 +59,7 @@ export const renderProductCards = (products) => {
               .join(" ")}
           </div>
           <div class="${
-            product.name.length > 22 && window.innerWidth <= 350
+            product.name.length > 22
               ? "card-info-section-long"
               : "card-info-section"
           }">

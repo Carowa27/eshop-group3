@@ -79,7 +79,7 @@ input[type="checkbox"] {
   font-size: x-large;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
-  padding: 0.5rem 0 0 0.3rem;
+  padding: 0 0 0 0.3rem;
 }
 .fa-cow {
   color: #a48271;
@@ -150,7 +150,6 @@ input[type="checkbox"] {
 
 @media screen and (min-width: 768px) {
   hr {
-    height: 0;
     width: 0;
   }
   #product-grid-section {
