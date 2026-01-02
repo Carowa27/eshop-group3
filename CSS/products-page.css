@@ -42,9 +42,7 @@ hr {
   flex-direction: row;
   gap: 5px;
 }
-#filter-mobile-caret {
-  visibility: 1;
-}
+
 .filter-box-btn {
   display: flex;
   flex-direction: row;

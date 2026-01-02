@@ -27,8 +27,9 @@ export const renderProductCards = (products) => {
 
   const renderHtml = () => {
     productList.length !== 0
-      ? (parent.innerHTML = productList.map((product) => {
-          return `
+      ? (parent.innerHTML = productList
+          .map((product) => {
+            return `
         <article class="product-card">
           <div class="card-img-section">
             <a class="no-link-style" href="product.html?id=${product.id}">
@@ -75,7 +76,8 @@ export const renderProductCards = (products) => {
             </p>
           </div>
         </article>`;
-        })).join(" ")
+          })
+          .join(" "))
       : (parent.innerHTML = `<p>Tyvärr hittade vi inga produkter med dina filter kriterier</p>`);
   };
   renderHtml();
