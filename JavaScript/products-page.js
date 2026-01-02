@@ -34,7 +34,7 @@ export const renderProductCards = (products) => {
             <a class="no-link-style" href="product.html?id=${product.id}">
               <img
                 src=${product.image.src}
-                alt=${product.image.alt}
+                alt="${product.image.alt}"
                 class="card-img"
               />
             </a>
@@ -57,7 +57,11 @@ export const renderProductCards = (products) => {
               })
               .join(" ")}
           </div>
-          <div class="card-info-section">
+          <div class="${
+            product.name.length > 22 && window.innerWidth <= 350
+              ? "card-info-section-long"
+              : "card-info-section"
+          }">
             <a class="no-link-style product-name" href="product.html?id=${
               product.id
             }">

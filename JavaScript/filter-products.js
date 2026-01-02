@@ -48,12 +48,12 @@ export const productFilterHTML = (products) => {
     </div>
     <div class="filter-box-section no-top-margin">
       <section id="filter-allergen-section">
-        <h5 class="filter-type-heading">Allergen</h5>
+        <h5 class="filter-type-heading">Fri från</h5>
         <div class="filter-wrapper">
         ${allergenArray
           .map(
             (a) => `
-          <label for="${a}" id="box-btn-${a.toLowerCase()}" class="filter-box-btn">
+          <label for="allergen-${a}" id="box-btn-${a.toLowerCase()}" class="filter-box-btn">
             <input type="checkbox" id="allergen-${a}" name="allergen" class="filter-box-input-allergen" value="${a}" ${isActiveFilter(
               "allergen",
               a
@@ -71,7 +71,7 @@ export const productFilterHTML = (products) => {
           ${categoryArray
             .map(
               (cat) => `
-          <label for="${cat}" id="box-btn-${cat.toLowerCase()}" class="filter-box-btn"
+          <label for="category-${cat}" id="box-btn-${cat.toLowerCase()}" class="filter-box-btn"
               )}>
             <input type="checkbox" id="category-${cat}" name="category" class="filter-box-input-cat" value="${cat}" ${isActiveFilter(
                 "category",
