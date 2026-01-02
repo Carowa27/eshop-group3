@@ -58,7 +58,7 @@ export const renderProductCards = (products) => {
               .join(" ")}
           </div>
           <div class="${
-            product.name.length > 22 && window.innerWidth <= 350
+            product.name.length > 22
               ? "card-info-section-long"
               : "card-info-section"
           }">
