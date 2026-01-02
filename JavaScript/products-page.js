@@ -6,9 +6,9 @@ import {
   removeFilterFromLS,
 } from "./filter-products.js";
 
-// window.addEventListener("pagehide", () => {
-//   removeFilterFromLS();
-// });
+window.addEventListener("pagehide", () => {
+  removeFilterFromLS();
+});
 
 export const renderProductCards = (products) => {
   let chosenFilterAttributes = getFilterFromLS();
