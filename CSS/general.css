@@ -104,11 +104,34 @@ h3 {
 
 /* Kassa-ikonen */
 #cart-btn {
+  position: relative;
   margin-left: auto;
   margin-right: .8rem;
   font-size: 1.4rem;
   color: var(--input-field-color);
   text-decoration: none;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: var(--accent-color-1);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.cart-badge[hidden] {
+  display: none;
 }
 
 /* Dölj nav checkboxen */
