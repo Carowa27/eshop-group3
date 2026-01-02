@@ -1,150 +1,320 @@
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
-.nav-toggle:checked ~ nav {
-  transform: scaleY(1);
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap");
+:root {
+  --primary-color: #e28383;
+  --secondary-color: #665253;
+  --accent-color-1: #5bb065;
+  --background-color: #f3e5dc;
+  --background-color-rgb: 243, 229, 220;
+  --input-field-color: #fdf4ee;
+  --border-color: #c5abab;
+  --font-family: "Domine", serif;
+  --font-color-primary: #574142;
+  --font-color-secondary: #746263;
+  --max-width: 1200px;
+  --body-padding: 20px;
+  --button-border-radius: 60px;
+  --button-padding: 1rem 1.5rem;
 }
 
-/*
-body:has(#nav-toggle:checked) .backdrop {
-  opacity: 1;
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.current {
+  font-weight: 600;
+}
+
+/* Denna koden färgar bakgrunden på markerad text, ta bort från general CSS och lägg i era egna om ni vill ha den */
+::selection {
+    background-color: var(--primary-color);
+    color: var(--input-field-color);
+}
+
+/* NAVIGATION */
+
+/* Headern */
+#header {
+  position: sticky;
+  top: 0;
+  background: var(--primary-color);
+  padding: .6rem 0rem;
+  z-index: 10000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  text-decoration: none;
+  transition: opacity 200ms ease, transform 200ms ease, font-weight 200ms ease;
+}
+#logo:hover{
+  transform: scale(1.1);
+}
+
+#logo h1 {
+  font-size: 1.5rem;
+  color: var(--input-field-color);
+  line-height: 1.2;
+}
+
+/* Klass för att göra &-tecknet i loggan kursivt */
+.italic {
+  font-style: italic;
+}
+
+/* Kassa-ikonen */
+#cart-btn {
+  margin-left: auto;
+  margin-right: .8rem;
+  font-size: 1.4rem;
+  color: var(--input-field-color);
+  text-decoration: none;
+}
+
+/* Dölj nav checkboxen */
+.nav-toggle {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Hamburger ikonen */
+.nav-toggle-label {
+  height: 40px;
+  width: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* Varje streck i hamburgerikonen */
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: var(--input-field-color);
+  height: 3px;
+  width: 1.7rem;
+  border-radius: 4px;
+  position: relative;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content:"";
+  position: absolute;
+}
+.nav-toggle-label span::before { bottom: 8px; }
+.nav-toggle-label span::after  { top: 8px; }
+
+/* Navigationsmenyn */
+#nav {
+  position: fixed;
+  top: 0; right: 0;
+  height: 100vh;
+  width: 40vw;
+  background: var(--primary-color);
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+  z-index: 9998;
+  padding: 5rem 2rem;
+  box-shadow: -4px 0 10px rgba(0,0,0,.2);
+  border-radius: 0px;
+}
+
+/* Länklista */
+#nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  text-align: left;
+}
+
+/* Enskild länk */
+#nav a {
+  text-decoration: none;
+  color: var(--input-field-color);
+  opacity: 0;
+  transition: opacity 200ms ease, transform 200ms ease, font-weight 200ms ease;
+  display: inline-block;
+}
+
+/* Kan vi se till så att länkarna kör en transform scale 1.1? och kanske blir fetmarkerade med font-weight */
+#nav a:hover {
+  color: var(--font-color-primary);
+  transform: scale(1.1);
+}
+
+/* Backdrop som gör bakgrunden suddig */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease;
+  z-index: 9997;
+  backdrop-filter: blur(5px);
+}
+
+/* När menyn öppnas sker detta*/
+.nav-toggle:checked ~ #nav {
+  transform: translateX(0);
+}
+.nav-toggle:checked ~ .backdrop {
   visibility: visible;
+  opacity: 1;
   pointer-events: all;
 }
-
-body:has(#nav-toggle:checked) header {
-  border-radius: 6px 6px 0 0;
-  box-shadow: none;
-  transition: border-radius 0ms ease 0ms;
-}
-
-.nav-toggle:checked ~ nav a {
+.nav-toggle:checked ~ #nav a {
   opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
+  transition-delay: .2s;
 }
-
-.nav-toggle:checked ~ .nav-toggle-label span {
+.nav-toggle:checked + .nav-toggle-label span {
   background: transparent;
 }
-
-.nav-toggle:checked ~ .nav-toggle-label span::before {
+.nav-toggle:checked + .nav-toggle-label span::before {
   transform: rotate(45deg);
   bottom: 0;
 }
-
-.nav-toggle:checked ~ .nav-toggle-label span::after {
+.nav-toggle:checked + .nav-toggle-label span::after {
   transform: rotate(-45deg);
   top: 0;
-}*/
-
-body{
-    margin: 0;
-}
-#nav-toggle {
-    display: none;
-}
-#home-page{
-    display: flex;
-    text-decoration: none;
-    align-items: center;
-}
-#home-page:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-}
-#logo-text {
-    font-family: 'Domine', serif;
-    color: #000000;
-    font-size: 0.9rem;
 }
 
-#head-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 4rem 0 2rem;
+/* Footer */
+#foot-container {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 1.5rem 1rem 1.5rem;
+  text-align: center;
+  font-family: var(--font-family);
 }
 
-#nav-container{
-}
-#nav-container ul{
+/* Wrapper för sociala ikoner */
+#media-wrapper {
   display: flex;
-  font-family: 'Domine', serif;
-  font-size: 1.1rem;
-  gap: 4rem;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
 }
-#nav-container li{
-  list-style: none;
-  transition: transform 0.2s ease-in-out;
-}
-#nav-container li:hover{
-  transform: scale(1.1);
-}
-#nav-container a,
-#nav-container i{
+
+#media-wrapper a {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
   text-decoration: none;
-  color: #000000;
-  transition: transform 0.2s ease-in-out;
-}
-#nav-container a:hover,
-#nav-container i:hover{
-  color: #f7559a;
-  transform: scale(1.2);
+  color: var(--input-field-color);
+  font-size: 1rem;
+  transition: transform .2s ease;
 }
 
-
-
-#foot-container{
-    font-family: 'Domine', serif;
-    width: 100%;
-
-    position: fixed;
-    bottom: 0;
+#media-wrapper a:hover {
+  transform: scale(1.08);
 }
-#media-wrapper{
+
+/* Footer copyright text */
+#foot-container p {
+  font-size: .8rem;
+  margin: 0;
+}
+
+/* Responsiv Design */
+@media (min-width: 768px) {
+
+  /* Layout för läsplatta och desktop */
+  #nav {
+    order: 2;
+    position: static;
+    transform: none;
+    height: auto;
+    width: auto;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  #nav ul {
     display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  #nav a {
+    opacity: 1;
+    font-size: 1.2rem;
+  }
+
+  /* Kassa-ikonen */
+  #cart-btn {
+    order: 3;
+    margin-left: 1.5rem;   /* spacing mellan meny och ikon */
+    font-size: 1.5rem;
+  }
+
+  /* Loggan ska alltid vara först */
+  #logo {
+    order: 1;
+  }
+
+  /* Dölj hamburgaren */
+  .nav-toggle,
+  .nav-toggle-label,
+  .backdrop {
+    display: none;
+  }
+
+    /* Ändrar riktning till row för större skärmar */
+    #media-wrapper {
+    flex-direction: row;
     justify-content: center;
-    gap: 10rem;
-    padding: 5rem 5rem 4rem 5rem;
-    background-color: #f7559a;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
 }
-#media-wrapper a{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: transform 0.2s ease-in-out;
-    color: white;
-    gap: 0.5rem;
-}
-#media-wrapper a:hover{
-    transform: scale(1.1);
-    color: black;
-}
-#media-wrapper i{
-    font-size: 1.4rem;
-    color: #000000;
-}
-#foot-container p{
-    background-color: #f7559a;
-    color: white;
-    text-align: center;
-    padding-bottom: 1rem;
-    margin-top: auto;
-    margin-bottom: 0;
-}
-
-
-
-
-
-
-
-
-
-
-/*
-@media screen and (min-width: 1300px) {}
-  
-.nav-toggle-label {
-  display: none;
-}*/

@@ -1,0 +1,361 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+
+:root {
+    --border-1: 1px solid var(--border-color);
+    --border-2: 1px dashed var(--border-color);
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color-primary);
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* .back-button {
+    background-color: var(--primary-color);
+    color: var(--input-field-color);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 60px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1rem 2rem;
+} */
+
+.product {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "image"
+    "details"
+    "ingredients-nutrition";   
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: 8px;
+}
+
+.product h1{
+    margin: 1rem 0 0 0;
+    line-height: 1.4;
+}
+
+#weight {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.product-image {
+    grid-area: image;
+    width: 100%;
+    margin: 0;
+    
+}
+
+.product-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.product-info {
+    grid-area: details;
+}
+
+.product-image {
+    grid-area: image;
+}
+
+.ingredients-nutrition {
+    grid-area: ingredients-nutrition;
+}
+
+.price-unit {
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+details > *:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary i {
+    margin-left: auto;
+    font-size: .8rem;
+    transition: transform .5s;
+}
+
+summary i::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f067";
+}
+
+details[open] summary i::before {
+    content: "\f068";
+}
+
+details[open] summary i {
+    transform: rotate(180deg);
+}
+
+.ingredients {
+    margin: 1rem 0 0 0;
+    padding: 2rem 1rem;
+    border-top: var(--border-1);
+    border-bottom: var(--border-1);
+}
+
+.allergen {
+    font-weight: 800;
+}
+
+#allergen-label {
+    display: flex;
+    border-radius: 60px;
+    column-gap: 0.5rem;
+    margin: .5rem 0 1rem 0;
+}
+#allergen-label p {
+    background-color: var(--font-color-primary);
+    color: var(--input-field-color);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 60px;
+}
+
+.nutrition {
+    margin: 0rem 0 2rem 0;
+    padding: 2rem 1rem;
+    border-bottom: var(--border-1);
+}
+
+.nutrition ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.nutrition li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--border-2);
+    padding: 1rem 0;
+    font-size: .9rem;
+}
+
+.nutrition .label {
+    font-weight: 800;
+}
+
+.nutrition .value {
+    text-align: right;
+}
+
+.purchase {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.quantity {
+    align-items: center;
+    display: inline-flex;
+    margin: 1rem 1rem 0 0;
+}
+
+.quantity input {
+    outline: none;
+    box-shadow: none;
+}
+
+.quantity input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.quantity input {
+    width: 80px;
+    text-align: center;
+    font-family: var(--font-family);
+    border: 1px solid var(--primary-color);
+    background-color: var(--input-field-color);
+    color: var(--font-color-primary);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 60px;
+}
+
+#quantity::-webkit-inner-spin-button,
+#quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#quantity {
+    -moz-appearance: textfield;
+}
+
+.add-to-cart {
+    background-color: var(--primary-color);
+    color: var(--input-field-color);
+    font-family: var(--font-family);
+    padding: var(--button-padding);
+    border: none;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color .3s ease, transform .2s ease;
+}
+
+.add-to-cart i {
+    margin-right: 0.5rem;
+}
+
+/* Disabled state */
+.add-to-cart.loading {
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+/* Spinner */
+.add-to-cart.loading i {
+    animation: spin 1s linear infinite;
+}
+
+/* Success state is now also disabled */
+.add-to-cart.success {
+    pointer-events: none; /*Needed to add this to prevent bug when clicking button while in success-state */
+    background-color: var(--accent-color-1);
+}
+
+/* Small press feedback */
+.add-to-cart:active {
+    transform: scale(0.97);
+}
+
+/* Spinner animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.others-like {
+    margin: 0 auto 3rem auto;
+    padding: 0 2rem;
+}
+
+.others-like h2 {
+    margin-bottom: 1rem;
+}
+
+/* Scroll-container */
+.others-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: .5rem;
+}
+
+/* Kort */
+.other-item {
+    scroll-snap-align: start;
+}
+
+.other-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.other-item p {
+    text-align: center;
+}
+
+.other-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.others-list::-webkit-scrollbar {
+    height: 4px;
+}
+
+.others-list::-webkit-scrollbar-track {
+    background: var(--input-field-color);
+    border-radius: 10px;
+}
+
+.others-list::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.others-list {
+    scrollbar-color: var(--primary-color) var(--input-field-color);
+    scrollbar-width: thin;
+}
+
+@media (min-width: 768px) {
+    .product { 
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "details image"
+        "ingredients-nutrition ingredients-nutrition";
+    }
+    .product h1{
+        margin: 0;
+    }
+
+    .others-list {
+        grid-auto-columns: 22%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .others-list {
+        grid-auto-columns: 18%;
+    }
+}

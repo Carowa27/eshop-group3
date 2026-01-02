@@ -1,35 +1,255 @@
+/* Outer wrappers and general settings */
+body {
+    background-color: var(--background-color);
+}
 main {
+    max-width: var(--max-width);
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 43%;
     justify-content: center;
-    /* background-image:linear-gradient(to right, rgba(247,85,154,0.7), rgba(37, 178, 255, 0.3)); */
+    color: var(--font-color-secondary);
+    padding: var(--body-padding);
 }
 
-section {
-    border: solid 1px black;
+h2 {
+    color: var(--font-color-primary);
+    margin: 10px;
 }
 
-#order-information {
+.discount {
+    font-style: italic;
+}
+
+p {
+    margin: 0;
+}
+
+/* Border settings */
+#product-details,
+#billing,
+#delivery, 
+.one-column button, 
+#order-information input,
+select, 
+.amount {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+#product-details,
+#billing,
+#delivery {
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+/* Order information settings*/
+
+.one-column,
+.two-column {
     display: grid;
-    border-right: 2px solid black;
+    padding: 0 10px 0 10px;
 }
 
-#product-details {
-    margin-left: 10px;
+.two-column {
+    grid-template-columns: 1fr 1fr;
 }
 
+.accept {
+    padding: 0 10px 0 10px;
+}
+
+.one-column button {
+    padding: 15px;
+    background-color: var(--accent-color-1);
+    margin: 20px 10px;
+    font-family: var(--font-family);
+    font-size: 1em;
+}
+
+#date,
+#first-name,
+#post-code {
+    grid-row: 2;
+    max-width: 95%;
+}
+
+/* Style the form questions */
+#confirm {
+    width: auto !important;
+}
+#order-information input,
+select {
+    padding: 12px 0 12px 8px;
+    margin: 8px 0;
+    background-color: var(--input-field-color);
+    width: 100%;
+}
+
+/* Products section */
+#product-position {
+    position: sticky;
+    top: 20px;
+}
+
+#products {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5px;
+    overflow-y: scroll;
+    max-height: 600px;
+    display: block;
+    -ms-overflow-style: none; /*hide scrollbar*/
+    scrollbar-width: none; /*hide scrollbar*/
+}
+/*hide scrollbar and mobile elements */
+#products::-webkit-scrollbar, #collapsible, #cost-mobile {
+    display: none; 
+}
+
+#products article {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0px;
+    margin-bottom: 8px;
+}
+
+.product-img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.product-name {
+    padding: 10px;
+}
+
+.product-cost {
+    align-self: flex-end;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.amount {
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.amount input,
+.amount button {
+    width: 2em;
+    height: 2em;
+    border: none;
+    background-color: var(--input-field-color);
+    border-radius: 6px;
+    flex-grow: 0;
+}
+
+.amount button {
+    cursor: pointer;
+}
+
+.amount input {
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    appearance: textfield;
+}
+
+#cost {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 20px 10px;
+}
+
+/* Screen adjustments */
 @media screen and (max-width: 980px) {
     main {
-        grid-template-columns: 47% 47%;
+        grid-template-columns: 52% 48%;
+        max-width: 100%;
+    }
+
+    #products {
+        width: 100%;
+        border: none;
+    }
+
+    #products article {
+        gap: 10px 0;
     }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 750px) {
     main {
+        padding: 0;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    main,
+    .two-column {
         grid-template-columns: 1fr;
+    }
+
+    #cost-mobile {
+        display: grid;
+        justify-content: end;
+        margin: 20px;
+    }
+
+    #product-position {
+        position: static;
+    }
+
+    #overview, #cost {
+        display: none;
+    }
+
+    #collapsible {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #collapsible h3 {
+        margin: 10px;
+    }
+
+    .fa {
+        font-size: 0.9em;
     }
 
     #product-details {
         order: -1;
+    }
+
+    #date,
+    #first-name,
+    #post-code {
+        max-width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        font-size: 0.9em;
     }
 }

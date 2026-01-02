@@ -1,0 +1,69 @@
+export const addToLSCart = (item, amount) => {
+  console.log(amount);
+  const newItem = products[item];
+  const amountToAdd = parseInt(amount);
+  const LSCart = getLSCart();
+  const newArray = LSCart && LSCart.length > 0 ? LSCart : [];
+  console.log(item);
+  const updateLSCart = () => {
+    if ((LSCart == undefined) | (LSCart == null)) {
+      localStorage.setItem(
+        "CC-Cart",
+        JSON.stringify([{ product: newItem, amount: amountToAdd }])
+      );
+    } else {
+      const existsInArray = LSCart.some(
+        (prod) => prod.product.name == newItem.name
+      );
+      if (existsInArray === true) {
+        LSCart.map((prod, i) => {
+          if (prod.product.name == newItem.name) {
+            const updatedProduct = {
+              product: prod.product,
+              amount: prod.amount + amountToAdd,
+            };
+            newArray.splice(i, 1, updatedProduct);
+            localStorage.setItem("CC-Cart", JSON.stringify(newArray));
+          }
+        });
+      } else {
+        newArray.push({ product: newItem, amount: amountToAdd });
+        localStorage.setItem("CC-Cart", JSON.stringify(newArray));
+      }
+    }
+  };
+  updateLSCart();
+};
+
+export const subtractToLSCart = (item) => {
+  const subItem = products[item];
+  const LSCart = getLSCart();
+  const newArray = LSCart && LSCart.length > 0 ? LSCart : [];
+  const updateLSCart = () => {
+    const existsInArray = LSCart.some(
+      (prod) => prod.product.name == subItem.name
+    );
+    if (existsInArray === true) {
+      LSCart.map((prod, i) => {
+        if (prod.product.name == subItem.name) {
+          if (prod.amount === 1) {
+            newArray.splice(i, 1);
+            localStorage.setItem("CC-Cart", JSON.stringify(newArray));
+          } else {
+            const updatedProduct = {
+              product: prod.product,
+              amount: prod.amount - 1,
+            };
+            newArray.splice(i, 1, updatedProduct);
+            localStorage.setItem("CC-Cart", JSON.stringify(newArray));
+          }
+        }
+      });
+    }
+  };
+  updateLSCart();
+};
+
+export const getLSCart = () => {
+  return JSON.parse(localStorage.getItem("CC-Cart"));
+};
