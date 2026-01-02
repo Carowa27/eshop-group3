@@ -154,7 +154,7 @@ input[type="checkbox"] {
     width: 0;
   }
   #product-grid-section {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
   }
   .product-card {
     grid-template-rows: repeat(7, 14.285714%);
@@ -179,7 +179,7 @@ input[type="checkbox"] {
 
 @media screen and (min-width: 992px) {
   #product-grid-section {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
   }
   .fa-icon-clickable {
     font-size: medium;
@@ -206,7 +206,7 @@ input[type="checkbox"] {
     grid-column: 2/3;
     /* grid-row: 2/3; */
 
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
   }
   .filter-type-heading {
     margin: 0.4rem 0 0.3rem 0;
