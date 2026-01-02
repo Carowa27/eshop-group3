@@ -152,7 +152,6 @@ input[type="checkbox"] {
 
 @media screen and (min-width: 768px) {
   hr {
-    height: 0;
     width: 0;
   }
   #product-grid-section {
