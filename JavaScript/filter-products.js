@@ -41,14 +41,14 @@ export const productFilterHTML = (products) => {
   let renderHtml = () => {
     parent.innerHTML = `
     <div id="filter-head-wrapper">
-      <h4 id="filter-heading">Filter</h4>
+      <h3 id="filter-heading">Filter</h3>
       <div id="filter-mobile-caret">
         <i class="fa-solid fa-caret-down"></i>
       </div>
     </div>
     <div class="filter-box-section no-top-margin">
       <section id="filter-allergen-section">
-        <h5 class="filter-type-heading">Fri från</h5>
+        <h4 class="filter-type-heading">Fri från</h4>
         <div class="filter-wrapper">
         ${allergenArray
           .map(
@@ -66,7 +66,7 @@ export const productFilterHTML = (products) => {
       </section>
       <hr/>
       <section id="filter-category-section">
-        <h5 class="filter-type-heading">Smak kategori</h5>
+        <h4 class="filter-type-heading">Smak kategori</h4>
         <div class="filter-wrapper">
           ${categoryArray
             .map(
