@@ -1,4 +1,4 @@
-import { addToLSCart } from "./JavaScript/local-storage-checkout-fn.js";
+import { addToLSCart } from "./local-storage-checkout-fn.js";
 
 // =======================
 // Rendera produkt
@@ -135,7 +135,7 @@ if (addToCartBtn) {
       // 3. Återställ efter kort stund
       setTimeout(() => {
         addToCartBtn.classList.remove("success");
-        icon.className = "fa-solid fa-bag-shopping";
+        icon.className = "fa-solid fa-cart-plus";
         text.textContent = "Lägg i varukorg";
       }, 2000);
     }, 800);
