@@ -42,9 +42,6 @@ export const productFilterHTML = (products) => {
     parent.innerHTML = `
     <div id="filter-head-wrapper">
       <h3 id="filter-heading">Filter</h3>
-      <div id="filter-mobile-caret">
-        <i class="fa-solid fa-caret-down"></i>
-      </div>
     </div>
     <div class="filter-box-section no-top-margin">
       <section id="filter-allergen-section">
