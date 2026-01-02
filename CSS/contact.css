@@ -74,6 +74,7 @@ textarea{
     color: var(--font-color-primary);
     padding: 0;
 }
+
 /*Extra Div för linje under terms
 .terms-underline{
     position: relative;
@@ -162,8 +163,6 @@ input[type="checkbox"] {
 .info-item p{
     color: var(--font-color-secondary);
 }
-
-
 
 
 
