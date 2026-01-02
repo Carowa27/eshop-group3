@@ -116,7 +116,9 @@ export const filterFn = (filterAttr) => {
   if (filterInArray === false) {
     filterArr.push(filterAttr);
   } else {
-    const filterIndexToRemove = filterArr.indexOf(filterAttr);
+    const filterIndexToRemove = filterArr.findIndex(
+      (item) => item.value === `${filterAttr.value}`
+    );
     filterArr.splice(filterIndexToRemove, 1);
   }
 
@@ -135,8 +137,7 @@ export const filterLogic = (products, filter) => {
       )
   );
   const categoryFilters = filterArr.filter((f) => f.type === "category");
-
-  if (productsWOAllergens.length > 0) {
+  if (productsWOAllergens.length >= 0) {
     productsToRender = productsWOAllergens.filter((prod) =>
       categoryFilters.every((filter) => prod.category.includes(filter.value))
     );
