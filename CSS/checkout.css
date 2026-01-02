@@ -2,7 +2,6 @@
 body {
     background-color: var(--background-color);
 }
-
 main {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -26,16 +25,22 @@ p {
     margin: 0;
 }
 
-#foot-container {
-    position: static;
+/* Border settings */
+#product-details,
+#billing,
+#delivery, 
+.one-column button, 
+#order-information input,
+select, 
+.amount {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
 }
 
 #product-details,
 #billing,
 #delivery {
     margin: 10px;
-    border: 1px solid var(--secondary-color);
-    border-radius: 6px;
     padding-bottom: 10px;
 }
 
@@ -49,7 +54,6 @@ p {
 
 .two-column {
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
 }
 
 .accept {
@@ -62,8 +66,6 @@ p {
     margin: 20px 10px;
     font-family: var(--font-family);
     font-size: 1em;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
 }
 
 #date,
@@ -73,33 +75,22 @@ p {
     max-width: 95%;
 }
 
-#cost-mobile {
-    display: none;
-}
-
 /* Style the form questions */
+#confirm {
+    width: auto !important;
+}
 #order-information input,
 select {
     padding: 12px 0 12px 8px;
     margin: 8px 0;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    overflow: hidden;
     background-color: var(--input-field-color);
-}
-
-select {
-    padding-left: 8px;
+    width: 100%;
 }
 
 /* Products section */
 #product-position {
     position: sticky;
     top: 20px;
-}
-
-#collapsible {
-    display: none;
 }
 
 #products {
@@ -109,6 +100,12 @@ select {
     overflow-y: scroll;
     max-height: 600px;
     display: block;
+    -ms-overflow-style: none; /*hide scrollbar*/
+    scrollbar-width: none; /*hide scrollbar*/
+}
+/*hide scrollbar and mobile elements */
+#products::-webkit-scrollbar, #collapsible, #cost-mobile {
+    display: none; 
 }
 
 #products article {
@@ -138,8 +135,6 @@ select {
 
 .amount {
     display: flex;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
     width: fit-content;
     margin-left: auto;
 }
@@ -224,7 +219,7 @@ input[type=number] {
         position: static;
     }
 
-    #overview {
+    #overview, #cost {
         display: none;
     }
 
@@ -241,16 +236,8 @@ input[type=number] {
         font-size: 0.9em;
     }
 
-    #products {
-        display: none;
-    }
-
     #product-details {
         order: -1;
-    }
-
-    #cost {
-        display: none;
     }
 
     #date,
