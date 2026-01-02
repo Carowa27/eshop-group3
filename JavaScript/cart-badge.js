@@ -27,13 +27,12 @@ const updateCartBadge = () => {
   badge.hidden = false;
 };
 
-/* 🔒 VIKTIGT FÖR MOBIL: vänta på DOM */
 document.addEventListener("DOMContentLoaded", () => {
   updateCartBadge();
 
-  // Lyssna på egna event (lägg till / ta bort)
+
   document.addEventListener("cartUpdated", updateCartBadge);
 
-  // iOS/Safari fallback
+
   window.addEventListener("pageshow", updateCartBadge);
 });
