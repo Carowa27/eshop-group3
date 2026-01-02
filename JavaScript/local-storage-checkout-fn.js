@@ -33,6 +33,7 @@ export const addToLSCart = (item, amount) => {
     }
   };
   updateLSCart();
+  document.dispatchEvent(new Event("cartUpdated"));
 };
 
 export const subtractToLSCart = (item) => {
@@ -62,6 +63,7 @@ export const subtractToLSCart = (item) => {
     }
   };
   updateLSCart();
+  document.dispatchEvent(new Event("cartUpdated"));
 };
 
 export const getLSCart = () => {
