@@ -21,10 +21,11 @@ function formatCardNumber() {
   cardNumber.value = formattedValue;
 }
 
+const expanderElement = document.getElementById("products");
+const iconElement = document.getElementById("icon-span");
 function expand() {
-  const expanderElement = document.getElementById("products");
-  const iconElement = document.getElementById("icon-span");
-    if(expanderElement.style.display === "block") {
+
+    if (expanderElement.style.display === "block") {
       expanderElement.style.display = "none";
       iconElement.classList.add('fa-chevron-down');
       iconElement.classList.remove('fa-chevron-up');
@@ -35,3 +36,13 @@ function expand() {
     }
 }
 
+window.addEventListener('resize', changeSize);
+function changeSize(){
+   if (window.innerWidth > 750) {
+      expanderElement.style.display = "block";
+   } else {
+      expanderElement.style.display = "none";
+      iconElement.classList.add('fa-chevron-down');
+      iconElement.classList.remove('fa-chevron-up');
+   }
+}
