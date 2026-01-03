@@ -4,5 +4,6 @@
 ### Produktlista - Carolina
 ### Produktsidor - Sebastian
 ### Om oss - Sofie
-### Kontakt - Sofie & Julia
+### Kontakt - Julia
 ### Checkout/Kassa - Erica
+### Terms and conditions - Sebastian

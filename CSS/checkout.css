@@ -2,6 +2,7 @@
 body {
     background-color: var(--background-color);
 }
+
 main {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -10,6 +11,7 @@ main {
     justify-content: center;
     color: var(--font-color-secondary);
     padding: var(--body-padding);
+    width: 100%;
 }
 
 h2 {
@@ -28,10 +30,10 @@ p {
 /* Border settings */
 #product-details,
 #billing,
-#delivery, 
-.one-column button, 
+#delivery,
+.one-column button,
 #order-information input,
-select, 
+select,
 .amount {
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -76,15 +78,58 @@ select,
 }
 
 /* Style the form questions */
-#confirm {
-    width: auto !important;
-}
-#order-information input,
+
+#order-information input:not(#confirm),
 select {
     padding: 12px 0 12px 8px;
     margin: 8px 0;
     background-color: var(--input-field-color);
     width: 100%;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-flex;
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--input-field-color);
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    -webkit-clip-path: polygon(21% 40%,
+            21% 40%,
+            8% 54%,
+            25% 68%,
+            36% 77%,
+            47% 65%,
+            48% 64%,
+            64% 47%,
+            75% 35%,
+            93% 13%,
+            81% 4%,
+            36% 54%);
+    clip-path: polygon(21% 40%,
+            21% 40%,
+            8% 54%,
+            25% 68%,
+            36% 77%,
+            47% 65%,
+            48% 64%,
+            64% 47%,
+            75% 35%,
+            93% 13%,
+            81% 4%,
+            36% 54%);
+    opacity: 0;
+    background-color: var(--secondary-color);
+}
+
+input[type="checkbox"]:checked::before {
+    opacity: 1;
 }
 
 /* Products section */
@@ -100,12 +145,16 @@ select {
     overflow-y: scroll;
     max-height: 600px;
     display: block;
-    -ms-overflow-style: none; /*hide scrollbar*/
-    scrollbar-width: none; /*hide scrollbar*/
+    -ms-overflow-style: none;
+    /*hide scrollbar*/
+    scrollbar-width: none;
 }
+
 /*hide scrollbar and mobile elements */
-#products::-webkit-scrollbar, #collapsible, #cost-mobile {
-    display: none; 
+#products::-webkit-scrollbar,
+#collapsible,
+#cost-mobile {
+    display: none;
 }
 
 #products article {
@@ -219,7 +268,8 @@ input[type=number] {
         position: static;
     }
 
-    #overview, #cost {
+    #overview,
+    #cost {
         display: none;
     }
 

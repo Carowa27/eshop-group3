@@ -40,6 +40,10 @@ window.addEventListener('resize', changeSize);
 function changeSize(){
    if (window.innerWidth > 750) {
       expanderElement.style.display = "block";
+   } else if (window.innerWidth < 750) {
+      expanderElement.style.display = "none";
+      iconElement.classList.add('fa-chevron-down');
+      iconElement.classList.remove('fa-chevron-up');
    } else {
       expanderElement.style.display = "none";
       iconElement.classList.add('fa-chevron-down');
