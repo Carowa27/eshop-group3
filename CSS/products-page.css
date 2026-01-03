@@ -293,9 +293,14 @@ input[type="checkbox"]:checked::before {
   .filter-wrapper {
     justify-content: start;
     row-gap: 5px;
+    flex-direction: column;
   }
   #filter-category-section {
     padding-left: 0px;
+  }
+  #filter-allergen-section,
+  #filter-category-section {
+    width: 80%;
   }
 }
 /* @media screen and (min-width: 1440px) {
