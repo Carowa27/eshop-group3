@@ -61,7 +61,7 @@ export const productFilterHTML = (products) => {
           .join("")}  
         </div>
       </section>
-      <hr/>
+      <hr id="filter-hr-mid"/>
       <section id="filter-category-section">
         <h4 class="filter-type-heading">Smak kategori</h4>
         <div class="filter-wrapper">
@@ -80,6 +80,7 @@ export const productFilterHTML = (products) => {
             .join("")}
         </div>
       </section>
+      <hr id="filter-hr-last"/>
     </div>`;
   };
 
