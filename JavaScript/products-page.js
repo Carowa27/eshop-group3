@@ -97,7 +97,7 @@ export const renderProductCards = (products) => {
         </article>`;
           })
           .join(" "))
-      : (parent.innerHTML = `<p>Tyvärr hittade vi inga produkter med dina filter kriterier</p>`);
+      : (parent.innerHTML = `<p id="no-products-to-show">Tyvärr hittade vi inga produkter med dina filter kriterier</p>`);
   };
   renderHtml();
 };
