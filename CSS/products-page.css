@@ -128,7 +128,7 @@ input[type="checkbox"]:checked::before {
   object-fit: cover;
 }
 .allergens {
-  font-size: x-large;
+  font-size: large;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
   padding: 0 0 0 0.3rem;
