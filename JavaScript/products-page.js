@@ -67,8 +67,14 @@ export const renderProductCards = (products) => {
               .join(" ")}
           </div>
           <div class="${
-            (product.name.length > 20 && window.innerWidth <= 350) ||
-            (product.name.length >= 20 && window.innerWidth > 350)
+            (product.name.length >= 20 && window.innerWidth <= 350) ||
+            (product.name.length >= 40 &&
+              window.innerWidth > 350 &&
+              window.innerWidth < 1024) ||
+            (product.name.length >= 31 &&
+              window.innerWidth >= 1024 &&
+              window.innerWidth < 1200) ||
+            (product.name.length >= 20 && window.innerWidth >= 1200)
               ? "card-info-section-long"
               : "card-info-section"
           }">
