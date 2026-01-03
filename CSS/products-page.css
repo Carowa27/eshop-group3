@@ -4,6 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: var(--font-color-primary);
 }
 
 p {
@@ -14,13 +15,17 @@ hr {
   width: 100%;
   border-top: 1px var(--font-color-primary) solid;
 }
+#product-page-header {
+  text-align: center;
+  padding: 35px 0 20px;
+}
 #filter-hr-mid {
   opacity: 50%;
 }
-
 #products-page {
   padding: var(--body-padding);
-
+}
+#products-section {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -268,8 +273,10 @@ input[type="checkbox"]:checked::before {
   #products-page {
     min-width: var(--max-width);
     max-width: var(--max-width);
-    grid-template-columns: 2fr 10fr;
     align-self: center;
+  }
+  #products-section {
+    grid-template-columns: 2fr 10fr;
   }
   #filter-section {
     grid-column: 1/2;
