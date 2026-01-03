@@ -16,3 +16,11 @@
 - Sätta generell CSS för att unblocka vidare arbete med layouterna.
 - Försöka utforma korten på ett sätt som matchar våra arbetssätt.
 - Se till att vi gemensamt är överens om kolumnernas betydelse för vår arbetsyta i Sprint 2.
+
+
+# Sprint 2 (27/12-5/1)
+
+### Sammanfattning - Retrospective ska hållas den 5/1
+- Vi tog genast tag i punkterna som gått mindre bra i Sprint 1. 
+- Vi såg till att synka vad gällde Trello-kolumnerna och satte en generell CSS.
+- Vi arbetade med krav på 2 godkända reviews per PR genom hela Sprint 2.
