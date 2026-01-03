@@ -27,7 +27,7 @@ html {
 }
 
 * {
-    -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -41,6 +41,9 @@ body {
   font-family: var(--font-family);
   font-size: 16px;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -53,7 +56,7 @@ a {
   color: var(--font-color-primary);
 }
 a:hover {
-  color: var( --primary-color);
+  color: var(--primary-color);
 }
 .current {
   font-weight: 600;
@@ -61,8 +64,8 @@ a:hover {
 
 /* Denna koden färgar bakgrunden på markerad text, ta bort från general CSS och lägg i era egna om ni vill ha den */
 ::selection {
-    background-color: var(--primary-color);
-    color: var(--input-field-color);
+  background-color: var(--primary-color);
+  color: var(--input-field-color);
 }
 
 /* NAVIGATION */
@@ -72,7 +75,7 @@ a:hover {
   position: sticky;
   top: 0;
   background: var(--primary-color);
-  padding: .6rem 0rem;
+  padding: 0.6rem 0rem;
   z-index: 10000;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
@@ -89,11 +92,11 @@ a:hover {
 #logo {
   display: flex;
   align-items: center;
-  gap: .2rem;
+  gap: 0.2rem;
   text-decoration: none;
   transition: opacity 200ms ease, transform 200ms ease, font-weight 200ms ease;
 }
-#logo:hover{
+#logo:hover {
   transform: scale(1.1);
 }
 
@@ -112,28 +115,28 @@ a:hover {
 #cart-btn {
   position: relative;
   margin-left: auto;
-  margin-right: .8rem;
+  margin-right: 0.8rem;
   font-size: 1.4rem;
   color: var(--input-field-color);
   text-decoration: none;
 }
 
 .cart-badge {
-    position: absolute;
-    top: -6px;
-    right: -8px;
-    background-color: var(--accent-color-1);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: bold;
-    min-width: 18px;
-    height: 18px;
-    padding: 0 5px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: var(--accent-color-1);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .cart-badge[hidden] {
@@ -172,16 +175,21 @@ a:hover {
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
-  content:"";
+  content: "";
   position: absolute;
 }
-.nav-toggle-label span::before { bottom: 8px; }
-.nav-toggle-label span::after  { top: 8px; }
+.nav-toggle-label span::before {
+  bottom: 8px;
+}
+.nav-toggle-label span::after {
+  top: 8px;
+}
 
 /* Navigationsmenyn */
 #nav {
   position: fixed;
-  top: 0; right: 0;
+  top: 0;
+  right: 0;
   height: 100vh;
   width: 40vw;
   background: var(--primary-color);
@@ -189,7 +197,7 @@ a:hover {
   transition: transform 300ms ease-in-out;
   z-index: 9998;
   padding: 5rem 2rem;
-  box-shadow: -4px 0 10px rgba(0,0,0,.2);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 0px;
 }
 
@@ -222,7 +230,7 @@ a:hover {
 .backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.4);
+  background: rgba(0, 0, 0, 0.4);
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
@@ -242,7 +250,7 @@ a:hover {
 }
 .nav-toggle:checked ~ #nav a {
   opacity: 1;
-  transition-delay: .2s;
+  transition-delay: 0.2s;
 }
 .nav-toggle:checked + .nav-toggle-label span {
   background: transparent;
@@ -264,6 +272,7 @@ a:hover {
   padding: 3rem 1.5rem 2rem 1.5rem;
   text-align: center;
   font-family: var(--font-family);
+  margin-top: auto;
 }
 
 /* Wrapper för sociala ikoner */
@@ -278,11 +287,11 @@ a:hover {
 #media-wrapper a {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   text-decoration: none;
   color: var(--input-field-color);
   font-size: 1rem;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
 }
 
 #media-wrapper a:hover {
@@ -291,13 +300,12 @@ a:hover {
 
 /* Footer copyright text */
 #foot-container p {
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin: 0;
 }
 
 /* Responsiv Design */
 @media (min-width: 768px) {
-
   /* Layout för läsplatta och desktop */
   #nav {
     order: 2;
@@ -323,7 +331,7 @@ a:hover {
   /* Kassa-ikonen */
   #cart-btn {
     order: 3;
-    margin-left: 1.5rem;   /* spacing mellan meny och ikon */
+    margin-left: 1.5rem; /* spacing mellan meny och ikon */
     font-size: 1.5rem;
   }
 
@@ -339,8 +347,8 @@ a:hover {
     display: none;
   }
 
-    /* Ändrar riktning till row för större skärmar */
-    #media-wrapper {
+  /* Ändrar riktning till row för större skärmar */
+  #media-wrapper {
     flex-direction: row;
     justify-content: center;
     gap: 4rem;
