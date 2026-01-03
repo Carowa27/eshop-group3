@@ -6,9 +6,9 @@ import {
   removeFilterFromLS,
 } from "./filter-products.js";
 
-window.addEventListener("pagehide", () => {
-  removeFilterFromLS();
-});
+// window.addEventListener("pagehide", () => {
+//   removeFilterFromLS();
+// });
 
 export const renderProductCards = (products) => {
   let chosenFilterAttributes = getFilterFromLS();
@@ -29,6 +29,14 @@ export const renderProductCards = (products) => {
     productList.length !== 0
       ? (parent.innerHTML = productList
           .map((product) => {
+            const indexOfParenthesis = product.name.indexOf("(");
+            const prodName =
+              indexOfParenthesis !== -1
+                ? product.name.slice(0, indexOfParenthesis).trim()
+                : product.name;
+            const allergenInfo =
+              indexOfParenthesis !== -1 &&
+              product.name.slice(indexOfParenthesis);
             return `
         <article class="product-card">
           <div class="card-img-section">
@@ -59,14 +67,19 @@ export const renderProductCards = (products) => {
               .join(" ")}
           </div>
           <div class="${
-            product.name.length > 22
+            (product.name.length > 20 && window.innerWidth <= 350) ||
+            (product.name.length >= 20 && window.innerWidth > 350)
               ? "card-info-section-long"
               : "card-info-section"
           }">
             <a class="no-link-style product-name" href="product.html?id=${
               product.id
             }">
-              <h4 class="product-name">${product.name}</h4>
+            <h4 class="product-name">${prodName}
+              <span id="allergen-info">${
+                allergenInfo !== false ? allergenInfo : ""
+              }</span>
+            </h4>
             </a>
             <p class="product-price">
               25kr /st

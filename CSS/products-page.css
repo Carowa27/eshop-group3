@@ -49,7 +49,59 @@ hr {
 }
 input[type="checkbox"] {
   margin: 0 5px 3px 3px;
+  accent-color: var(--accent-color-1);
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: var(--button-border-radius);
+  border: 1px solid var(--secondary-color);
+  background-color: var(--input-field-color);
 }
+
+input[type="checkbox"]::before {
+  content: "";
+  margin: 0.2rem 0.1rem 0 0.1rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  -webkit-clip-path: polygon(
+    21% 40%,
+    21% 40%,
+    8% 54%,
+    25% 68%,
+    36% 77%,
+    47% 65%,
+    48% 64%,
+    64% 47%,
+    75% 35%,
+    93% 13%,
+    81% 4%,
+    36% 54%
+  );
+  clip-path: polygon(
+    21% 40%,
+    21% 40%,
+    8% 54%,
+    25% 68%,
+    36% 77%,
+    47% 65%,
+    48% 64%,
+    64% 47%,
+    75% 35%,
+    93% 13%,
+    81% 4%,
+    36% 54%
+  );
+  opacity: 0;
+  background-color: var(--secondary-color);
+}
+
+input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
 #product-grid-section {
   display: grid;
   grid-template-columns: 1fr;
@@ -121,9 +173,12 @@ input[type="checkbox"] {
   background: rgba(var(--background-color-rgb), 0.8);
 
   grid-column: 1/ -1;
-  grid-row: 6/-1;
+  grid-row: -4/-1;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+}
+#allergen-info {
+  font-size: xx-small;
 }
 .product-name {
   margin: 0;
