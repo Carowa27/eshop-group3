@@ -2,16 +2,16 @@ import { addToLSCart } from "./local-storage-checkout-fn.js";
 window.addToLSCart = addToLSCart;
 import {
   filterLogic,
-  getFilterFromLS,
-  removeFilterFromLS,
+  getFilterFromSS,
+  removeFilterFromSS,
 } from "./filter-products.js";
 
 window.addEventListener("pagehide", () => {
-  removeFilterFromLS();
+  removeFilterFromSS();
 });
 
 export const renderProductCards = (products) => {
-  let chosenFilterAttributes = getFilterFromLS();
+  let chosenFilterAttributes = getFilterFromSS();
   const parent = document.getElementById("product-grid-section");
   const productArray = Object.values(products);
   let productList =
@@ -19,7 +19,7 @@ export const renderProductCards = (products) => {
 
   document.addEventListener("change", (e) => {
     if (e.target.closest(".filter-wrapper")) {
-      chosenFilterAttributes = getFilterFromLS();
+      chosenFilterAttributes = getFilterFromSS();
       productList = filterLogic(products, chosenFilterAttributes);
       renderHtml();
     }
