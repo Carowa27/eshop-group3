@@ -13,6 +13,7 @@
 body {
     background-color: var(--background-color);
     color: var(--font-color-primary);
+    display: block;
 }
 
 main {
@@ -20,16 +21,7 @@ main {
     margin: 0 auto;
 }
 
-/* .back-button {
-    background-color: var(--primary-color);
-    color: var(--input-field-color);
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 60px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 1rem 2rem;
-} */
+/* ALL KOD ÄR SKRIVEN I DEN ORDNING DEN KOMMER PÅ SIDAN */
 
 .product {
     display: grid;
@@ -249,29 +241,29 @@ details[open] summary i {
     margin-right: 0.5rem;
 }
 
-/* Disabled state */
+
 .add-to-cart.loading {
     pointer-events: none;
     opacity: 0.85;
 }
 
-/* Spinner */
+
 .add-to-cart.loading i {
     animation: spin 1s linear infinite;
 }
 
-/* Success state is now also disabled */
+
 .add-to-cart.success {
-    pointer-events: none; /*Needed to add this to prevent bug when clicking button while in success-state */
+    pointer-events: none; 
     background-color: var(--accent-color-1);
 }
 
-/* Small press feedback */
+
 .add-to-cart:active {
     transform: scale(0.97);
 }
 
-/* Spinner animation */
+
 @keyframes spin {
     from { transform: rotate(0deg); }
     to   { transform: rotate(360deg); }
@@ -286,7 +278,6 @@ details[open] summary i {
     margin-bottom: 1rem;
 }
 
-/* Scroll-container */
 .others-list {
     display: grid;
     grid-auto-flow: column;
@@ -297,7 +288,6 @@ details[open] summary i {
     padding-bottom: .5rem;
 }
 
-/* Kort */
 .other-item {
     scroll-snap-align: start;
 }

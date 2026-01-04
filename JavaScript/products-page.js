@@ -2,16 +2,16 @@ import { addToLSCart } from "./local-storage-checkout-fn.js";
 window.addToLSCart = addToLSCart;
 import {
   filterLogic,
-  getFilterFromLS,
-  removeFilterFromLS,
+  getFilterFromSS,
+  removeFilterFromSS,
 } from "./filter-products.js";
 
-// window.addEventListener("pagehide", () => {
-//   removeFilterFromLS();
-// });
+window.addEventListener("pagehide", () => {
+  removeFilterFromSS();
+});
 
 export const renderProductCards = (products) => {
-  let chosenFilterAttributes = getFilterFromLS();
+  let chosenFilterAttributes = getFilterFromSS();
   const parent = document.getElementById("product-grid-section");
   const productArray = Object.values(products);
   let productList =
@@ -19,7 +19,7 @@ export const renderProductCards = (products) => {
 
   document.addEventListener("change", (e) => {
     if (e.target.closest(".filter-wrapper")) {
-      chosenFilterAttributes = getFilterFromLS();
+      chosenFilterAttributes = getFilterFromSS();
       productList = filterLogic(products, chosenFilterAttributes);
       renderHtml();
     }
@@ -67,8 +67,14 @@ export const renderProductCards = (products) => {
               .join(" ")}
           </div>
           <div class="${
-            (product.name.length > 20 && window.innerWidth <= 350) ||
-            (product.name.length >= 20 && window.innerWidth > 350)
+            (product.name.length >= 20 && window.innerWidth <= 350) ||
+            (product.name.length >= 40 &&
+              window.innerWidth > 350 &&
+              window.innerWidth < 1024) ||
+            (product.name.length >= 31 &&
+              window.innerWidth >= 1024 &&
+              window.innerWidth < 1200) ||
+            (product.name.length >= 20 && window.innerWidth >= 1200)
               ? "card-info-section-long"
               : "card-info-section"
           }">
@@ -91,7 +97,7 @@ export const renderProductCards = (products) => {
         </article>`;
           })
           .join(" "))
-      : (parent.innerHTML = `<p>Tyvärr hittade vi inga produkter med dina filter kriterier</p>`);
+      : (parent.innerHTML = `<p id="no-products-to-show">Tyvärr hittade vi inga produkter med dina filter kriterier</p>`);
   };
   renderHtml();
 };
