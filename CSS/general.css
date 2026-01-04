@@ -58,9 +58,6 @@ a {
 a:hover {
   color: var(--primary-color);
 }
-.current {
-  font-weight: 600;
-}
 
 /* Denna koden färgar bakgrunden på markerad text, ta bort från general CSS och lägg i era egna om ni vill ha den */
 ::selection {
