@@ -1,20 +1,31 @@
 body {
   margin: 0;
   background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--font-color-primary);
 }
 
 p {
   margin: 0;
 }
 hr {
+  margin: 1rem 0;
   width: 100%;
-  opacity: 50%;
   border-top: 1px var(--font-color-primary) solid;
 }
-
+#product-page-header {
+  text-align: center;
+  padding: 35px 0 20px;
+}
+#filter-hr-mid {
+  opacity: 50%;
+}
 #products-page {
   padding: var(--body-padding);
-
+}
+#products-section {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -22,7 +33,6 @@ hr {
   min-height: fit-content;
   margin-bottom: 0.8rem;
   padding-bottom: 0.8rem;
-  border-bottom: 1px var(--font-color-primary) solid;
 }
 #filter-heading {
   margin: 0 0.2rem 0 0;
@@ -128,7 +138,7 @@ input[type="checkbox"]:checked::before {
   object-fit: cover;
 }
 .allergens {
-  font-size: x-large;
+  font-size: large;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
   padding: 0 0 0 0.3rem;
@@ -202,10 +212,18 @@ input[type="checkbox"]:checked::before {
   text-decoration: none;
   color: inherit;
 }
+#no-products-to-show {
+  grid-column: 1/-1;
+  margin: 1rem auto;
+}
 
 @media screen and (min-width: 768px) {
-  hr {
+  #filter-hr-mid {
     width: 0;
+    margin: 0 0.2rem;
+  }
+  #filter-hr-last {
+    display: none;
   }
   #product-grid-section {
     grid-template-columns: repeat(2, 1fr);
@@ -243,14 +261,22 @@ input[type="checkbox"]:checked::before {
   } */
 }
 @media screen and (min-width: 1200px) {
-  hr {
-    margin-left: 0;
+  #filter-hr-mid {
     width: 80%;
+    margin: 0.4rem 0 0 0;
+  }
+  #filter-hr-last {
+    display: block;
+    width: 80%;
+    margin: 0.4rem 0 0 0;
   }
   #products-page {
+    min-width: var(--max-width);
     max-width: var(--max-width);
-    grid-template-columns: 2fr 10fr;
     align-self: center;
+  }
+  #products-section {
+    grid-template-columns: 2fr 10fr;
   }
   #filter-section {
     grid-column: 1/2;
@@ -293,9 +319,14 @@ input[type="checkbox"]:checked::before {
   .filter-wrapper {
     justify-content: start;
     row-gap: 5px;
+    flex-direction: column;
   }
   #filter-category-section {
     padding-left: 0px;
+  }
+  #filter-allergen-section,
+  #filter-category-section {
+    width: 80%;
   }
 }
 /* @media screen and (min-width: 1440px) {

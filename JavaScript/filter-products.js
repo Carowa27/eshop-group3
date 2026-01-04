@@ -1,17 +1,17 @@
-export const getFilterFromLS = () => {
+export const getFilterFromSS = () => {
   return JSON.parse(sessionStorage.getItem("CC-prod-filter"));
 };
-export const setFilterToLS = (filterAttr) => {
+export const setFilterToSS = (filterAttr) => {
   sessionStorage.setItem("CC-prod-filter", JSON.stringify(filterAttr));
 };
-export const removeFilterFromLS = () => {
+export const removeFilterFromSS = () => {
   return sessionStorage.removeItem("CC-prod-filter");
 };
 
 export const productFilterHTML = (products) => {
   const parent = document.getElementById("filter-section");
   const productArray = Object.values(products);
-  let activeFilter = getFilterFromLS() || [];
+  let activeFilter = getFilterFromSS() || [];
 
   let allergenArray = [];
   let categoryArray = [];
@@ -61,7 +61,7 @@ export const productFilterHTML = (products) => {
           .join("")}  
         </div>
       </section>
-      <hr/>
+      <hr id="filter-hr-mid"/>
       <section id="filter-category-section">
         <h4 class="filter-type-heading">Smak kategori</h4>
         <div class="filter-wrapper">
@@ -80,6 +80,7 @@ export const productFilterHTML = (products) => {
             .join("")}
         </div>
       </section>
+      <hr id="filter-hr-last"/>
     </div>`;
   };
 
@@ -96,7 +97,7 @@ export const productFilterHTML = (products) => {
 
   document.addEventListener("change", (e) => {
     if (e.target.closest(".filter-wrapper")) {
-      activeFilter = getFilterFromLS();
+      activeFilter = getFilterFromSS();
       renderHtml();
       isActiveFilter();
     }
@@ -119,7 +120,7 @@ export const filterFn = (filterAttr) => {
     filterArr.splice(filterIndexToRemove, 1);
   }
 
-  setFilterToLS(filterArr);
+  setFilterToSS(filterArr);
 };
 
 let productsToRender = [];
