@@ -70,9 +70,9 @@ select,
     font-size: 1em;
 }
 
-#date,
+#expiration-date,
 #first-name,
-#post-code {
+#postal-code {
     grid-row: 2;
     max-width: 95%;
 }
@@ -257,7 +257,9 @@ input[type=number] {
     .two-column {
         grid-template-columns: 1fr;
     }
-
+    #products {
+        display: none;
+    }
     #cost-mobile {
         display: grid;
         justify-content: end;
@@ -290,12 +292,11 @@ input[type=number] {
         order: -1;
     }
 
-    #date,
+    #expiration-date,
     #first-name,
-    #post-code {
+    #postal-code {
         max-width: 100%;
     }
-
 }
 
 @media only screen and (max-width: 400px) {

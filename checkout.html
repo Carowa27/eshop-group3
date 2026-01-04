@@ -35,21 +35,17 @@
                 <span id="cart-badge" class="cart-badge" hidden>0</span>
             </a>
 
-
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
-
 
             <label for="nav-toggle" class="nav-toggle-label" aria-label="Öppna meny">
                 <span></span>
             </label>
 
-
             <div class="backdrop"></div>
-
 
             <nav id="nav">
                 <ul>
-                    <li><a class="current" href="index.html">Hem</a></li>
+                    <li><a href="index.html">Hem</a></li>
                     <li><a href="products.html">Produkter</a></li>
                     <li><a href="about.html">Om oss</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
@@ -64,38 +60,42 @@
                 <h2>Ange leveransuppgifter</h2>
                 <form id="delivery-info">
                     <div class="one-column">
+                        <label for="delivery-date">Önskat leveransdatum: </label>
+                        <input type="date" name="delivery-date" id="delivery-date" required min="2026-01-06" max="2026-01-30" />
+                    </div>
+                    <div class="one-column">
                         <label for="country">Land: </label>
-                        <select name="country">
+                        <select name="country" id="country">
                             <option>Sverige</option>
                         </select>
                     </div>
                     <div class="two-column">
                         <label for="first-name">Förnamn: </label>
-                        <input type="text" name="first-name" required id="first-name" pattern="[A-Öa-ö\-\s]*$"
+                        <input type="text" name="first-name" id="first-name" required pattern="[A-Öa-ö\-\s]*$"
                             placeholder="John" onkeyup="validityCheck()" />
                         <label for="last-name">Efternamn: </label>
-                        <input type="text" name="last-name" required pattern="[A-Öa-ö\-]*$" placeholder="Karlsson"
+                        <input type="text" name="last-name" id="last-name" required pattern="[A-Öa-ö\-]*$" placeholder="Karlsson"
                             onkeyup="validityCheck()" />
                     </div>
                     <div class="one-column">
                         <label for="address">Adress: </label>
-                        <input type="text" name="address" required placeholder="Stadsgatan 1"
+                        <input type="text" name="address" id="address" required placeholder="Stadsgatan 1"
                             pattern="[A-Öa-ö0-9\-\s]*$" onkeyup="validityCheck()" />
                     </div>
                     <div class="two-column">
                         <label for="postal-code">Postnummer: </label>
-                        <input type="text" name="postal-code" required id="post-code" pattern="[0-9]{3}\s[0-9]{2}"
+                        <input type="text" name="postal-code" id="postal-code" required pattern="[0-9]{3}\s[0-9]{2}"
                             placeholder="123 45" onkeyup="validityCheck()" />
                         <label for="city">Stad: </label>
-                        <input type="text" name="city" required pattern="[A-Öa-ö\-]*$" placeholder="Stockholm"
+                        <input type="text" name="city" id="city" required pattern="[A-Öa-ö\-]*$" placeholder="Stockholm"
                             onkeyup="validityCheck()" />
                     </div>
                     <div class="one-column">
                         <label for="phone-number">Telefonnummer: </label>
-                        <input type="tel" name="phone-number" required pattern="[0-9]{10}" placeholder="0701234567"
+                        <input type="tel" name="phone-number" id="phone-number" required pattern="[0-9]{10}" placeholder="0701234567"
                             onkeyup="validityCheck()" />
                         <label for="email">E-post: </label>
-                        <input type="email" name="email" required placeholder="exempel@exempel.se"
+                        <input type="email" name="email" id="email" required placeholder="exempel@exempel.se"
                             onkeyup="validityCheck()" />
                     </div>
                 </form>
@@ -106,20 +106,20 @@
                     <div class="one-column">
                         <label for="card-number">Kortnummer: </label>
                         <input type="text" inputmode="numeric" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}"
-                            name="card-number" id="cardnumber" placeholder="0000 1111 2222 3333"
+                            name="card-number" id="card-number" required placeholder="0000 1111 2222 3333"
                             onkeyup="validityCheck(); formatCardNumber()" />
                     </div>
                     <div class="two-column">
                         <label for="expiration-date">Förfallodatum: </label>
-                        <input type="text" name="expiration-date" id="date" pattern="[0-9]{2}/[0-9]{2}"
+                        <input type="text" name="expiration-date" id="expiration-date" required pattern="[0-9]{2}/[0-9]{2}"
                             placeholder="01/25" onkeyup="validityCheck()" />
                         <label for="security-code">Säkerhetskod: </label>
-                        <input type="decimal" name="security-code" pattern="[0-9]{3}" placeholder="123"
+                        <input type="decimal" name="security-code" id="security-code" required pattern="[0-9]{3}" placeholder="123"
                             onkeyup="validityCheck()" />
                     </div>
                     <div class="one-column">
                         <label for="card-name">Namn på kort: </label>
-                        <input type="text" name="card-name" pattern="[A-Öa-ö\-\s]*$" placeholder="John Karlsson"
+                        <input type="text" name="card-name" id="card-name" required pattern="[A-Öa-ö\-\s]*$" placeholder="John Karlsson"
                             onkeyup="validityCheck()" />
                     </div>
                     <div id="cost-mobile">
@@ -128,7 +128,7 @@
                     </div>
                     <div class="accept">
                         <label for="confirm">Jag har läst och accepterar <a href="termsandconditions.html">villkoren</a></label>
-                        <input type="checkbox" name="confirm" id="confirm">
+                        <input type="checkbox" name="confirm" id="confirm" required />
                     </div>
 
                     <div class="one-column">
