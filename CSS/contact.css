@@ -8,14 +8,14 @@ main{
 #hero h1{
     text-align: center;
     font-size: 2.5rem;
-    padding: 3rem 1rem 2rem 1rem;
+    padding: 3rem 1.5rem 3rem 1.5rem;
     color: var(--primary-color);
     
 }
 
 /*Contact section*/
 .contact-section{
-    padding: 1rem 2rem 3rem 2rem;
+    padding: 1rem 2.5rem 10rem 2.5rem;
 }
 
 /*Contact wrapper*/
@@ -32,7 +32,6 @@ main{
 }
 .form .terms{
     display: flex;
-    align-items: center;
 }
 
 .form-group input,
@@ -144,7 +143,7 @@ textarea{
 /* Responsiv Design */
 @media (max-width: 950px) {
     #contact-wrapper{
-        gap: 2rem;
+        gap: 2.5rem;
     }
     .form .terms{
         align-items: flex-start;
@@ -153,12 +152,11 @@ textarea{
 
 @media (max-width: 768px){
     #hero h1{
-        padding: 2.5rem 1.5rem 2rem 1.5rem;
+        padding: 2.5rem 1.5rem 2.5rem 1.5rem;
     }
     #contact-wrapper{
         flex-direction: column;
-        align-items: center;
-        padding: 0 2.5rem 0 2.5rem;
+        padding: 0 3rem 0 3rem;
     }
     .form{
         gap: 1.5rem;
@@ -169,7 +167,7 @@ textarea{
     }
    
     #contact-info{
-        padding: 2rem 0 2rem 0;
-        gap: 2rem;
+        padding: 2.5rem 0 2.5rem 0;
+        gap: 2.5rem;
     }
 }
