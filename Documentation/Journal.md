@@ -24,3 +24,23 @@
 - Vi tog genast tag i punkterna som gått mindre bra i Sprint 1. 
 - Vi såg till att synka vad gällde Trello-kolumnerna och satte en generell CSS.
 - Vi arbetade med krav på 2 godkända reviews per PR genom hela Sprint 2.
+
+### Vad gick bra?
+- Gott samarbete (kul med gemensamma delar, att arbeta mot andras JS etc)
+- Bra kommunikation
+- Bra arbete med reviews (Behövde inte vänta länge på approval)
+- Länkar mellan Trello och Git fungerade bra för att förtydliga
+- Bra delning av feedback för förbättringar
+- Klara enligt tid, med bra framförhållning. Har inte behövt stressa. 
+
+### Vad gick mindre bra?
+- Vi satte gemensam CSS men har ändå en del saker som inte är streamlinade (ex. border sizes, margin etc.)
+- Justera filmappning i efterhand - ledde till en del justeringar även i kod
+- Mycket notiser för reviews genom GitHub, mycket mail samt kan bli lite stressigt
+- Struktur i GitHub uppdateringar var lite oklar
+
+### Hur gör vi det bättre?
+- För ett framtida projekt planera in de generella variablerna tidigare i projektet, sätta CSS för marginal etc. från början
+- Se till ha mappstrukturen från början
+- Ev. ändra Github notis inställningar
+- I början av projektet inkludera hur man vill lägga upp GitHub uppdateringar - branch name, commit comments etc. 
